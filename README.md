@@ -36,4 +36,4 @@ ENS-style name service. Source: [Polkadot-Community-Foundation/dotns](https://gi
 | RootGatewayDispatcher | `0x22362162032ED2442b43f5902b3421be5aCF1b60` |
 | Multicall3 | `0x1C1044BEa5bDe0F435436bB52A8340fBE1D59847` |
 
-A client SDK/CLI for DotNS is available at [Polkadot-Community-Foundation/dotns-sdk](https://github.com/Polkadot-Community-Foundation/dotns-sdk).
+A client SDK/CLI for DotNS including the changes with the above dotns relevant contract addresses in summit-net is available at [Polkadot-Community-Foundation/dotns-sdk](https://github.com/Polkadot-Community-Foundation/dotns-sdk).
