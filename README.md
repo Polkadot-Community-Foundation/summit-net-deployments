@@ -38,6 +38,14 @@ ENS-style name service. Source: [Polkadot-Community-Foundation/dotns](https://gi
 
 A client SDK/CLI for DotNS including the changes with the above dotns relevant contract addresses in summit-net is available at [Polkadot-Community-Foundation/dotns-sdk](https://github.com/Polkadot-Community-Foundation/dotns-sdk).
 
+## CDM — Contract Dependency Manager
+
+The CDM `ContractRegistry`. Source: [Polkadot-Community-Foundation/contract-dependency-manager](https://github.com/Polkadot-Community-Foundation/contract-dependency-manager). Deployed 2026-06-11.
+
+| Contract | Address |
+| --- | --- |
+| ContractRegistry | `0xa5747e60ae27f93e92019e4021abfc4957050141` |
+
 ### DotNS UI (web app on Bulletin)
 
 The DotNS UI deployed to the **Summit Bulletin chain** and bound to a `.dot` name. Built from `pcf-dotns-ui` **v0.7.1**, deployed 2026-06-10.
