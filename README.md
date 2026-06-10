@@ -37,3 +37,17 @@ ENS-style name service. Source: [Polkadot-Community-Foundation/dotns](https://gi
 | Multicall3 | `0x1C1044BEa5bDe0F435436bB52A8340fBE1D59847` |
 
 A client SDK/CLI for DotNS including the changes with the above dotns relevant contract addresses in summit-net is available at [Polkadot-Community-Foundation/dotns-sdk](https://github.com/Polkadot-Community-Foundation/dotns-sdk).
+
+### DotNS UI (web app on Bulletin)
+
+The DotNS UI deployed to the **Summit Bulletin chain** and bound to a `.dot` name. Built from `pcf-dotns-ui` **v0.7.1**, deployed 2026-06-10.
+
+| Field | Value |
+| --- | --- |
+| Domain | `summit-net-name-service.dot` |
+| Root CID | `bafybeid7fijq27dia5alqoojr7ht4ha2pg4qod53ocdevpesk5fc3ynwk4` |
+| Contenthash | `0xe301017012207f2a130d7c680740b839c98fcf3e1c1a79b9070fbb70864abc92574a2de1b657` |
+| Owner / deployer | `14M6Yc9i8dg6QLM2u1yd3jaFM2cd3NNvyKznfBaS2q3cNdKy` (EVM `0x7e0e0a5a111aa15b0c1e4bac776884e263fa6b13`) |
+| Bulletin uploader | `5Fk8FBTqBpAyBReZPse2wn8Lf4ADzdNVAsrGoNMSTxKedN8f` (435 blocks / 14.68 MB) |
+| register tx | `0x95721477838ae1de09bfc112e7a0a0fed02caa4cbd507c3f78e90206cb7c4b84` |
+| setContenthash tx | `0x4b4e40293b2332bdfa42cfdbb48a3436cfafdaa365669d0ab066e25d80832c4a` |
