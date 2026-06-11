@@ -88,7 +88,7 @@ Artifacts: [`deployments/summit/`](https://github.com/Polkadot-Community-Foundat
 
 ## npm Packages
 
-PCF-scoped packages published to npm under [`@polkadot-community-foundation`](https://www.npmjs.com/org/polkadot-community-foundation), via the isolated publisher [Polkadot-Community-Foundation/npm-publish-automation](https://github.com/Polkadot-Community-Foundation/npm-publish-automation).
+PCF-scoped packages published to npm under [`@polkadot-community-foundation`](https://www.npmjs.com/org/polkadot-community-foundation).
 
 | Package | Version | Purpose | Source |
 | --- | --- | --- | --- |
