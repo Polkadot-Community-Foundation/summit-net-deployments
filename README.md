@@ -85,3 +85,12 @@ EAS-style attestation layer: schema registry + attestation service (both ownerle
 | AttestationService | `0x40c48a58cdc2797f21325269c4422e717e6510e5` |
 
 Artifacts: [`deployments/summit/`](https://github.com/Polkadot-Community-Foundation/attestation-protocol/tree/main/deployments/summit) in the source repo.
+
+## npm Packages
+
+PCF-scoped packages published to npm under [`@polkadot-community-foundation`](https://www.npmjs.com/org/polkadot-community-foundation), via the isolated publisher [Polkadot-Community-Foundation/npm-publish-automation](https://github.com/Polkadot-Community-Foundation/npm-publish-automation).
+
+| Package | Version | Purpose | Source |
+| --- | --- | --- | --- |
+| [`@polkadot-community-foundation/cdm-env`](https://www.npmjs.com/package/@polkadot-community-foundation/cdm-env) | `2.1.0` | CDM chain env presets; `getRegistryAddress("w3s")` returns the Summit `ContractRegistry` address `0xa5747e60ae27f93e92019e4021abfc4957050141` (see CDM section) | contract-dependency-manager — `@parity/cdm-env` rescoped at publish |
+| `@polkadot-community-foundation/dotns-cli` | _pending_ | DotNS CLI (`dotns`) | dotns-sdk — `pcf-dotns-cli` renamed; publishes on next release |
