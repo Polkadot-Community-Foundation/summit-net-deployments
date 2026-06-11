@@ -93,4 +93,4 @@ PCF-scoped packages published to npm under [`@polkadot-community-foundation`](ht
 | Package | Version | Purpose | Source |
 | --- | --- | --- | --- |
 | [`@polkadot-community-foundation/cdm-env`](https://www.npmjs.com/package/@polkadot-community-foundation/cdm-env) | `2.1.0` | CDM chain env presets; `getRegistryAddress("w3s")` returns the Summit `ContractRegistry` address `0xa5747e60ae27f93e92019e4021abfc4957050141` (see CDM section) | contract-dependency-manager — `@parity/cdm-env` rescoped at publish |
-| `@polkadot-community-foundation/dotns-cli` | _pending_ | DotNS CLI (`dotns`) | dotns-sdk — `pcf-dotns-cli` renamed; publishes on next release |
+| [`@polkadot-community-foundation/dotns-cli`](https://www.npmjs.com/package/@polkadot-community-foundation/dotns-cli) | `0.7.2` | DotNS CLI (`dotns`) | dotns-sdk — `pcf-dotns-cli` renamed |
