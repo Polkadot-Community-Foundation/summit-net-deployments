@@ -38,14 +38,6 @@ ENS-style name service. Source: [Polkadot-Community-Foundation/dotns](https://gi
 
 A client SDK/CLI for DotNS including the changes with the above dotns relevant contract addresses in summit-net is available at [Polkadot-Community-Foundation/dotns-sdk](https://github.com/Polkadot-Community-Foundation/dotns-sdk).
 
-## CDM — Contract Dependency Manager
-
-The CDM `ContractRegistry`. Source: [Polkadot-Community-Foundation/contract-dependency-manager](https://github.com/Polkadot-Community-Foundation/contract-dependency-manager). Deployed 2026-06-11.
-
-| Contract | Address |
-| --- | --- |
-| ContractRegistry | `0xa5747e60ae27f93e92019e4021abfc4957050141` |
-
 ### DotNS UI (web app on Bulletin)
 
 The DotNS UI deployed to the **Summit Bulletin chain** and bound to a `.dot` name. Built from `pcf-dotns-ui` **v0.7.1**, deployed 2026-06-10.
@@ -59,3 +51,16 @@ The DotNS UI deployed to the **Summit Bulletin chain** and bound to a `.dot` nam
 | Bulletin uploader | `5Fk8FBTqBpAyBReZPse2wn8Lf4ADzdNVAsrGoNMSTxKedN8f` (435 blocks / 14.68 MB) |
 | register tx | `0x95721477838ae1de09bfc112e7a0a0fed02caa4cbd507c3f78e90206cb7c4b84` |
 | setContenthash tx | `0x4b4e40293b2332bdfa42cfdbb48a3436cfafdaa365669d0ab066e25d80832c4a` |
+
+## CDM — Contract Dependency Manager
+
+The CDM contract layer: the `ContractRegistry` plus the shared system contracts registered in it. Sources: [contract-dependency-manager](https://github.com/Polkadot-Community-Foundation/contract-dependency-manager) (registry), [contract-developer-tools](https://github.com/Polkadot-Community-Foundation/contract-developer-tools) (system contracts). Deployed 2026-06-11.
+
+| Contract | Package | Address | Metadata CID |
+| --- | --- | --- | --- |
+| ContractRegistry | — | `0xa5747e60ae27f93e92019e4021abfc4957050141` | — |
+| Contexts | `@polkadot/contexts` | `0x9B935075094D7176Afc7e33C5B183109B86B1b6A` | `bafk2bzacebxxftyxsgmbqbqjxg2epgt2cu5efcgqudaeze7mbs2po7exzsbhu` |
+| Disputes | `@mock/disputes` | `0x3671Fe6Ebdd5E2FFCE2EbbD499972900390bdD64` | `bafk2bzaceboepbkvkkqwowok4j7elutfxpofnzoqerkdnmipumggp2w7whkxw` |
+| Profiles | `@polkadot/profiles` | `0x99dAFFC69479297C30815e3a27746f81632dfea1` | `bafk2bzaced4iqgbx7ph5dmri42jy27omodwkrouspwxkyiatiiee57cfi2r5y` |
+| Reputation | `@mock/reputation` | `0x94a9099379EeA0C5093F93E9934a7f6605E7922f` | `bafk2bzacedzebmc33kmrgtynlvlwxdhusuuzoxc5cbasxhfi2xjkg3n4umuxe` |
+| Threads | `@polkadot/threads` | `0xFa1AB6B6aCBb056F5D9952EEDC5C67F1F3162f3A` | `bafk2bzacebp7nmv5h4lp4mov23pzq6no5eati4u3nri3xkpb7cvxz4lri2er4` |
