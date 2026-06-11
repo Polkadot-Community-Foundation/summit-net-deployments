@@ -14,7 +14,7 @@ What has been deployed to the **Summit** network and the on-chain addresses.
 
 ## DotNS
 
-ENS-style name service. Source: [Polkadot-Community-Foundation/dotns](https://github.com/Polkadot-Community-Foundation/dotns). Deployed 2026-06-07.
+ENS-style name service. Source: [Polkadot-Community-Foundation/dotns](https://github.com/Polkadot-Community-Foundation/dotns).
 
 | Contract | Address |
 | --- | --- |
@@ -40,7 +40,7 @@ A client SDK/CLI for DotNS including the changes with the above dotns relevant c
 
 ### DotNS UI (web app on Bulletin)
 
-The DotNS UI deployed to the **Summit Bulletin chain** and bound to a `.dot` name. Built from `pcf-dotns-ui` **v0.7.1**, deployed 2026-06-10.
+The DotNS UI deployed to the **Summit Bulletin chain** and bound to a `.dot` name. Built from `pcf-dotns-ui` **v0.7.1**.
 
 | Field | Value |
 | --- | --- |
@@ -54,7 +54,7 @@ The DotNS UI deployed to the **Summit Bulletin chain** and bound to a `.dot` nam
 
 ## CDM — Contract Dependency Manager
 
-The CDM contract layer: the `ContractRegistry` plus the shared system contracts registered in it. Sources: [contract-dependency-manager](https://github.com/Polkadot-Community-Foundation/contract-dependency-manager) (registry), [contract-developer-tools](https://github.com/Polkadot-Community-Foundation/contract-developer-tools) (system contracts). Deployed 2026-06-11.
+The CDM contract layer: the `ContractRegistry` plus the shared system contracts registered in it. Sources: [contract-dependency-manager](https://github.com/Polkadot-Community-Foundation/contract-dependency-manager) (registry), [contract-developer-tools](https://github.com/Polkadot-Community-Foundation/contract-developer-tools) (system contracts).
 
 | Contract | Package | Address | Metadata CID |
 | --- | --- | --- | --- |
