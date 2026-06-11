@@ -74,3 +74,14 @@ The CDM contract-registry browse hub deployed to the **Summit Bulletin chain** a
 | Domain | `contracts.dot` |
 | URL | https://contracts.dot.li |
 | Root CID | `bafybeid2flilxbxopek7yaifq4gsp6zvbalz46gv2nd7ayvij5znckhqnu` |
+
+## Attestation Protocol
+
+EAS-style attestation layer: schema registry + attestation service (both ownerless). Source: [Polkadot-Community-Foundation/attestation-protocol](https://github.com/Polkadot-Community-Foundation/attestation-protocol). Consumed by `browse`.
+
+| Contract | Address |
+| --- | --- |
+| SchemaRegistry | `0x4d5b7543c380be0446ff9c22b6055990e2aa952a` |
+| AttestationService | `0x40c48a58cdc2797f21325269c4422e717e6510e5` |
+
+Deployed 2026-06-11 by `5Hn6AMFkiAyGFgWCShqAdXFax87uknHa5YXCZmiabFidohQy` (native `Revive.instantiate_with_code`, sr25519). Artifacts: [`deployments/summit/`](https://github.com/Polkadot-Community-Foundation/attestation-protocol/tree/main/deployments/summit) in the source repo.
