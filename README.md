@@ -84,4 +84,4 @@ EAS-style attestation layer: schema registry + attestation service (both ownerle
 | SchemaRegistry | `0x4d5b7543c380be0446ff9c22b6055990e2aa952a` |
 | AttestationService | `0x40c48a58cdc2797f21325269c4422e717e6510e5` |
 
-Deployed 2026-06-11 by `5Hn6AMFkiAyGFgWCShqAdXFax87uknHa5YXCZmiabFidohQy` (native `Revive.instantiate_with_code`, sr25519). Artifacts: [`deployments/summit/`](https://github.com/Polkadot-Community-Foundation/attestation-protocol/tree/main/deployments/summit) in the source repo.
+Artifacts: [`deployments/summit/`](https://github.com/Polkadot-Community-Foundation/attestation-protocol/tree/main/deployments/summit) in the source repo.
