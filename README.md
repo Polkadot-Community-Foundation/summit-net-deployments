@@ -64,3 +64,13 @@ The CDM contract layer: the `ContractRegistry` plus the shared system contracts 
 | Profiles | `@polkadot/profiles` | `0x99dAFFC69479297C30815e3a27746f81632dfea1` | `bafk2bzaced4iqgbx7ph5dmri42jy27omodwkrouspwxkyiatiiee57cfi2r5y` |
 | Reputation | `@mock/reputation` | `0x94a9099379EeA0C5093F93E9934a7f6605E7922f` | `bafk2bzacedzebmc33kmrgtynlvlwxdhusuuzoxc5cbasxhfi2xjkg3n4umuxe` |
 | Threads | `@polkadot/threads` | `0xFa1AB6B6aCBb056F5D9952EEDC5C67F1F3162f3A` | `bafk2bzacebp7nmv5h4lp4mov23pzq6no5eati4u3nri3xkpb7cvxz4lri2er4` |
+
+### CDM Frontend (browse hub on Bulletin)
+
+The CDM contract-registry browse hub deployed to the **Summit Bulletin chain** and bound to a `.dot` name. Built from `@parity/cdm-frontend`; defaults to the W3S/Summit network.
+
+| Field | Value |
+| --- | --- |
+| Domain | `contracts.dot` |
+| URL | https://contracts.dot.li |
+| Root CID | `bafybeid2flilxbxopek7yaifq4gsp6zvbalz46gv2nd7ayvij5znckhqnu` |
