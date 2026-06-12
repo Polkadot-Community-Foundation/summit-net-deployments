@@ -113,14 +113,29 @@ Conference app (soulbound tickets, attendance POAPs, composable sessions) + two 
 
 Deployed 2026-06-12 by `5Hn6AMFkiAyGFgWCShqAdXFax87uknHa5YXCZmiabFidohQy` (EVM `0xc53bb1eeac9b01bbd8161f3e9af1b0626e52a7e7`) — holds `DEFAULT_ADMIN_ROLE`/`MANAGER_ROLE`. Native `Revive.instantiate_with_code` (sr25519), stock Foundry (cancun EVM bytecode, no resolc).
 
-### Festival apps (web app on Bulletin) — domains registered ✅, content _pending_
+### Festival apps (web app on Bulletin) — ✅ live
 
-Two Nuxt SPAs to be published to the **Summit Bulletin chain**, bound to two `.dot` names. Publisher/owner = `5Fk8FBTqBpAyBReZPse2wn8Lf4ADzdNVAsrGoNMSTxKedN8f` (EVM `0xF8d186c352e2ea0B9C02c211525A20DdcB8CD2dD`). Both names **registered 2026-06-12** to `5Fk8` (verified on-chain; ≥9-char → NoStatus, no personhood).
+Two Nuxt SPAs published to the **Summit Bulletin chain**, bound to two `.dot` names (registered 2026-06-12, ≥9-char → NoStatus, no personhood). Publisher/owner/uploader = `5Fk8FBTqBpAyBReZPse2wn8Lf4ADzdNVAsrGoNMSTxKedN8f` (EVM `0xF8d186c352e2ea0B9C02c211525A20DdcB8CD2dD`) — direct-signer uploads (`bulletin-deploy --mnemonic`, 5Fk8 Bulletin-authorized). Content bindings verified on-chain (`DotnsContentResolver.contenthash(namehash(name))`).
 
-| App | Domain | Registered | Root CID |
+| App | Domain | URL | Root CID |
 | --- | --- | --- | --- |
-| Admin SPA (+ announcements worker) | `web3summit-admin.dot` | ✅ → `5Fk8` | _pending_ |
-| Attendee SPA | `web3summit.dot` | ✅ → `5Fk8` | _pending_ |
+| Admin SPA | `web3summit-admin.dot` | https://web3summit-admin.dot.li | `bafybeihuuc6poyiwu32d6uaeflffeb3mpvxbnrahjnolah2hfhbudk52ku` |
+| Attendee SPA | `web3summit.dot` | https://web3summit.dot.li | `bafybeigkjfmdjmsjtpko4ivlsgzdg47ooocxz4o3xbtfz7hndv2vr552ta` |
+
+> Bulletin storage expires after ~14 days (201600 blocks) — renew before then (`enable_auto_renew` / `refresh_account_authorization`); see `BULLETIN_DEPLOY_MODEL.md` §9.
+
+## dotli — the public web gateway (dot.li)
+
+The dotli `.dot` browser serving **Summit** as its default network, live at **https://dot.li** — a full production cutover from the legacy paritytech box (2026-06-12). Source: [Polkadot-Community-Foundation/dotli-community](https://github.com/Polkadot-Community-Foundation/dotli-community) (`main`, PR #1). **No on-chain artifact** — a self-hosted nginx service; pure DotNS consumer (reads the Registry + ContentResolver above via RPC gateway, "Trusted" mode — Summit parachain chainspecs unpublished).
+
+| Field | Value |
+| --- | --- |
+| Domain | `dot.li` (+ `*.dot.li`, `*.app.dot.li` — three-origin architecture) |
+| Host | GCP `pcf-summit-dotli` (infra repo PR #4), reserved IP `35.198.77.216` |
+| DNS | **Comlaude** (NS transfer refused → records managed there; Cloudflare unused) |
+| TLS | Let's Encrypt wildcard via acme.sh **manual DNS-01**, SANs `dot.li *.dot.li *.app.dot.li` — ⏰ **expires 2026-09-10, NO auto-renew yet** (CNAME-delegation follow-up pending) |
+| Deployed | 2026-06-12, `make deploy` (build:prod on-box) + manual cert + `make deploy-nginx` |
+| Network default | `summit` (rpc-gateway-only); existing users' localStorage network selections preserved |
 
 ## npm Packages
 
