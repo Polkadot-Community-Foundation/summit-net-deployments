@@ -100,14 +100,14 @@ Conference app (soulbound tickets, attendance POAPs, composable sessions) + two 
 
 Deployed 2026-06-12 by `5Hn6AMFkiAyGFgWCShqAdXFax87uknHa5YXCZmiabFidohQy` (EVM `0xc53bb1eeac9b01bbd8161f3e9af1b0626e52a7e7`) — holds `DEFAULT_ADMIN_ROLE`/`MANAGER_ROLE`. Native `Revive.instantiate_with_code` (sr25519), stock Foundry (cancun EVM bytecode, no resolc).
 
-### Festival apps (web app on Bulletin) — _pending_
+### Festival apps (web app on Bulletin) — domains registered ✅, content _pending_
 
-Two Nuxt SPAs to be published to the **Summit Bulletin chain** and bound to two `.dot` names. Publisher/owner = `5Fk8…`.
+Two Nuxt SPAs to be published to the **Summit Bulletin chain**, bound to two `.dot` names. Publisher/owner = `5Fk8FBTqBpAyBReZPse2wn8Lf4ADzdNVAsrGoNMSTxKedN8f` (EVM `0xF8d186c352e2ea0B9C02c211525A20DdcB8CD2dD`). Both names **registered 2026-06-12** to `5Fk8` (verified on-chain; ≥9-char → NoStatus, no personhood).
 
-| App | Domain | Root CID |
-| --- | --- | --- |
-| Admin SPA (+ announcements worker) | `web3summit-admin.dot` | _pending_ |
-| Attendee SPA | `web3summit.dot` | _pending_ |
+| App | Domain | Registered | Root CID |
+| --- | --- | --- | --- |
+| Admin SPA (+ announcements worker) | `web3summit-admin.dot` | ✅ → `5Fk8` | _pending_ |
+| Attendee SPA | `web3summit.dot` | ✅ → `5Fk8` | _pending_ |
 
 ## npm Packages
 
