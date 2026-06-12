@@ -99,9 +99,30 @@ EAS-style attestation layer: schema registry + attestation service (both ownerle
 
 Artifacts: [`deployments/summit/`](https://github.com/Polkadot-Community-Foundation/attestation-protocol/tree/main/deployments/summit) in the source repo.
 
+## Browse
+
+Privacy-app directory ("Home for privacy apps"). Source: [Polkadot-Community-Foundation/browse](https://github.com/Polkadot-Community-Foundation/browse). Deployer / Publisher owner / `browse.dot` owner / uploader = `5Fk8FBTqBpAyBReZPse2wn8Lf4ADzdNVAsrGoNMSTxKedN8f` (EVM `0xF8d186c352e2ea0B9C02c211525A20DdcB8CD2dD`).
+
+| Contract | Address |
+| --- | --- |
+| Publisher (v2.1.0) | `0xf5fe0fc9f4c13dfd3a4a8abd27e64eb652157494` |
+| RecipientAndAttesterIndexResolver | `0xa2ea4ab49bbe73f466f2fa0aeb50b39d34b55218` |
+| TrustedAttesterIndexResolver | `0xde4a63079034230d71b5a5071571ed3fd95194e0` |
+
+Schemas (in the shared SchemaRegistry): id `1` = `bool like` (resolver = the index resolver) · id `2` = `bool compliant`, unique (resolver = the trusted resolver). Trusted attester = `5HECKTpBe95rgbptG812Gh61VH3pjDfhgtE6xq5mHvRSUSo3` (EVM `0xeB686805D91dB3637258d0d21DefC06d0dA3a8C9`).
+
+### Browse app (web app on Bulletin) — ✅ live
+
+| Field | Value |
+| --- | --- |
+| Domain | `browse.dot` |
+| URL | https://browse.dot.li |
+| Root CID | `bafybeig6oyro2d337o22igjfmr4u7ctprucxkn3zomdluk4cazzrmtriea` |
+| Owner / uploader | `5Fk8FBTqBpAyBReZPse2wn8Lf4ADzdNVAsrGoNMSTxKedN8f` |
+
 ## Festival
 
-Conference app (soulbound tickets, attendance POAPs, composable sessions) + two Nuxt SPAs. Self-contained — no cross-repo contract dependency. Source: [Polkadot-Community-Foundation/festival](https://github.com/Polkadot-Community-Foundation/festival).
+Conference app (soulbound tickets, attendance POAPs, composable sessions) + two Nuxt SPAs. Self-contained. Source: [Polkadot-Community-Foundation/festival](https://github.com/Polkadot-Community-Foundation/festival).
 
 | Contract | Address |
 | --- | --- |
@@ -109,7 +130,7 @@ Conference app (soulbound tickets, attendance POAPs, composable sessions) + two 
 | Festival POAP (AttendancePOAP) | `0x22127c13ee2abd2280c2e56bf3b7fff82d24ef75` |
 | Session POAP (AttendancePOAP) | `0x55a0fced4cf4f2e50570ae27ce9a037b99579578` |
 | Festival | `0xd75f84d9593bd2cf61dbf3670cc94f771050a99a` |
-| FestivalSession (orphan, code-registration only) | `0x50a70807bbb6eec19840ad46b0cb508f8c6cd99e` |
+| FestivalSession | `0x50a70807bbb6eec19840ad46b0cb508f8c6cd99e` |
 
 Deployed by `5Hn6AMFkiAyGFgWCShqAdXFax87uknHa5YXCZmiabFidohQy` (EVM `0xc53bb1eeac9b01bbd8161f3e9af1b0626e52a7e7`).
 
@@ -121,6 +142,20 @@ Two Nuxt SPAs published to the **Summit Bulletin chain**, bound to two `.dot` na
 | --- | --- | --- | --- |
 | Admin SPA | `web3summit-admin.dot` | https://web3summit-admin.dot.li | `bafybeihuuc6poyiwu32d6uaeflffeb3mpvxbnrahjnolah2hfhbudk52ku` |
 | Attendee SPA | `web3summit.dot` | https://web3summit.dot.li | `bafybeigkjfmdjmsjtpko4ivlsgzdg47ooocxz4o3xbtfz7hndv2vr552ta` |
+
+## Webviews (web apps on Bulletin) — ✅ live
+
+Two static webviews embedded by the Polkadot superapp clients (android/ios/desktop): the game-results
+viewer and the pocket-collectibles viewer.. Deployed with
+[`@polkadot-community-foundation/polkadot-app-deploy@0.10.1`](https://www.npmjs.com/package/@polkadot-community-foundation/polkadot-app-deploy). Owner / uploader =
+`5Fk8FBTqBpAyBReZPse2wn8Lf4ADzdNVAsrGoNMSTxKedN8f` (EVM `0xF8d186c352e2ea0B9C02c211525A20DdcB8CD2dD`).
+Sources: [game-results-webview](https://github.com/Polkadot-Community-Foundation/game-results-webview) ·
+[pocket-collectibles-webview](https://github.com/Polkadot-Community-Foundation/pocket-collectibles-webview).
+
+| App | Domain | URL | Root CID |
+| --- | --- | --- | --- |
+| Game results | `game-results-webview.dot` | https://game-results-webview.dot.li | `bafybeichlyq74h5fpdlwdt4cn5ivmkxlbp4tdusrmoldedhzo4ilk4luby` |
+| Pocket collectibles | `collectibles-webview.dot` | https://collectibles-webview.dot.li | `bafybeieqx7p6rccwid3xjvxpksz3piwfn37brwa2eatpd2lud2b53xmhye` |
 
 ## dotli — the public web gateway (dot.li)
 
@@ -139,3 +174,4 @@ PCF-scoped packages published to npm under [`@polkadot-community-foundation`](ht
 | --- | --- | --- | --- |
 | [`@polkadot-community-foundation/cdm-env`](https://www.npmjs.com/package/@polkadot-community-foundation/cdm-env) | `2.1.0` | CDM chain env presets; `getRegistryAddress("w3s")` returns the Summit `ContractRegistry` address `0xa5747e60ae27f93e92019e4021abfc4957050141` (see CDM section) | contract-dependency-manager — `@parity/cdm-env` rescoped at publish |
 | [`@polkadot-community-foundation/dotns-cli`](https://www.npmjs.com/package/@polkadot-community-foundation/dotns-cli) | `0.7.2` | DotNS CLI (`dotns`) | dotns-sdk — `pcf-dotns-cli` renamed |
+| [`@polkadot-community-foundation/polkadot-app-deploy`](https://www.npmjs.com/package/@polkadot-community-foundation/polkadot-app-deploy) | `0.10.1` | Bulletin app-deploy CLI (`polkadot-app-deploy`/`pad`); npm-legacy name `bulletin-deploy`. Carries the **manifest direct-signer fix** (manifest/icon/widget uploads sign with `--mnemonic`, not the unauthorized pool) | polkadot-app-deploy — `@parity/polkadot-app-deploy` rescoped at publish |
