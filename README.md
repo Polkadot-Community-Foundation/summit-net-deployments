@@ -86,6 +86,29 @@ EAS-style attestation layer: schema registry + attestation service (both ownerle
 
 Artifacts: [`deployments/summit/`](https://github.com/Polkadot-Community-Foundation/attestation-protocol/tree/main/deployments/summit) in the source repo.
 
+## Festival
+
+Conference app (soulbound tickets, attendance POAPs, composable sessions) + two Nuxt SPAs. Self-contained — no cross-repo contract dependency. Source: [Polkadot-Community-Foundation/festival](https://github.com/Polkadot-Community-Foundation/festival).
+
+| Contract | Address |
+| --- | --- |
+| Multicall3 | `0x6749bd94dc0d68fb7f829e0bf3422ad324d5fe53` |
+| Festival POAP (AttendancePOAP) | `0x22127c13ee2abd2280c2e56bf3b7fff82d24ef75` |
+| Session POAP (AttendancePOAP) | `0x55a0fced4cf4f2e50570ae27ce9a037b99579578` |
+| Festival | `0xd75f84d9593bd2cf61dbf3670cc94f771050a99a` |
+| FestivalSession (orphan, code-registration only) | `0x50a70807bbb6eec19840ad46b0cb508f8c6cd99e` |
+
+Deployed 2026-06-12 by `5Hn6AMFkiAyGFgWCShqAdXFax87uknHa5YXCZmiabFidohQy` (EVM `0xc53bb1eeac9b01bbd8161f3e9af1b0626e52a7e7`) — holds `DEFAULT_ADMIN_ROLE`/`MANAGER_ROLE`. Native `Revive.instantiate_with_code` (sr25519), stock Foundry (cancun EVM bytecode, no resolc).
+
+### Festival apps (web app on Bulletin) — _pending_
+
+Two Nuxt SPAs to be published to the **Summit Bulletin chain** and bound to two `.dot` names. Publisher/owner = `5Fk8…`.
+
+| App | Domain | Root CID |
+| --- | --- | --- |
+| Admin SPA (+ announcements worker) | `web3summit-admin.dot` | _pending_ |
+| Attendee SPA | `web3summit.dot` | _pending_ |
+
 ## npm Packages
 
 PCF-scoped packages published to npm under [`@polkadot-community-foundation`](https://www.npmjs.com/org/polkadot-community-foundation).
