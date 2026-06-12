@@ -12,6 +12,19 @@ What has been deployed to the **Summit** network and the on-chain addresses.
 | SS58 prefix | `0` |
 | Asset Hub RPC | `wss://summit-asset-hub-rpc.polkadot.io` |
 
+## Ownership & control
+
+Who controls each deployment (verified on-chain via `owner()` / role reads, 2026-06-12):
+
+| Deployment | Control model | Controlling account |
+| --- | --- | --- |
+| **DotNS** (all contracts) | `Ownable` — `owner()` | `0x8c78b53f2ceaf395fda66152d7a5e6e7a79db675` — the **raw secp256k1 DotNS deployer key** (an EVM key, *not* an sr25519/mapped account; sign EVM txs via the eth-RPC). Also gates the registrar whitelist + `registerReserved`. |
+| **CDM** `ContractRegistry` | `AccessControl` (no `owner()`) | `DEFAULT_ADMIN_ROLE` → `5Hn6AMFkiAyGFgWCShqAdXFax87uknHa5YXCZmiabFidohQy` (H160 `0xc53bb1eeac9b01bbd8161f3e9af1b0626e52a7e7`) |
+| **Attestation** (SchemaRegistry, AttestationService) | **ownerless** — no admin, immutable | — |
+| **Festival** (Festival, both POAPs) | `AccessControl` (no `owner()`) | `DEFAULT_ADMIN_ROLE` / `MANAGER_ROLE` → `5Hn6AMFkiAyGFgWCShqAdXFax87uknHa5YXCZmiabFidohQy` (H160 `0xc53bb1eeac9b01bbd8161f3e9af1b0626e52a7e7`) |
+
+> **DotNS owner override.** The DotNS owner can register any `.dot` label — including 6–8-char names that normally require PopFull personhood — via `DotnsRegistrarController.registerReserved()` (`onlyWhiteListedOrOwner`, price 0, no PoP check). Personhood itself is sourced from an external People-chain precompile and is **not** grantable on-chain. For first-party names only. Tooling: `summit-deployer-skills/guides/_tools/register-reserved-name.mjs`.
+
 ## DotNS
 
 ENS-style name service. Source: [Polkadot-Community-Foundation/dotns](https://github.com/Polkadot-Community-Foundation/dotns).
