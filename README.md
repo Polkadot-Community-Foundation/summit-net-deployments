@@ -22,6 +22,7 @@ Who controls each deployment (verified on-chain via `owner()` / role reads):
 | **CDM** `ContractRegistry` | `AccessControl` (no `owner()`) | `DEFAULT_ADMIN_ROLE` → `5Hn6AMFkiAyGFgWCShqAdXFax87uknHa5YXCZmiabFidohQy` (H160 `0xc53bb1eeac9b01bbd8161f3e9af1b0626e52a7e7`) |
 | **Attestation** (SchemaRegistry, AttestationService) | **ownerless** — no admin, immutable | — |
 | **Festival** (Festival, both POAPs) | `AccessControl` (no `owner()`) | `DEFAULT_ADMIN_ROLE` / `MANAGER_ROLE` → `5Hn6AMFkiAyGFgWCShqAdXFax87uknHa5YXCZmiabFidohQy` (H160 `0xc53bb1eeac9b01bbd8161f3e9af1b0626e52a7e7`) |
+| **t3rminal** (T3rminalBulletinIndex) | **ownerless** — no admin, writes permissionless | — (the `t3rminal.dot` / `terminal.dot` names are owned by `5Fk8…`, registered via the DotNS owner override) |
 
 > **DotNS owner override.** The DotNS owner can register any `.dot` label — including 6–8-char names that normally require PopFull personhood — via `DotnsRegistrarController.registerReserved()` (`onlyWhiteListedOrOwner`, price 0, no PoP check). Personhood itself is sourced from an external People-chain precompile and is **not** grantable on-chain. For first-party names only. Tooling: `summit-deployer-skills/guides/_tools/register-reserved-name.mjs`.
 
@@ -154,6 +155,25 @@ Sources: [game-results-webview](https://github.com/Polkadot-Community-Foundation
 | --- | --- | --- | --- |
 | Game results | `game-results-webview.dot` | https://game-results-webview.dot.li | `bafybeichlyq74h5fpdlwdt4cn5ivmkxlbp4tdusrmoldedhzo4ilk4luby` |
 | Pocket collectibles | `collectibles-webview.dot` | https://collectibles-webview.dot.li | `bafybeieqx7p6rccwid3xjvxpksz3piwfn37brwa2eatpd2lud2b53xmhye` |
+
+## t3rminal
+
+Point-of-sale terminal: accepts payments and anchors signed daily sales reports on-chain. The contract only **indexes** report CIDs (keyed by merchant+terminal+date, with a `finalize` lock); the report bytes live on Bulletin. **Writes are permissionless** — no admin/owner. Source: [Polkadot-Community-Foundation/t3rminal](https://github.com/Polkadot-Community-Foundation/t3rminal).
+
+| Contract | Address |
+| --- | --- |
+| T3rminalBulletinIndex | `0x10acbce7ea2fb859ef7c2caab29c0babb8b91803` |
+
+Prebuilt PolkaVM blob — code hash `0x47143defb9b966a31ec75f83cf54ba76231578280e4a9893d15f3afaa95245d3`. Deployed by `5Hn6AMFkiAyGFgWCShqAdXFax87uknHa5YXCZmiabFidohQy` (EVM `0xc53bb1eeac9b01bbd8161f3e9af1b0626e52a7e7`); deploy tx `0x06be2f41732213d2a8316ecfd08823e669332af27d44b01c320d7f3356c2f930`.
+
+### t3rminal app (web app on Bulletin) — ✅ live
+
+Static Next.js export published to the **Summit Bulletin chain**, bound to **two** `.dot` names — each a full product manifest (`app.<name>` subname holding the app contenthash, plus `text[manifest]` + `text[executable]` records on the root; shared icon CID `bafk2bzacebqw4qplfbh3g6h6ypipxvanbiyzrbg4imruyh43f2fcm3jccp3fi`). Both names registered via the **DotNS owner override** (`registerReserved`) and owned by `5Fk8FBTqBpAyBReZPse2wn8Lf4ADzdNVAsrGoNMSTxKedN8f` (EVM `0xF8d186c352e2ea0B9C02c211525A20DdcB8CD2dD`), which is also the Bulletin uploader. The CLI bakes the target domain into each bundle, so the two names carry **distinct CIDs** (same app, same source build). Deployed with [`@polkadot-community-foundation/polkadot-app-deploy@0.10.1`](https://www.npmjs.com/package/@polkadot-community-foundation/polkadot-app-deploy).
+
+| Name | URL | App CID (on `app.<name>`) |
+| --- | --- | --- |
+| `t3rminal.dot` | https://t3rminal.dot.li | `bafybeibwpj54mrm62fuzrpesianvzfnwgowln7juipjbbhgp6puhut5yau` |
+| `terminal.dot` | https://terminal.dot.li | `bafybeig5gghipthmzr3wowyi3wunnjbkqlgrcdh4hyzs27fapceo3e7tha` |
 
 ## dotli — the public web gateway (dot.li)
 
