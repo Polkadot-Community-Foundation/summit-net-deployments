@@ -14,7 +14,7 @@ What has been deployed to the **Summit** network and the on-chain addresses.
 
 ## Ownership & control
 
-Who controls each deployment (verified on-chain via `owner()` / role reads, 2026-06-12):
+Who controls each deployment (verified on-chain via `owner()` / role reads):
 
 | Deployment | Control model | Controlling account |
 | --- | --- | --- |
@@ -57,13 +57,11 @@ The DotNS UI deployed to the **Summit Bulletin chain** and bound to a `.dot` nam
 
 | Field | Value |
 | --- | --- |
-| Domain | `summit-net-name-service.dot` |
-| Root CID | `bafybeid7fijq27dia5alqoojr7ht4ha2pg4qod53ocdevpesk5fc3ynwk4` |
-| Contenthash | `0xe301017012207f2a130d7c680740b839c98fcf3e1c1a79b9070fbb70864abc92574a2de1b657` |
+| Domain | `dotns.dot` |
+| Root CID | `bafybeid6x63k3b3opmjkcfmlwagmtmdavwhher4mswzxijw7rm2olwozau` |
+| Contenthash | `0xe301017012207ebfb6ad876e7b12a1158bb00cc9b060ad8e72478c95b37426df8b34e5d9d905` |
 | Owner / deployer | `14M6Yc9i8dg6QLM2u1yd3jaFM2cd3NNvyKznfBaS2q3cNdKy` (EVM `0x7e0e0a5a111aa15b0c1e4bac776884e263fa6b13`) |
-| Bulletin uploader | `5Fk8FBTqBpAyBReZPse2wn8Lf4ADzdNVAsrGoNMSTxKedN8f` (435 blocks / 14.68 MB) |
-| register tx | `0x95721477838ae1de09bfc112e7a0a0fed02caa4cbd507c3f78e90206cb7c4b84` |
-| setContenthash tx | `0x4b4e40293b2332bdfa42cfdbb48a3436cfafdaa365669d0ab066e25d80832c4a` |
+| Bulletin uploader | `5Fk8FBTqBpAyBReZPse2wn8Lf4ADzdNVAsrGoNMSTxKedN8f` (~448 chunks / 15.4 MB) |
 
 ## CDM — Contract Dependency Manager
 
