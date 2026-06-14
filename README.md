@@ -23,6 +23,7 @@ Who controls each deployment (verified on-chain via `owner()` / role reads):
 | **Attestation** (SchemaRegistry, AttestationService) | **ownerless** — no admin, immutable | — |
 | **Festival** (Festival, both POAPs) | `AccessControl` (no `owner()`) | `DEFAULT_ADMIN_ROLE` / `MANAGER_ROLE` → `5Hn6AMFkiAyGFgWCShqAdXFax87uknHa5YXCZmiabFidohQy` (H160 `0xc53bb1eeac9b01bbd8161f3e9af1b0626e52a7e7`) |
 | **t3rminal** (T3rminalBulletinIndex) | **ownerless** — no admin, writes permissionless | — (the `t3rminal.dot` / `terminal.dot` names are owned by `5Fk8…`, registered via the DotNS owner override) |
+| **Playground** (`@w3s/playground-registry`) | `sudo` — set to the deployer in the constructor, immutable (no `set_sudo`/`transfer_sudo`) | `5Fk8FBTqBpAyBReZPse2wn8Lf4ADzdNVAsrGoNMSTxKedN8f` (H160 `0xf8d186c352e2ea0b9c02c211525a20ddcb8cd2dd`) — same key owns `playground.dot` + the `playground.dot` context |
 
 > **DotNS owner override.** The DotNS owner can register any `.dot` label — including 6–8-char names that normally require PopFull personhood — via `DotnsRegistrarController.registerReserved()` (`onlyWhiteListedOrOwner`, price 0, no PoP check). Personhood itself is sourced from an external People-chain precompile and is **not** grantable on-chain. For first-party names only. Tooling: `summit-deployer-skills/guides/_tools/register-reserved-name.mjs`.
 
@@ -54,15 +55,17 @@ A client SDK/CLI for DotNS including the changes with the above dotns relevant c
 
 ### DotNS UI (web app on Bulletin)
 
-The DotNS UI deployed to the **Summit Bulletin chain** and bound to a `.dot` name. Built from `pcf-dotns-ui` **v0.7.1**.
+The DotNS UI deployed to the **Summit Bulletin chain** and bound to a `.dot` name. Built from the `dotns-sdk` `main` branch (`packages/ui`).
 
 | Field | Value |
 | --- | --- |
 | Domain | `dotns.dot` |
-| Root CID | `bafybeid6x63k3b3opmjkcfmlwagmtmdavwhher4mswzxijw7rm2olwozau` |
-| Contenthash | `0xe301017012207ebfb6ad876e7b12a1158bb00cc9b060ad8e72478c95b37426df8b34e5d9d905` |
+| Root CID | `bafybeiggzry5xc4ewcb6by7vh3dz7q3afhl5qk5kdufnla2vpajh2g5bha` |
+| Contenthash | `0xe30101701220c6cc71db8b84b083e0e3f53ec79fc36029d7d82baa1d0ad5835578127d1ba138` |
 | Owner / deployer | `14M6Yc9i8dg6QLM2u1yd3jaFM2cd3NNvyKznfBaS2q3cNdKy` (EVM `0x7e0e0a5a111aa15b0c1e4bac776884e263fa6b13`) |
-| Bulletin uploader | `5Fk8FBTqBpAyBReZPse2wn8Lf4ADzdNVAsrGoNMSTxKedN8f` (~448 chunks / 15.4 MB) |
+| Bulletin uploader | `5Fk8FBTqBpAyBReZPse2wn8Lf4ADzdNVAsrGoNMSTxKedN8f` |
+| Last redeploy | 2026-06-14 — retarget user-facing tooling references to upstream paritytech (dotns-sdk PR #10); `setContenthash` tx `0x63c172b70218b09ac6ca1e440ac193bb9c8abb00ffe870b4b71e25d4a449047b` |
+| Previous CID (rollback) | `bafybeid6x63k3b3opmjkcfmlwagmtmdavwhher4mswzxijw7rm2olwozau` (contenthash `0xe301017012207ebfb6ad876e7b12a1158bb00cc9b060ad8e72478c95b37426df8b34e5d9d905`) |
 
 ## CDM — Contract Dependency Manager
 
@@ -175,6 +178,62 @@ Static Next.js export published to the **Summit Bulletin chain**, bound to **two
 | `t3rminal.dot` | https://t3rminal.dot.li | `bafybeibwpj54mrm62fuzrpesianvzfnwgowln7juipjbbhgp6puhut5yau` |
 | `terminal.dot` | https://terminal.dot.li | `bafybeig5gghipthmzr3wowyi3wunnjbkqlgrcdh4hyzs27fapceo3e7tha` |
 
+## w3spay-admin
+
+W3sPay pilot **admin console**: registers merchant terminals on chain, manages item/processor configs and merchant profiles, and reads the t3rminal daily sales reports (via the [t3rminal](#t3rminal) `T3rminalBulletinIndex`). Two legs — the `W3SPayRegistry` contract (pallet-revive on Summit Asset Hub) + a Vite SPA on Bulletin bound to `w3spayadmin.dot`. The sibling customer-checkout app [w3spay](https://github.com/Polkadot-Community-Foundation/w3spay) consumes this registry. Source: [Polkadot-Community-Foundation/w3spay-admin](https://github.com/Polkadot-Community-Foundation/w3spay-admin). Deployed with [`@polkadot-community-foundation/polkadot-app-deploy@0.10.1`](https://www.npmjs.com/package/@polkadot-community-foundation/polkadot-app-deploy).
+
+| Contract | Address |
+| --- | --- |
+| W3SPayRegistry | `0xf76dadbbc112738275ed398d15c0e8c47b2550f2` |
+
+Deployed via `Revive.instantiate_with_code` by `5Hn6AMFkiAyGFgWCShqAdXFax87uknHa5YXCZmiabFidohQy` (EVM `0xc53bb1eeac9b01bbd8161f3e9af1b0626e52a7e7`); deploy tx `0xffba02270496cef84cc2993f1bdfce45dacc3693680b5b970873151674da42d5`. The deployer's H160 is the registry **owner**, implicitly **super-admin** + **admin** (it grants/revokes further admins); the owner cannot be demoted.
+
+### w3spay-admin app (web app on Bulletin) — ✅ live
+
+Static Vite SPA published to the **Summit Bulletin chain**, bound to `w3spayadmin.dot` — a full product manifest (`app.w3spayadmin.dot` subname holding the app contenthash, plus `text[manifest]` + `text[executable]` records on the root; icon CID `bafk2bzacecbcnneve3ge3h2dbc2522nvwbbzbstwit3wvcuzj7uzlhoqhwdvo`). Owned by / uploaded with `5Fk8FBTqBpAyBReZPse2wn8Lf4ADzdNVAsrGoNMSTxKedN8f` (EVM `0xF8d186c352e2ea0B9C02c211525A20DdcB8CD2dD`), the Bulletin uploader.
+
+| Name | URL | App CID (on `app.<name>`) |
+| --- | --- | --- |
+| `w3spayadmin.dot` | https://w3spayadmin.dot.li | `bafybeihk6ugqrpdbkphtvuwszowiiawp2pejuym3uo5iffbdw3juf72gmi` |
+
+## Playground
+
+Registry browser + quest platform for the Web3 Summit Developer Lab ("build and mod sovereign apps on Polkadot"). A CDM-chain app: an on-chain registry contract (`@w3s/playground-registry`, deployed via CDM, depends on `@mock/reputation` + `@polkadot/contexts`) + a Vite SPA on Bulletin bound to `playground.dot`. Source: [Polkadot-Community-Foundation/playground-app-community](https://github.com/Polkadot-Community-Foundation/playground-app-community). Deployer / registry `sudo` / `playground.dot` owner / uploader = `5Fk8FBTqBpAyBReZPse2wn8Lf4ADzdNVAsrGoNMSTxKedN8f` (EVM `0xF8d186c352e2ea0B9C02c211525A20DdcB8CD2dD`).
+
+| Contract | Package | Address | Metadata CID |
+| --- | --- | --- | --- |
+| Registry | `@w3s/playground-registry` | `0x14C27954796575C26c85eD9BC6441522e174a0f3` | `bafk2bzaceai6hn6a7ewu5ld76j3okvsja3oj5mltyhzrpztimmlcx7n5zsi5g` |
+
+Registered in the CDM `ContractRegistry` (`0xa5747e60…`). The `playground.dot` context (id `0x504a3e4ea91bf009c9e8b8349ef8bacac9da95718282ed3c5140c74dd6849958`) is registered on `@polkadot/contexts` with owner `5Fk8…`, and the registry contract is authorized as an operator on it.
+
+### Playground app (web app on Bulletin) — ✅ live
+
+The Vite SPA published to the **Summit Bulletin chain**, bound to `playground.dot` with a full product manifest (`app.playground.dot` subname + `text[manifest]` record + icon). Deployed via [`@polkadot-community-foundation/polkadot-app-deploy@0.10.1`](https://www.npmjs.com/package/@polkadot-community-foundation/polkadot-app-deploy) (CI auto-deploy on merge to `main`).
+
+| Field | Value |
+| --- | --- |
+| Domain | `playground.dot` |
+| URL | https://playground.dot.li |
+| Root CID | `bafybeiexv7rtjnetdtk5xrkgycobbao73sgtyrcpmeu77w2hf2efdcmq3q` |
+| Icon CID | `bafk2bzacebnksskzlxrcaist4qabrseb73mmsevrot7emwki3ljijnbj6z2r4` |
+| Owner / uploader | `5Fk8FBTqBpAyBReZPse2wn8Lf4ADzdNVAsrGoNMSTxKedN8f` |
+
+## dotli Starter (web app on Bulletin) — ✅ live
+
+The `dotli-starter` template app published to the **Summit Bulletin chain** and bound to a `.dot` name. A
+plain HTML/CSS/JS Vite SPA (no React) demonstrating the `@parity/product-sdk-host` flow against **Summit
+Asset Hub**; deployed by the repo's own CI (`deploy-summit.yml`) with
+[`@polkadot-community-foundation/polkadot-app-deploy@0.10.1`](https://www.npmjs.com/package/@polkadot-community-foundation/polkadot-app-deploy)
+(`--env summit --mnemonic`). The `.dot` name was registered fresh during the first deploy. Source:
+[Polkadot-Community-Foundation/dotli-starter](https://github.com/Polkadot-Community-Foundation/dotli-starter).
+
+| Field | Value |
+| --- | --- |
+| Domain | `dotli-starter.dot` |
+| URL | https://dotli-starter.dot.li |
+| Root CID | `bafybeieekbrschbyclzsw4cjcs5wjcbisqkbkvwyfnn3ilzey6xifck2d4` |
+| Owner / uploader | `5Fk8FBTqBpAyBReZPse2wn8Lf4ADzdNVAsrGoNMSTxKedN8f` (EVM `0xF8d186c352e2ea0B9C02c211525A20DdcB8CD2dD`) |
+
 ## dotli — the public web gateway (dot.li)
 
 The dotli `.dot` browser serving **Summit** as its default network, live at **https://dot.li** — a full production cutover from paritytech. Source: [Polkadot-Community-Foundation/dotli-community](https://github.com/Polkadot-Community-Foundation/dotli-community).
@@ -193,3 +252,4 @@ PCF-scoped packages published to npm under [`@polkadot-community-foundation`](ht
 | [`@polkadot-community-foundation/cdm-env`](https://www.npmjs.com/package/@polkadot-community-foundation/cdm-env) | `2.1.0` | CDM chain env presets; `getRegistryAddress("w3s")` returns the Summit `ContractRegistry` address `0xa5747e60ae27f93e92019e4021abfc4957050141` (see CDM section) | contract-dependency-manager — `@parity/cdm-env` rescoped at publish |
 | [`@polkadot-community-foundation/dotns-cli`](https://www.npmjs.com/package/@polkadot-community-foundation/dotns-cli) | `0.7.2` | DotNS CLI (`dotns`) | dotns-sdk — `pcf-dotns-cli` renamed |
 | [`@polkadot-community-foundation/polkadot-app-deploy`](https://www.npmjs.com/package/@polkadot-community-foundation/polkadot-app-deploy) | `0.10.1` | Bulletin app-deploy CLI (`polkadot-app-deploy`/`pad`); npm-legacy name `bulletin-deploy`. Carries the **manifest direct-signer fix** (manifest/icon/widget uploads sign with `--mnemonic`, not the unauthorized pool) | polkadot-app-deploy — `@parity/polkadot-app-deploy` rescoped at publish |
+| [`@polkadot-community-foundation/cdm-cli`](https://www.npmjs.com/package/@polkadot-community-foundation/cdm-cli) | `0.8.22` | CDM CLI (`cdm`) — build/install/deploy CDM contract libraries. Shipped as a single **bundled** node executable (zero runtime deps) with the Summit/W3S `ContractRegistry` baked in (via the in-tree cdm-env) | contract-dependency-manager — `@parity/cdm-cli` bundled + rescoped at publish |
