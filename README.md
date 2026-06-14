@@ -57,7 +57,7 @@ Shared `ContractRegistry` + system contracts. Admin: **CDM admin**. Sources: [co
 | Reputation | `@polkadot/reputation` | `0x94a9099379EeA0C5093F93E9934a7f6605E7922f` |
 | Threads | `@polkadot/threads` | `0xFa1AB6B6aCBb056F5D9952EEDC5C67F1F3162f3A` |
 
-> All packages converged onto the `@polkadot/*` namespace, and the `ContractRegistry` is now registered under its own package name. The registry is append-only (no rename/delete), so the original placeholder names `@mock/disputes` and `@mock/reputation` remain registered to the same addresses as legacy aliases and still resolve.
+> Registry is append-only. Legacy aliases `@mock/disputes` and `@mock/reputation` remain registered at the same addresses and still resolve.
 
 ## Attestation Protocol
 
@@ -118,7 +118,63 @@ Registry browser + quest platform for the Web3 Summit Developer Lab. Deployer / 
 | --- | --- | --- |
 | Registry | `@polkadot/playground-registry` | `0x14C27954796575C26c85eD9BC6441522e174a0f3` |
 
-> Converged onto `@polkadot/*`. The legacy alias `@w3s/playground-registry` stays registered (append-only) at the same address — the deployed playground registry resolves it at runtime, so it must remain.
+> Legacy alias `@w3s/playground-registry` stays registered (append-only) at the same address and still resolves at runtime.
+
+## LocalDOT
+
+Peer-to-peer cash↔token marketplace (offer book + handoff-agent registry + native-token escrow). Solidity → Revive/PolkaVM; **no on-chain owner/admin** (permissionless escrow). Deployer / publisher: **W3S publisher**. Source: [localdot-community](https://github.com/Polkadot-Community-Foundation/localdot-community).
+
+| Contract | Address |
+| --- | --- |
+| P2PMarket | `0x6132fe5cfd82790ea548515c7d63878e6860397d` |
+| ZKPassportRegistry | `0x4161D8dbe61DB1A68dfC570c1cBfD2f7C8E44749` |
+
+> `localmarket.dot` registered via DotNS owner-override `registerReserved` → owner 5Fk8 (`0xF8d186c352e2ea0B9C02c211525A20DdcB8CD2dD`). Both contracts are ownerless; `ZKPassportRegistry` is the optional identity-verification leg.
+
+## Mercado
+
+Food-delivery marketplace dApp (restaurants, orders, ratings, disputes, matchmakers). Solidity → Revive/PolkaVM. Deployer / owner: **DotNS deployer** (`0x8c78b53f…`, constructor owner of all contracts). App owner / uploader: **W3S publisher** (`mercado.dot`). Source: [mercado-community](https://github.com/Polkadot-Community-Foundation/mercado-community).
+
+| Contract | Address |
+| --- | --- |
+| MercadoCore | `0xc411ea624e8f8f0ec2a2145f79e88b80e0269289` |
+| MercadoRatings | `0xac36c0173ea817c63dfea1ea796bfd4506d586d2` |
+| RestaurantMeta | `0xe707ec73fc95a939c2591dbbdc910d91fdb52e3b` |
+| MercadoDisputes | `0xb03380920c5dd15f725875c8eba6e30c2b3710fe` |
+| MockMobRule | `0x24f2cce5598c733415d4cb3d23494c7e589d05ba` |
+| MercadoMatchmakers | `0x569ee3092a64fdeb114c1cf3414817b31d3bc0bd` |
+
+> `mercado.dot` (7-char, PoP-gated) registered via DotNS owner-override `registerReserved` → owner 5Fk8 (tx `0x5804ed2f…`). App-leg CID in the Apps table.
+
+## Simple Survey
+
+Decentralized survey app: the contract indexes survey + response CIDs (content on Bulletin); **no on-chain owner/admin** (permissionless — any mapped account can create surveys / submit responses). Deployer / publisher: **W3S publisher**. Registered in the CDM `ContractRegistry`. Source: [simple-survey](https://github.com/Polkadot-Community-Foundation/simple-survey).
+
+| Contract | Package | Address |
+| --- | --- | --- |
+| Surveys | `@polkadot/surveys` | `0xD9FBCF04Ea06904Ded8703d07b0c7E34F681E89F` |
+
+> `survey.dot` (6-char, PoP-gated) registered via DotNS owner-override `registerReserved` → owner 5Fk8. **Listed in the playground Apps grid** (`@polkadot/playground-registry`, tag `social`, moddable) via the PCF `playground-cli` fork (`9bc4415`); that publish RE-HOSTED the SPA, so the **current contenthash = the playground-cli root CID** in the Apps table (playground metadata CID `bafk2bzacedvgob55d6rm4tw57ghulonrtirbdqztiusczjtmrgchnmy37zcj6`). Earlier `polkadot-app-deploy` published the product manifest + icon (icon CID `bafk2bzaceacbyysvxvvu6mtqh3o5xmyamvxxar5jsiq2o7hust6rqdr3sia72`). On-chain contract metadata carries no ABI; the app bundles the ABI in `cdm.json` (so `cdm install @polkadot/surveys` returns no typed ABI). App-leg CID in the Apps table.
+
+## Rock-Paper-Scissors
+
+Rock-paper-scissors game: the `@rps/leaderboard` contract tracks `address → (game-history CID, points)`; game history lives on Bulletin. **No on-chain owner/admin** (permissionless — any mapped account registers / updates its own score). Deployer / publisher: **W3S publisher**. Registered in the CDM `ContractRegistry`. Served at two names (same build). Source: [Rock-Paper-Scissors](https://github.com/Polkadot-Community-Foundation/Rock-Paper-Scissors).
+
+| Contract | Package | Address |
+| --- | --- | --- |
+| Leaderboard | `@rps/leaderboard` | `0xf3A06D11BDf5d01fD27D767Cd88e277070026AeE` |
+
+> Metadata CID `bafk2bzacebxrsph5b6z3my5ykvdoaqsle5hry6l7pcwf4fqikj2h423gnkbuu`; deploy tx `0x56d580267d651607a20d17eef50ace500c5cba31ec8f31cea5923947c8c652bc`. `rps-game.dot` (8-char, PoP-gated) registered via DotNS owner-override `registerReserved` → owner 5Fk8 (tx `0xc48c2b079da4ec26161b4bdf71487a40690511ece1eca597b8c2f09cc707c158`); `rock-paper-scissors.dot` (open) registered by CI. No typed ABI in on-chain metadata; the app bundles the ABI in `cdm.json`. App-leg CID in the Apps table.
+
+## Feedback Board
+
+Decentralized sticky-note board: the `@polkadot/feedback` contract keeps an ordered list of note CIDs (note JSON on Bulletin) + the H160 of each poster. **No on-chain owner/admin** (permissionless — any mapped account can `postFeedback`). Deployer / publisher: **W3S publisher**. Registered in the CDM `ContractRegistry`. Source: [feedback-board](https://github.com/Polkadot-Community-Foundation/feedback-board).
+
+| Contract | Package | Address |
+| --- | --- | --- |
+| Feedback | `@polkadot/feedback` | `0x86Cc121993A2B7Aa53EC8222B63D2053eF352f32` |
+
+> Metadata CID `bafk2bzacea6dsyaa7epjo27hvipt7waumihd53geczm6qlvtirqmnhapg2xxw`; deploy tx `0x7efd9e3cebbc787a61fb77ddfd977d4a54466703b30a1a8f27e01a755f511c43`. `feedback.dot` (8-char, PoP-gated) registered via DotNS owner-override `registerReserved` → owner 5Fk8 (tx `0xb9a8b681bd533b04710546392adf080040137cadee0aac55ad878c7a2ef920e2`). No typed ABI in on-chain metadata; the app bundles the ABI in `cdm.json`. App-leg CID in the Apps table.
 
 ## Apps on Bulletin
 
@@ -140,7 +196,14 @@ Web apps published to the **Summit Bulletin chain** and bound to `.dot` names. O
 | w3s-payment-processor | `w3spayprocessor.dot` | https://w3spayprocessor.dot.li | `bafybeiermq4qz3vstftmhgmxqpfhzghhgj7k5s3sci6vwlwb7zqdm3qxdm` |
 | Playground | `playground.dot` | https://playground.dot.li | `bafybeihzgdyuq7v5ncclnnusgmcy3lye3z7kadrcfqxmgvdxveqwpy76bq` |
 | Playground constellation (kiosk) | `constellation.dot` | https://constellation.dot.li | `bafybeibudgjoiyhcvgqumuzqlm7mzmormtpfeosv2kxdib7pomtl5hswza` |
+| Playground template (starter) | `playground-template.dot` | https://playground-template.dot.li | `bafybeiaplcd7ol5qwwezmd7pjvbnfspdpoxljoip2zna5v5pzdccgzfyna` |
+| Playground tutorial (Rock Paper Scissors) | `playground-tutorial.dot` | https://playground-tutorial.dot.li | `bafybeib2g5ig4fgrcdkqkxe5zwzoofy2msuakuksa27ixubjsclnae7pjy` |
+| Rock-Paper-Scissors (game frontend) | `rock-paper-scissors.dot` | https://rock-paper-scissors.dot.li | `bafybeiags5diu3c4lo2rd2dizn5qyps3dcx565kbn6ytcaq53kj54uyyam` |
+| Simple Survey | `survey.dot` | https://survey.dot.li | `bafybeifukaj2gdsmmtlk4oagno2bhucnaixr7dinsogcahkvuhofongcyu` |
 | dotli Starter | `dotli-starter.dot` | https://dotli-starter.dot.li | `bafybeieekbrschbyclzsw4cjcs5wjcbisqkbkvwyfnn3ilzey6xifck2d4` |
+| LocalDOT | `localmarket.dot` | https://localmarket.dot.li | `bafybeihbtyzmngldajelxi4ffk65oavtnsldtp63qlyq4xj2zsmu3mg2iy` |
+| Mercado | `mercado.dot` | https://mercado.dot.li | `bafybeicg32dyfbeb732vj7gq4ciqcw66qhonrxte24dw2xu4ydfv7yxiwu` |
+| Feedback Board | `feedback.dot` | https://feedback.dot.li | `bafybeifes2f6rizrna64osii6rcaugncejog23fbbh23cbdz3sh6irttru` |
 
 > **DotNS UI** owner / deployer: `14M6Yc9i8dg6QLM2u1yd3jaFM2cd3NNvyKznfBaS2q3cNdKy` (EVM `0x7e0e0a5a111aa15b0c1e4bac776884e263fa6b13`); uploaded by **W3S publisher**.
 
