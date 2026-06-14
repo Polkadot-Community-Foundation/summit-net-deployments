@@ -50,12 +50,14 @@ Shared `ContractRegistry` + system contracts. Admin: **CDM admin**. Sources: [co
 
 | Contract | Package | Address |
 | --- | --- | --- |
-| ContractRegistry | — | `0xa5747e60ae27f93e92019e4021abfc4957050141` |
+| ContractRegistry | `@polkadot/contract-registry` | `0xa5747e60ae27f93e92019e4021abfc4957050141` |
 | Contexts | `@polkadot/contexts` | `0x9B935075094D7176Afc7e33C5B183109B86B1b6A` |
-| Disputes | `@mock/disputes` | `0x3671Fe6Ebdd5E2FFCE2EbbD499972900390bdD64` |
+| Disputes | `@polkadot/disputes` | `0x3671Fe6Ebdd5E2FFCE2EbbD499972900390bdD64` |
 | Profiles | `@polkadot/profiles` | `0x99dAFFC69479297C30815e3a27746f81632dfea1` |
-| Reputation | `@mock/reputation` | `0x94a9099379EeA0C5093F93E9934a7f6605E7922f` |
+| Reputation | `@polkadot/reputation` | `0x94a9099379EeA0C5093F93E9934a7f6605E7922f` |
 | Threads | `@polkadot/threads` | `0xFa1AB6B6aCBb056F5D9952EEDC5C67F1F3162f3A` |
+
+> All packages converged onto the `@polkadot/*` namespace, and the `ContractRegistry` is now registered under its own package name. The registry is append-only (no rename/delete), so the original placeholder names `@mock/disputes` and `@mock/reputation` remain registered to the same addresses as legacy aliases and still resolve.
 
 ## Attestation Protocol
 
@@ -114,7 +116,9 @@ Registry browser + quest platform for the Web3 Summit Developer Lab. Deployer / 
 
 | Contract | Package | Address |
 | --- | --- | --- |
-| Registry | `@w3s/playground-registry` | `0x14C27954796575C26c85eD9BC6441522e174a0f3` |
+| Registry | `@polkadot/playground-registry` | `0x14C27954796575C26c85eD9BC6441522e174a0f3` |
+
+> Converged onto `@polkadot/*`. The legacy alias `@w3s/playground-registry` stays registered (append-only) at the same address — the deployed playground registry resolves it at runtime, so it must remain.
 
 ## Apps on Bulletin
 
