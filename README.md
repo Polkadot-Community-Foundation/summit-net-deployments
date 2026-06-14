@@ -214,9 +214,31 @@ The Vite SPA published to the **Summit Bulletin chain**, bound to `playground.do
 | --- | --- |
 | Domain | `playground.dot` |
 | URL | https://playground.dot.li |
-| Root CID | `bafybeiexv7rtjnetdtk5xrkgycobbao73sgtyrcpmeu77w2hf2efdcmq3q` |
+| Root CID | `bafybeihzgdyuq7v5ncclnnusgmcy3lye3z7kadrcfqxmgvdxveqwpy76bq` |
 | Icon CID | `bafk2bzacebnksskzlxrcaist4qabrseb73mmsevrot7emwki3ljijnbj6z2r4` |
 | Owner / uploader | `5Fk8FBTqBpAyBReZPse2wn8Lf4ADzdNVAsrGoNMSTxKedN8f` |
+
+> **Frontend chain + read origin (Summit specifics).** Built with `CHAIN="summit"` + the
+> `@parity/product-sdk-descriptors/summit-asset-hub` descriptor (Summit AH genesis `0xf388dc6d…`; an earlier
+> build shipped the Paseo genesis `0xbf0488db…` and was corrected). The SPA resolves contract addresses live
+> from the CDM registry via a dry-run **read origin** `DEV_PHRASE//playground-querier`
+> (`5DXpwDcFif9SzDX3GcqhW6igXhiCLpHrSRiJCBTwFfC4po9C`, H160 `0x04d1e2c8829f300c578939a83a16c8cfb802c500`), which
+> had to be **funded + `Revive.map_account()`-mapped** on Summit (2026-06-14) or reads fail with "Failed to
+> resolve live address". Prior root CID (rollback): `bafybeiexv7rtjnetdtk5xrkgycobbao73sgtyrcpmeu77w2hf2efdcmq3q`.
+
+## playground-constellation — kiosk visualizer (web app on Bulletin) — ✅ live
+
+Read-only big-screen "constellation" star-map of `@w3s/playground-registry` activity (deploys / mods / stars) for the Web3 Summit Developer Lab — a kiosk display. **No contracts of its own**: a pure CDM consumer + chain reader that signs nothing. Built in **direct mode** (`VITE_USE_DIRECT=1`) against the `@parity/product-sdk-descriptors/summit-asset-hub` descriptor (Summit AH genesis `0xf388dc6d…`); resolves the registry address **live at boot** from the CDM meta-registry (`0xa5747e60…0141`). Source: [Polkadot-Community-Foundation/playground-constellation](https://github.com/Polkadot-Community-Foundation/playground-constellation). Deployed via [`@polkadot-community-foundation/polkadot-app-deploy@0.10.1`](https://www.npmjs.com/package/@polkadot-community-foundation/polkadot-app-deploy) `--env summit`.
+
+| Field | Value |
+| --- | --- |
+| Domain | `constellation.dot` |
+| URL | https://constellation.dot.li |
+| Root CID | `bafybeibudgjoiyhcvgqumuzqlm7mzmormtpfeosv2kxdib7pomtl5hswza` |
+| Owner / uploader | `5Fk8FBTqBpAyBReZPse2wn8Lf4ADzdNVAsrGoNMSTxKedN8f` (EVM `0xF8d186c352e2ea0B9C02c211525A20DdcB8CD2dD`) |
+| Reads | `@w3s/playground-registry` `0x14C27954796575C26c85eD9BC6441522e174a0f3` (live via CDM meta-registry `0xa5747e60…0141`) |
+
+> **Read origin (Summit specific).** Dry-run reads dispatch from the committed public team phrase's SS58 (`src/chain/client.ts`; it never signs). For **LIVE** data that origin must be funded + `Revive.map_account()`-mapped on Summit AH — otherwise reads fail `Revive::AccountUnmapped` (same class as the playground querier above). The static site serves regardless; `constellation.dot?demo=1` is the dependency-free event-day fallback. ~14-day Bulletin renewal applies.
 
 ## dotli Starter (web app on Bulletin) — ✅ live
 
