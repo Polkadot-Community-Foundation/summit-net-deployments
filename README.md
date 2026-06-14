@@ -262,7 +262,7 @@ Read-only big-screen "constellation" star-map of `@w3s/playground-registry` acti
 | Owner / uploader | `5Fk8FBTqBpAyBReZPse2wn8Lf4ADzdNVAsrGoNMSTxKedN8f` (EVM `0xF8d186c352e2ea0B9C02c211525A20DdcB8CD2dD`) |
 | Reads | `@w3s/playground-registry` `0x14C27954796575C26c85eD9BC6441522e174a0f3` (live via CDM meta-registry `0xa5747e60…0141`) |
 
-> **Read origin (Summit specific).** Dry-run reads dispatch from the committed public team phrase's SS58 (`src/chain/client.ts`; it never signs). For **LIVE** data that origin must be funded + `Revive.map_account()`-mapped on Summit AH — otherwise reads fail `Revive::AccountUnmapped` (same class as the playground querier above). The static site serves regardless; `constellation.dot?demo=1` is the dependency-free event-day fallback. ~14-day Bulletin renewal applies.
+> **Read origin (Summit specific).** Dry-run reads dispatch from the committed public team phrase's SS58 `5FHxLwXdYvyQAsuH9RKeF7LyLXJaA3NbXjPZAbq13hZMcKRN` (H160 `0x534507665bce7715a2894dec797e17e337a3d2e6`; `src/chain/client.ts`, it never signs). **✅ funded + `Revive.map_account()`-mapped (to itself) on Summit AH 2026-06-14** — live resolution verified (`fromLiveClient` → `@w3s/playground-registry` `0x14C27954…`), so LIVE mode shows real data. `constellation.dot?demo=1` remains the dependency-free fallback. ~14-day Bulletin renewal applies.
 
 ## dotli Starter (web app on Bulletin) — ✅ live
 
