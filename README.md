@@ -198,12 +198,13 @@ Web apps published to the **Summit Bulletin chain** and bound to `.dot` names. O
 | Playground constellation (kiosk) | `constellation.dot` | https://constellation.dot.li | `bafybeibudgjoiyhcvgqumuzqlm7mzmormtpfeosv2kxdib7pomtl5hswza` |
 | Playground template (starter) | `playground-template.dot` | https://playground-template.dot.li | `bafybeiaplcd7ol5qwwezmd7pjvbnfspdpoxljoip2zna5v5pzdccgzfyna` |
 | Playground tutorial (Rock Paper Scissors) | `playground-tutorial.dot` | https://playground-tutorial.dot.li | `bafybeib2g5ig4fgrcdkqkxe5zwzoofy2msuakuksa27ixubjsclnae7pjy` |
-| Rock-Paper-Scissors (game frontend) | `rock-paper-scissors.dot` | https://rock-paper-scissors.dot.li | `bafybeiags5diu3c4lo2rd2dizn5qyps3dcx565kbn6ytcaq53kj54uyyam` |
+| Rock-Paper-Scissors (game frontend) | `rock-paper-scissors.dot` | https://rock-paper-scissors.dot.li | `bafybeidhs6e2zv7ykvjp3ex4dlugciasuyl56xhv5f33itanblf2wlvskq` |
+| Rock-Paper-Scissors (alias, host-only) | `rps-game.dot` | https://rps-game.dot.li | `bafybeiflahpgddarjrg3yod6lbxm3m7wqidcoqzexedpzxy5afsputt66i` |
 | Simple Survey | `survey.dot` | https://survey.dot.li | `bafybeifukaj2gdsmmtlk4oagno2bhucnaixr7dinsogcahkvuhofongcyu` |
 | dotli Starter | `dotli-starter.dot` | https://dotli-starter.dot.li | `bafybeieekbrschbyclzsw4cjcs5wjcbisqkbkvwyfnn3ilzey6xifck2d4` |
 | LocalDOT | `localmarket.dot` | https://localmarket.dot.li | `bafybeihbtyzmngldajelxi4ffk65oavtnsldtp63qlyq4xj2zsmu3mg2iy` |
 | Mercado | `mercado.dot` | https://mercado.dot.li | `bafybeicg32dyfbeb732vj7gq4ciqcw66qhonrxte24dw2xu4ydfv7yxiwu` |
-| Feedback Board | `feedback.dot` | https://feedback.dot.li | `bafybeifes2f6rizrna64osii6rcaugncejog23fbbh23cbdz3sh6irttru` |
+| Feedback Board | `feedback.dot` | https://feedback.dot.li | `bafybeibj5tbmmqdmajveunbmwdb2vewjoav3zuj5gzf7yitgyqbgw6llo4` |
 
 > **DotNS UI** owner / deployer: `14M6Yc9i8dg6QLM2u1yd3jaFM2cd3NNvyKznfBaS2q3cNdKy` (EVM `0x7e0e0a5a111aa15b0c1e4bac776884e263fa6b13`); uploaded by **W3S publisher**.
 
