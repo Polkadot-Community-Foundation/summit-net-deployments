@@ -196,6 +196,30 @@ Static Vite SPA published to the **Summit Bulletin chain**, bound to `w3spayadmi
 | --- | --- | --- |
 | `w3spayadmin.dot` | https://w3spayadmin.dot.li | `bafybeihk6ugqrpdbkphtvuwszowiiawp2pejuym3uo5iffbdw3juf72gmi` |
 
+## w3spay
+
+W3sPay pilot **customer checkout** app (W3S Receipts): a mobile-first Vite SPA that scans merchant receipt / TSE terminal-payment codes, resolves pilot merchants from the on-chain `W3SPayRegistry`, and asks the Polkadot host to execute CASH payments. **App-only** — no contract of its own; it consumes the [w3spay-admin](#w3spay-admin) `W3SPayRegistry` (`0xf76dadbbc112738275ed398d15c0e8c47b2550f2`). Source: [Polkadot-Community-Foundation/w3spay](https://github.com/Polkadot-Community-Foundation/w3spay). Deployed via CI (push to `main`) with [`@polkadot-community-foundation/polkadot-app-deploy@0.10.1`](https://www.npmjs.com/package/@polkadot-community-foundation/polkadot-app-deploy).
+
+Static Vite SPA published to the **Summit Bulletin chain**, bound to `w3spaycheckout.dot` — a full product manifest (`app.w3spaycheckout.dot` subname holding the app contenthash, plus `text[manifest]` + `text[executable]` records on the root; icon CID `bafk2bzacecwz22wnuxpygnfyluyg6rlzuhbvyeuos447fovseyc6scfymzd34`). Owned by / uploaded with `5Fk8FBTqBpAyBReZPse2wn8Lf4ADzdNVAsrGoNMSTxKedN8f` (EVM `0xF8d186c352e2ea0B9C02c211525A20DdcB8CD2dD`), the Bulletin uploader. Name registered tx `0xbb7977fdab5dd0eae2198c6ca7f997b81a960c9a43b28d0659fc96ccd53ad718` (block 447665); root contenthash tx `0xbe59d7e22e5cc6d0476a3a5837d3ef7b4ecdacdb01b01ef9f4739b6e5e6e198a` (block 447683).
+
+| Name | URL | App CID (on `app.<name>`) |
+| --- | --- | --- |
+| `w3spaycheckout.dot` | https://w3spaycheckout.dot.li | `bafybeiadel63jof2tiailtl3ngr7l5bgvtbaca63c35k4mlwbo35x7evhe` |
+
+## w3s-payment-processor
+
+W3sPay per-merchant **always-on monitor**: unlocks merchant credentials on-device, watches v1 on-chain CASH credits + v2 Statement Store payments, claims v2 bearer coins via the Polkadot host, and anchors daily Z reports. App-only — it **consumes** the [w3spay-admin](#w3spay-admin) `W3SPayRegistry` (per-merchant config CIDs + report index); no contract of its own. Source: [Polkadot-Community-Foundation/w3s-payment-processor](https://github.com/Polkadot-Community-Foundation/w3s-payment-processor). Deployed with [`@polkadot-community-foundation/polkadot-app-deploy@0.10.1`](https://www.npmjs.com/package/@polkadot-community-foundation/polkadot-app-deploy).
+
+### w3s-payment-processor app (web app on Bulletin) — ✅ live
+
+Static Vite SPA published to the **Summit Bulletin chain**, bound to `w3spayprocessor.dot` — a full product manifest (`app.w3spayprocessor.dot` subname holding the app contenthash, plus `text[manifest]` + `text[executable]` records on the root; icon CID `bafk2bzaceaq6qlc3vokk4utaiojh7i2yemofr4tnzr375y5ycbyy5c77ky37m`). Owned by / uploaded with `5Fk8FBTqBpAyBReZPse2wn8Lf4ADzdNVAsrGoNMSTxKedN8f` (EVM `0xF8d186c352e2ea0B9C02c211525A20DdcB8CD2dD`), the Bulletin uploader. Reads the `W3SPayRegistry` at `0xf76dadbbc112738275ed398d15c0e8c47b2550f2`.
+
+| Name | URL | App CID (on `app.<name>`) |
+| --- | --- | --- |
+| `w3spayprocessor.dot` | https://w3spayprocessor.dot.li | `bafybeiermq4qz3vstftmhgmxqpfhzghhgj7k5s3sci6vwlwb7zqdm3qxdm` |
+
+Root contenthash = the App CID above (verified on-chain). Previous contenthash (rollback): `bafybeieadmhrxrcnren5jjdgbada2rcu5244ojgsgcazxgteh2pbf4bcda`.
+
 ## Playground
 
 Registry browser + quest platform for the Web3 Summit Developer Lab ("build and mod sovereign apps on Polkadot"). A CDM-chain app: an on-chain registry contract (`@w3s/playground-registry`, deployed via CDM, depends on `@mock/reputation` + `@polkadot/contexts`) + a Vite SPA on Bulletin bound to `playground.dot`. Source: [Polkadot-Community-Foundation/playground-app-community](https://github.com/Polkadot-Community-Foundation/playground-app-community). Deployer / registry `sudo` / `playground.dot` owner / uploader = `5Fk8FBTqBpAyBReZPse2wn8Lf4ADzdNVAsrGoNMSTxKedN8f` (EVM `0xF8d186c352e2ea0B9C02c211525A20DdcB8CD2dD`).
