@@ -27,7 +27,9 @@ On-chain addresses, deployers, and domains for everything deployed to the **Summ
 | **Browse trusted attester** | `5HECKTpBe95rgbptG812Gh61VH3pjDfhgtE6xq5mHvRSUSo3` | `0xeB686805D91dB3637258d0d21DefC06d0dA3a8C9` | trusted attester recognized by Browse TrustedAttesterIndexResolver |
 | **Playground read origin** | `5DXpwDcFif9SzDX3GcqhW6igXhiCLpHrSRiJCBTwFfC4po9C` | — | read origin for Playground SPA CDM reads |
 | **Constellation read origin** | `5FHxLwXdYvyQAsuH9RKeF7LyLXJaA3NbXjPZAbq13hZMcKRN` | `0x534507665bce7715a2894dec797e17e337a3d2e6` | read origin for Constellation kiosk SPA CDM reads |
-| **Identity backend attester (real account)** | `5GjUuGpacCspUJjnDdNVpGLn1JQk9QvCXGhtKiLEpMRcHEHA` | — | identity-backend service attester; registers People-chain usernames + reserves .dot names |
+| **Identity backend attester (real account)** | `5HKa1PwrXak7jQX1ukx3t2YQsQfsw2jinKpBYrNpWUKz4kEh` | — | the REAL attester identity (ATTESTER_PUBLIC_KEY) for identity-backend; holds DotnsGateway AttestationAllowance on Asset Hub (1,000,000) + People-lite attestation allowance; attests/reservations run as this account via Proxy.proxy from its delegates |
+| **Identity backend attester proxy (signer)** | `5GjUuGpacCspUJjnDdNVpGLn1JQk9QvCXGhtKiLEpMRcHEHA` | — | identity-backend's signing key (ATTESTER_PROXY_PRIVATE_KEY); an Any-proxy of 5HKa on People + Asset Hub; signs Proxy.proxy(real=5HKa) for peopleLite.attest and dotnsGateway.reserve_name |
+| **flow-funder reserver** | `5FH9DEoT2Mr7EwMiXUMH4FzNzQdd5ryh4WD5EKk5XodatCvd` | — | flow-funder's signing key: an Any-proxy of 5HKa on Asset Hub; reserves .dot names via Proxy.proxy(real=5HKa, dotnsGateway.reserve_name); also the DIM invitation-ticket pool signer on People (INVITER_POOL_PRIVATE_KEY) |
 <!-- /GEN:accounts -->
 
 ## DotNS
@@ -243,16 +245,16 @@ Web apps published to the **Summit Bulletin chain** and bound to `.dot` names. O
 | DotNS UI | `dotns.dot` | https://dotns.dot.li | `bafybeiggzry5xc4ewcb6by7vh3dz7q3afhl5qk5kdufnla2vpajh2g5bha` |
 | CDM Frontend | `contracts.dot` | https://contracts.dot.li | `bafybeid2flilxbxopek7yaifq4gsp6zvbalz46gv2nd7ayvij5znckhqnu` |
 | Browse | `browse.dot` | https://browse.dot.li | `bafybeig6oyro2d337o22igjfmr4u7ctprucxkn3zomdluk4cazzrmtriea` |
-| Festival — Admin | `web3summit-admin.dot` | https://web3summit-admin.dot.li | `bafybeighn5cql6n52pf7rl2n6eer3p2xcb2yf2alurngvs322lu3vf6frq` |
-| Festival — Attendee | `web3summit.dot` | https://web3summit.dot.li | `bafybeicx6ymls2eovcl3gkbf54zil2qecswmht5es6rfoy2a6bazl3ntlu` |
+| Festival — Admin | `web3summit-admin.dot` | https://web3summit-admin.dot.li | `bafybeihuuc6poyiwu32d6uaeflffeb3mpvxbnrahjnolah2hfhbudk52ku` |
+| Festival — Attendee | `web3summit.dot` | https://web3summit.dot.li | `bafybeigkjfmdjmsjtpko4ivlsgzdg47ooocxz4o3xbtfz7hndv2vr552ta` |
 | Game results webview | `game-webview.dot` | https://game-webview.dot.li | `bafybeihi7faliwhtqaree53u5raxt6ayv2d5iv5z3xpoybx6nmjehy2pga` |
 | Pocket collectibles webview | `collectibles-webview.dot` | https://collectibles-webview.dot.li | `bafybeiav2ztoo4zlm374pfx47zyvqdq2sfhvnuhs6wcuninho6e4sp5a7i` |
-| t3rminal | `t3rminal.dot` | https://t3rminal.dot.li | `bafybeihqbbcfttr3pqfbchqrueph5ttl7c5givasuzqknun4yph5uun66m` |
+| t3rminal | `t3rminal.dot` | https://t3rminal.dot.li | `bafybeibwpj54mrm62fuzrpesianvzfnwgowln7juipjbbhgp6puhut5yau` |
 | t3rminal (alias) | `terminal.dot` | https://terminal.dot.li | `bafybeig5gghipthmzr3wowyi3wunnjbkqlgrcdh4hyzs27fapceo3e7tha` |
 | w3spay-admin | `w3spayadmin.dot` | https://w3spayadmin.dot.li | `bafybeihk6ugqrpdbkphtvuwszowiiawp2pejuym3uo5iffbdw3juf72gmi` |
-| w3spay checkout | `w3spaycheckout.dot` | https://w3spaycheckout.dot.li | `bafybeifi6bc7wk35ibob7rvfsywdbbptskubeulk3t3nt4dbmrussdyaai` |
+| w3spay checkout | `w3spay.dot` | https://w3spay.dot.li | `bafybeibfysmrfngmh4j4dmdcwqme4ngu4l6chhbuxshjewyktqz2o5mqjm` |
 | w3s-payment-processor | `w3spayprocessor.dot` | https://w3spayprocessor.dot.li | `bafybeif6kkkfelyo2eynuqveev2ozkjungzgykd2dcgrmu3hxad6mkrugq` |
-| Playground | `playground.dot` | https://playground.dot.li | `bafybeicndylk6flhr42737gvujhbkp6ekiowozsbtvrgpeszpwe6y4ytm4` |
+| Playground | `playground.dot` | https://playground.dot.li | `bafybeihzgdyuq7v5ncclnnusgmcy3lye3z7kadrcfqxmgvdxveqwpy76bq` |
 | Playground constellation (kiosk) | `constellation.dot` | https://constellation.dot.li | `bafybeibudgjoiyhcvgqumuzqlm7mzmormtpfeosv2kxdib7pomtl5hswza` |
 | Playground template (starter) | `playground-template.dot` | https://playground-template.dot.li | `bafybeifbva5wdmkxvs4x4swom2e4hicvzjsdy7arorfttyn3kktii2etoy` |
 | Playground tutorial (Rock Paper Scissors) | `playground-tutorial.dot` | https://playground-tutorial.dot.li | `bafybeidtp6d7j65pvmyvpk2n5eydrjj4yh7vfcqo2jeywqzjfd6ppcvgi4` |
@@ -261,7 +263,7 @@ Web apps published to the **Summit Bulletin chain** and bound to `.dot` names. O
 | Simple Survey | `survey.dot` | https://survey.dot.li | `bafybeih46vl67qfeiecplc2mjmsx7h63jl5j6lqokt5khrqwclfq4bahlq` |
 | dotli Starter | `dotli-starter.dot` | https://dotli-starter.dot.li | `bafybeieekbrschbyclzsw4cjcs5wjcbisqkbkvwyfnn3ilzey6xifck2d4` |
 | LocalDOT | `localmarket.dot` | https://localmarket.dot.li | `bafybeihbtyzmngldajelxi4ffk65oavtnsldtp63qlyq4xj2zsmu3mg2iy` |
-| Mercado | `mercado.dot` | https://mercado.dot.li | `bafybeiawxyzink4qklzyq5nrm5bm4yh7sn66qvopjh7555mt7qb7wcxgvy` |
+| Mercado | `mercado.dot` | https://mercado.dot.li | `bafybeicg32dyfbeb732vj7gq4ciqcw66qhonrxte24dw2xu4ydfv7yxiwu` |
 | Feedback Board | `feedback.dot` | https://feedback.dot.li | `bafybeigyrp65wfqwuk7fkhvjv7nlo7npxjm4k2kulgcdije4tjwpzdvunq` |
 <!-- /GEN:apps -->
 
@@ -279,6 +281,7 @@ Hosted on PCF infrastructure.
 | Service | Endpoint |
 | --- | --- |
 | identity-backend | https://polkadot-app.api.polkadotcommunity.foundation |
+| flow-funder | internal — People→AssetHub dotNS reservation bot (ns flow-funder, pcf-prod) |
 <!-- /GEN:services -->
 
 ## npm Packages

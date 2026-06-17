@@ -27,7 +27,9 @@
       "ss58": "5GWa6ajKCE8SBvRgYKtQC4MJqAUfKaKCL15onWcrBop4yZfW",
       "evm": null,
       "keyType": "sr25519",
-      "roles": ["dotns-whitelist-operator"],
+      "roles": [
+        "dotns-whitelist-operator"
+      ],
       "controls": [
         "DotnsRegistrarController whitelist operator"
       ],
@@ -76,7 +78,10 @@
       "label": "DotNS UI owner",
       "ss58": "14M6Yc9i8dg6QLM2u1yd3jaFM2cd3NNvyKznfBaS2q3cNdKy",
       "evm": "0x7e0e0a5a111aa15b0c1e4bac776884e263fa6b13",
-      "roles": ["dotns-dot-name-owner", "view-call-origin"],
+      "roles": [
+        "dotns-dot-name-owner",
+        "view-call-origin"
+      ],
       "controls": [
         "dotns.dot name owner",
         "read/view-call origin in tooling"
@@ -88,7 +93,9 @@
       "label": "Browse trusted attester",
       "ss58": "5HECKTpBe95rgbptG812Gh61VH3pjDfhgtE6xq5mHvRSUSo3",
       "evm": "0xeB686805D91dB3637258d0d21DefC06d0dA3a8C9",
-      "roles": ["browse-trusted-attester"],
+      "roles": [
+        "browse-trusted-attester"
+      ],
       "controls": [
         "trusted attester recognized by Browse TrustedAttesterIndexResolver"
       ],
@@ -100,11 +107,16 @@
       "ss58": "5DXpwDcFif9SzDX3GcqhW6igXhiCLpHrSRiJCBTwFfC4po9C",
       "evm": null,
       "keyType": "public-dev-phrase",
-      "roles": ["frontend-read-origin"],
+      "roles": [
+        "frontend-read-origin"
+      ],
       "controls": [
         "read origin for Playground SPA CDM reads"
       ],
-      "requires": ["funded-on-AH", "revive-mapped"],
+      "requires": [
+        "funded-on-AH",
+        "revive-mapped"
+      ],
       "notes": "Derived as DEV_PHRASE//<app>-querier. MUST be funded + Revive.map_account()'d on Summit or every live read fails (strict white-screen). Public dev phrase self-signs the map. Each consumer SPA has its OWN read origin."
     },
     {
@@ -113,25 +125,70 @@
       "ss58": "5FHxLwXdYvyQAsuH9RKeF7LyLXJaA3NbXjPZAbq13hZMcKRN",
       "evm": "0x534507665bce7715a2894dec797e17e337a3d2e6",
       "keyType": "public-phrase",
-      "roles": ["frontend-read-origin"],
+      "roles": [
+        "frontend-read-origin"
+      ],
       "controls": [
         "read origin for Constellation kiosk SPA CDM reads"
       ],
-      "requires": ["funded-on-AH", "revive-mapped"],
+      "requires": [
+        "funded-on-AH",
+        "revive-mapped"
+      ],
       "notes": "= the committed TEAM_SURI phrase (= playground-app's project deploy signer), a DIFFERENT account from playground's read origin. Funded + mapped 2026-06-14. Mapping one read origin does NOT cover another — map per-SPA."
     },
     {
       "id": "identity-backend-attester",
       "label": "Identity backend attester (real account)",
-      "ss58": "5GjUuGpacCspUJjnDdNVpGLn1JQk9QvCXGhtKiLEpMRcHEHA",
+      "ss58": "5HKa1PwrXak7jQX1ukx3t2YQsQfsw2jinKpBYrNpWUKz4kEh",
       "evm": null,
       "keyType": "sr25519-public",
-      "roles": ["people-lite-attester", "dotns-gateway-attester"],
-      "controls": [
-        "identity-backend service attester; registers People-chain usernames + reserves .dot names"
+      "roles": [
+        "people-lite-attester",
+        "dotns-gateway-attester",
+        "dotns-allowance-holder"
       ],
-      "requires": ["people-lite-attestation-allowance", "proxy-delegation-registered"],
-      "notes": "Public key 0xce83e4d44cec5d2bd0cdafe71d48dddb691a9ef7216d83828071f7fa112b3137 (= GET /api/v1/attester on the live service). This is the REAL account in PROXY_DELEGATION mode; a separate secret proxy key (PROXY_PRIVATE_KEY / ATTESTER_PROXY_PRIVATE_KEY) signs Proxy.proxy on its behalf. ⚠️ VERIFIED 2026-06-15 on wss://summit-people-rpc.polkadot.io: PeopleLite.AttestationAllowance(5GjU…)=NULL (zero) AND Proxy.Proxies(5GjU…)=NULL — so username registration is NOT yet functional on Summit. Allowance grant is Root/Sudo-only (peopleLite.increase_attestation_allowance) via the paritytech/individuality-community bootstrap scripts 12b/12c. Distinct from browse-trusted-attester (EVM/Browse) — different attester role entirely."
+      "controls": [
+        "the REAL attester identity (ATTESTER_PUBLIC_KEY) for identity-backend",
+        "holds DotnsGateway AttestationAllowance on Asset Hub (1,000,000) + People-lite attestation allowance",
+        "attests/reservations run as this account via Proxy.proxy from its delegates"
+      ],
+      "requires": [],
+      "notes": "Public key 0xe8836caacf63a85bde5dd4d4000def1644d7ab1f7b251bee91d817f19437bf03. REAL account in PROXY_DELEGATION mode — it does NOT sign directly; delegates (5GjU, 5FH9) sign Proxy.proxy(real=5HKa) on its behalf. ✅ VERIFIED 2026-06-17: DotnsGateway.AttestationAllowance(5HKa)=1,000,000 on Asset Hub; Proxies(5HKa) on AH = {5GjU (Any), 5FH9 (Any)}. Corrects the prior entry which mislabeled the delegate 5GjU as the real account."
+    },
+    {
+      "id": "identity-backend-attester-proxy",
+      "label": "Identity backend attester proxy (signer)",
+      "ss58": "5GjUuGpacCspUJjnDdNVpGLn1JQk9QvCXGhtKiLEpMRcHEHA",
+      "evm": null,
+      "keyType": "sr25519",
+      "roles": [
+        "attester-proxy-signer"
+      ],
+      "controls": [
+        "identity-backend's signing key (ATTESTER_PROXY_PRIVATE_KEY); an Any-proxy of 5HKa on People + Asset Hub",
+        "signs Proxy.proxy(real=5HKa) for peopleLite.attest and dotnsGateway.reserve_name"
+      ],
+      "notes": "Public key 0xce83e4d44cec5d2bd0cdafe71d48dddb691a9ef7216d83828071f7fa112b3137 (= GET /api/v1/attester on the live service). The DELEGATE, not the real account (5HKa is real). Stored as a 64-byte Ed25519-expanded sr25519 secret (polkadot-js/PAPI form) — note flow-funder's stock 32-byte RESERVER_SECRET_KEY cannot consume that form, which is why flow-funder uses 5FH9 instead."
+    },
+    {
+      "id": "flow-funder-reserver",
+      "label": "flow-funder reserver",
+      "ss58": "5FH9DEoT2Mr7EwMiXUMH4FzNzQdd5ryh4WD5EKk5XodatCvd",
+      "evm": null,
+      "keyType": "sr25519",
+      "roles": [
+        "dotns-reserver",
+        "dim-inviter-pool-signer"
+      ],
+      "controls": [
+        "flow-funder's signing key: an Any-proxy of 5HKa on Asset Hub; reserves .dot names via Proxy.proxy(real=5HKa, dotnsGateway.reserve_name)",
+        "also the DIM invitation-ticket pool signer on People (INVITER_POOL_PRIVATE_KEY)"
+      ],
+      "requires": [
+        "proxy-of-5HKa-on-AH"
+      ],
+      "notes": "Public key 0x8e30ff207d4e4fdb531ec90fe897f7cc52ff153dff146c9be32659e01226010f. Added as an Any-proxy of 5HKa on Asset Hub 2026-06-17 so flow-funder reserves using 5HKa's 1,000,000 allowance. Stock 32-byte RESERVER_SECRET_KEY; GCP secret flow-funder-reserver-secret-key."
     }
   ]
 }
