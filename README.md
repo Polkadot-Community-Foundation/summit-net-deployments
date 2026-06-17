@@ -2,12 +2,6 @@
 
 On-chain addresses, deployers, and domains for everything deployed to the **Summit** network.
 
-> The tables below are **generated** from `accounts.json` + `deployments.json` by
-> `tools/gen-registry-tables.mjs` (blocks marked `<!-- GEN:… -->`). **Edit the JSON, then run
-> `node tools/gen-registry-tables.mjs`** — don't hand-edit the tables; `--check` flags drift.
-> Operational secrets / key custody / caveats are intentionally **not** here — they live in the
-> private (gitignored) `summit-deployer-skills/guides/SECRETS_AND_CAVEATS.md`.
-
 ## Network
 
 <!-- GEN:network -->
@@ -78,6 +72,8 @@ Shared `ContractRegistry` + system contracts. Admin: **CDM admin**. Sources: [co
 <!-- /GEN:contracts:cdm -->
 
 > Registry is append-only. Legacy aliases `@mock/disputes` and `@mock/reputation` remain registered at the same addresses and still resolve.
+
+> All packages converged onto the `@polkadot/*` namespace, and the `ContractRegistry` is now registered under its own package name. The registry is append-only (no rename/delete), so the original placeholder names `@mock/disputes` and `@mock/reputation` remain registered to the same addresses as legacy aliases and still resolve.
 
 ## Attestation Protocol
 
@@ -159,7 +155,7 @@ Registry browser + quest platform for the Web3 Summit Developer Lab. Deployer / 
 | Registry | `@polkadot/playground-registry` | `0x14C27954796575C26c85eD9BC6441522e174a0f3` |
 <!-- /GEN:contracts:playground -->
 
-> Legacy alias `@w3s/playground-registry` stays registered (append-only) at the same address and still resolves at runtime.
+> Converged onto `@polkadot/*`. The legacy alias `@w3s/playground-registry` stays registered (append-only) at the same address — the deployed playground registry resolves it at runtime, so it must remain.
 
 ## LocalDOT
 
