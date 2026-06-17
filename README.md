@@ -245,8 +245,8 @@ Web apps published to the **Summit Bulletin chain** and bound to `.dot` names. O
 | Browse | `browse.dot` | https://browse.dot.li | `bafybeig6oyro2d337o22igjfmr4u7ctprucxkn3zomdluk4cazzrmtriea` |
 | Festival — Admin | `web3summit-admin.dot` | https://web3summit-admin.dot.li | `bafybeighn5cql6n52pf7rl2n6eer3p2xcb2yf2alurngvs322lu3vf6frq` |
 | Festival — Attendee | `web3summit.dot` | https://web3summit.dot.li | `bafybeicx6ymls2eovcl3gkbf54zil2qecswmht5es6rfoy2a6bazl3ntlu` |
-| Game results webview | `game-webview.dot` | https://game-webview.dot.li | `bafybeidum55dn7odnysdgoftzgcck2vpsgqz6oihuzl7ielnewzuyqzdoq` |
-| Pocket collectibles webview | `collectibles-webview.dot` | https://collectibles-webview.dot.li | `bafybeigweag727h3mjbivxydskhh5r44ovpk7u7q2zcdgoq5sbn4esybki` |
+| Game results webview | `game-webview.dot` | https://game-webview.dot.li | `bafybeieazwzfkdnumc5ubcqcbga5zxcn5zifzp264tio67kkwyzdkbi5be` |
+| Pocket collectibles webview | `collectibles-webview.dot` | https://collectibles-webview.dot.li | `bafybeic2imtop557eq7zxzk4ph5bqhx4oebswlrqumsafxh6h7ut4mc6zq` |
 | t3rminal | `t3rminal.dot` | https://t3rminal.dot.li | `bafybeihqbbcfttr3pqfbchqrueph5ttl7c5givasuzqknun4yph5uun66m` |
 | t3rminal (alias) | `terminal.dot` | https://terminal.dot.li | `bafybeig5gghipthmzr3wowyi3wunnjbkqlgrcdh4hyzs27fapceo3e7tha` |
 | w3spay-admin | `w3spayadmin.dot` | https://w3spayadmin.dot.li | `bafybeihk6ugqrpdbkphtvuwszowiiawp2pejuym3uo5iffbdw3juf72gmi` |
