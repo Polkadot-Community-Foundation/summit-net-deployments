@@ -248,7 +248,7 @@ Web apps published to the **Summit Bulletin chain** and bound to `.dot` names. O
 | Festival — Admin | `web3summit-admin.dot` | https://web3summit-admin.dot.li | `bafybeihuuc6poyiwu32d6uaeflffeb3mpvxbnrahjnolah2hfhbudk52ku` |
 | Festival — Attendee | `web3summit.dot` | https://web3summit.dot.li | `bafybeigkjfmdjmsjtpko4ivlsgzdg47ooocxz4o3xbtfz7hndv2vr552ta` |
 | Game results webview | `game-webview.dot` | https://game-webview.dot.li | `bafybeihi7faliwhtqaree53u5raxt6ayv2d5iv5z3xpoybx6nmjehy2pga` |
-| Pocket collectibles webview | `collectibles-webview.dot` | https://collectibles-webview.dot.li | `bafybeiav2ztoo4zlm374pfx47zyvqdq2sfhvnuhs6wcuninho6e4sp5a7i` |
+| Pocket collectibles webview | `collectibles-webview.dot` | https://collectibles-webview.dot.li | `bafybeiapc7v7x2ghalgciirymvxlmaspmhrf4hlgwu6xgzmfoa6qkwjg5i` |
 | t3rminal | `t3rminal.dot` | https://t3rminal.dot.li | `bafybeibwpj54mrm62fuzrpesianvzfnwgowln7juipjbbhgp6puhut5yau` |
 | t3rminal (alias) | `terminal.dot` | https://terminal.dot.li | `bafybeig5gghipthmzr3wowyi3wunnjbkqlgrcdh4hyzs27fapceo3e7tha` |
 | w3spay-admin | `w3spayadmin.dot` | https://w3spayadmin.dot.li | `bafybeihk6ugqrpdbkphtvuwszowiiawp2pejuym3uo5iffbdw3juf72gmi` |
@@ -256,8 +256,8 @@ Web apps published to the **Summit Bulletin chain** and bound to `.dot` names. O
 | w3s-payment-processor | `w3spayprocessor.dot` | https://w3spayprocessor.dot.li | `bafybeif6kkkfelyo2eynuqveev2ozkjungzgykd2dcgrmu3hxad6mkrugq` |
 | Playground | `playground.dot` | https://playground.dot.li | `bafybeihzgdyuq7v5ncclnnusgmcy3lye3z7kadrcfqxmgvdxveqwpy76bq` |
 | Playground constellation (kiosk) | `constellation.dot` | https://constellation.dot.li | `bafybeibudgjoiyhcvgqumuzqlm7mzmormtpfeosv2kxdib7pomtl5hswza` |
-| Playground template (starter) | `playground-template.dot` | https://playground-template.dot.li | `bafybeifbva5wdmkxvs4x4swom2e4hicvzjsdy7arorfttyn3kktii2etoy` |
-| Playground tutorial (Rock Paper Scissors) | `playground-tutorial.dot` | https://playground-tutorial.dot.li | `bafybeidtp6d7j65pvmyvpk2n5eydrjj4yh7vfcqo2jeywqzjfd6ppcvgi4` |
+| Playground template (starter) | `playground-template.dot` | https://playground-template.dot.li | `bafybeibfa3q4us7ufv2bajyjvbrukycfixgmbpiccurzij3556l5fqfdpe` |
+| Playground tutorial (Rock Paper Scissors) | `playground-tutorial.dot` | https://playground-tutorial.dot.li | `bafybeihcma3ab4qodsc45cg5u5tav5qkyhc5qav6vw5c7a5ycjhg45v2vq` |
 | Rock-Paper-Scissors (game frontend) | `rock-paper-scissors.dot` | https://rock-paper-scissors.dot.li | `bafybeig32jfoayuvtduoa5svqvmhd2lsxaldt7rdofjz4oyxca7fvfd4su` |
 | Rock-Paper-Scissors (alias, host-only) | `rps-game.dot` | https://rps-game.dot.li | `bafybeicohsszja25bq2quwjkosz32lmqoxcvpexvhgeoesrfqqvhmz5krq` |
 | Simple Survey | `survey.dot` | https://survey.dot.li | `bafybeih46vl67qfeiecplc2mjmsx7h63jl5j6lqokt5khrqwclfq4bahlq` |
