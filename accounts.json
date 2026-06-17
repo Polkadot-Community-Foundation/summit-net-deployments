@@ -15,9 +15,9 @@
         "mercado-constructor-owner"
       ],
       "controls": [
-        "CREATE3 owner of the entire DotNS contract suite",
-        "owner-override registration of every reserved/PoP-gated .dot name (registerReserved)",
-        "constructor owner of all Mercado contracts"
+        "DotNS contract suite owner (CREATE3)",
+        "registerReserved .dot name registration",
+        "Mercado contracts owner"
       ],
       "notes": "Raw secp256k1 EVM key — no SS58 representation. Distinct from the DotNS UI owner (0x7e0e...). This is the key behind every .dot name registration."
     },
@@ -29,7 +29,7 @@
       "keyType": "sr25519",
       "roles": ["dotns-whitelist-operator"],
       "controls": [
-        "holds DOTNS_WHITELIST_OPERATOR_ROLE on DotnsRegistrarController (whiteListAddress)"
+        "DotnsRegistrarController whitelist operator"
       ],
       "notes": "Operational role separate from the DotNS owner: can whitelist addresses without being the contract owner. Verified live by check-readiness.mjs PART A."
     },
@@ -46,8 +46,8 @@
       ],
       "controls": [
         "CDM ContractRegistry owner/admin",
-        "Festival contracts deployer + admin",
-        "t3rminal contract deployer",
+        "Festival deployer/admin",
+        "t3rminal deployer",
         "W3SPayRegistry deployer (super-admin)"
       ],
       "notes": "CAVEAT: this is the CDM *registry* owner, but `cdm deploy` must be signed by a Bulletin-authorized account (w3s-publisher), NOT this one — see SECRETS_AND_CAVEATS.md."
@@ -64,10 +64,10 @@
         "product-deployer"
       ],
       "controls": [
-        "Bulletin-authorized uploader for nearly all app uploads",
+        "Bulletin uploader for most apps",
         ".dot name owner for most apps",
-        "signer for `cdm deploy` (publishes ABI to Bulletin)",
-        "deployer of Playground / Browse / LocalDOT / Simple Survey / Rock-Paper-Scissors / Feedback contracts"
+        "cdm deploy signer",
+        "Playground / Browse / LocalDOT / Survey / RPS / Feedback contract deployer"
       ],
       "notes": "The most overloaded account — straddles upload, name ownership, and several contract deploys. CI secret MNEMONIC / DOTNS_MNEMONIC in app repos = this account (see SECRETS_AND_CAVEATS.md)."
     },
@@ -78,8 +78,8 @@
       "evm": "0x7e0e0a5a111aa15b0c1e4bac776884e263fa6b13",
       "roles": ["dotns-dot-name-owner", "view-call-origin"],
       "controls": [
-        "owner of the dotns.dot name (DotNS UI)",
-        "used as a generic read/view-call origin in tooling (check-readiness.mjs)"
+        "dotns.dot name owner",
+        "read/view-call origin in tooling"
       ],
       "notes": "Distinct from both the DotNS deployer (0x8c78...) and the W3S publisher. The dotns.dot app was uploaded by w3s-publisher but the name is owned here."
     },
@@ -102,7 +102,7 @@
       "keyType": "public-dev-phrase",
       "roles": ["frontend-read-origin"],
       "controls": [
-        "dry-run query origin for the Playground SPA's live CDM registry reads"
+        "read origin for Playground SPA CDM reads"
       ],
       "requires": ["funded-on-AH", "revive-mapped"],
       "notes": "Derived as DEV_PHRASE//<app>-querier. MUST be funded + Revive.map_account()'d on Summit or every live read fails (strict white-screen). Public dev phrase self-signs the map. Each consumer SPA has its OWN read origin."
@@ -115,7 +115,7 @@
       "keyType": "public-phrase",
       "roles": ["frontend-read-origin"],
       "controls": [
-        "dry-run query origin for the Constellation kiosk SPA's live CDM registry reads"
+        "read origin for Constellation kiosk SPA CDM reads"
       ],
       "requires": ["funded-on-AH", "revive-mapped"],
       "notes": "= the committed TEAM_SURI phrase (= playground-app's project deploy signer), a DIFFERENT account from playground's read origin. Funded + mapped 2026-06-14. Mapping one read origin does NOT cover another — map per-SPA."
@@ -128,7 +128,7 @@
       "keyType": "sr25519-public",
       "roles": ["people-lite-attester", "dotns-gateway-attester"],
       "controls": [
-        "the on-chain identity recognised by the identity-backend service (ATTESTER_PUBLIC_KEY); registers usernames on the Summit People chain via peopleLite.attest, and (when DOTNS_GATEWAY_ENABLED) reserves .dot names via dotnsGateway.reserve_name on Asset Hub"
+        "identity-backend service attester; registers People-chain usernames + reserves .dot names"
       ],
       "requires": ["people-lite-attestation-allowance", "proxy-delegation-registered"],
       "notes": "Public key 0xce83e4d44cec5d2bd0cdafe71d48dddb691a9ef7216d83828071f7fa112b3137 (= GET /api/v1/attester on the live service). This is the REAL account in PROXY_DELEGATION mode; a separate secret proxy key (PROXY_PRIVATE_KEY / ATTESTER_PROXY_PRIVATE_KEY) signs Proxy.proxy on its behalf. ⚠️ VERIFIED 2026-06-15 on wss://summit-people-rpc.polkadot.io: PeopleLite.AttestationAllowance(5GjU…)=NULL (zero) AND Proxy.Proxies(5GjU…)=NULL — so username registration is NOT yet functional on Summit. Allowance grant is Root/Sudo-only (peopleLite.increase_attestation_allowance) via the paritytech/individuality-community bootstrap scripts 12b/12c. Distinct from browse-trusted-attester (EVM/Browse) — different attester role entirely."
