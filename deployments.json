@@ -197,18 +197,18 @@
     { "name": "t3rminal (alias)", "domain": "terminal.dot", "url": "https://terminal.dot.li", "cid": "bafybeig5gghipthmzr3wowyi3wunnjbkqlgrcdh4hyzs27fapceo3e7tha", "ownerRef": "w3s-publisher" },
     { "name": "w3spay-admin", "domain": "w3spayadmin.dot", "url": "https://w3spayadmin.dot.li", "cid": "bafybeihk6ugqrpdbkphtvuwszowiiawp2pejuym3uo5iffbdw3juf72gmi", "ownerRef": "w3s-publisher" },
     { "name": "w3spay checkout", "domain": "w3spaycheckout.dot", "url": "https://w3spaycheckout.dot.li", "cid": "bafybeiadel63jof2tiailtl3ngr7l5bgvtbaca63c35k4mlwbo35x7evhe", "ownerRef": "w3s-publisher" },
-    { "name": "w3s-payment-processor", "domain": "w3spayprocessor.dot", "url": "https://w3spayprocessor.dot.li", "cid": "bafybeiermq4qz3vstftmhgmxqpfhzghhgj7k5s3sci6vwlwb7zqdm3qxdm", "ownerRef": "w3s-publisher" },
+    { "name": "w3s-payment-processor", "domain": "w3spayprocessor.dot", "url": "https://w3spayprocessor.dot.li", "cid": "bafybeif6kkkfelyo2eynuqveev2ozkjungzgykd2dcgrmu3hxad6mkrugq", "ownerRef": "w3s-publisher" },
     { "name": "Playground", "domain": "playground.dot", "url": "https://playground.dot.li", "cid": "bafybeihzgdyuq7v5ncclnnusgmcy3lye3z7kadrcfqxmgvdxveqwpy76bq", "ownerRef": "w3s-publisher" },
     { "name": "Playground constellation (kiosk)", "domain": "constellation.dot", "url": "https://constellation.dot.li", "cid": "bafybeibudgjoiyhcvgqumuzqlm7mzmormtpfeosv2kxdib7pomtl5hswza", "ownerRef": "w3s-publisher" },
-    { "name": "Playground template (starter)", "domain": "playground-template.dot", "url": "https://playground-template.dot.li", "cid": "bafybeiaplcd7ol5qwwezmd7pjvbnfspdpoxljoip2zna5v5pzdccgzfyna", "ownerRef": "w3s-publisher" },
-    { "name": "Playground tutorial (Rock Paper Scissors)", "domain": "playground-tutorial.dot", "url": "https://playground-tutorial.dot.li", "cid": "bafybeib2g5ig4fgrcdkqkxe5zwzoofy2msuakuksa27ixubjsclnae7pjy", "ownerRef": "w3s-publisher" },
-    { "name": "Rock-Paper-Scissors (game frontend)", "domain": "rock-paper-scissors.dot", "url": "https://rock-paper-scissors.dot.li", "cid": "bafybeidhs6e2zv7ykvjp3ex4dlugciasuyl56xhv5f33itanblf2wlvskq", "ownerRef": "w3s-publisher" },
-    { "name": "Rock-Paper-Scissors (alias, host-only)", "domain": "rps-game.dot", "url": "https://rps-game.dot.li", "cid": "bafybeiflahpgddarjrg3yod6lbxm3m7wqidcoqzexedpzxy5afsputt66i", "ownerRef": "w3s-publisher" },
-    { "name": "Simple Survey", "domain": "survey.dot", "url": "https://survey.dot.li", "cid": "bafybeifukaj2gdsmmtlk4oagno2bhucnaixr7dinsogcahkvuhofongcyu", "ownerRef": "w3s-publisher" },
+    { "name": "Playground template (starter)", "domain": "playground-template.dot", "url": "https://playground-template.dot.li", "cid": "bafybeifbva5wdmkxvs4x4swom2e4hicvzjsdy7arorfttyn3kktii2etoy", "ownerRef": "w3s-publisher" },
+    { "name": "Playground tutorial (Rock Paper Scissors)", "domain": "playground-tutorial.dot", "url": "https://playground-tutorial.dot.li", "cid": "bafybeidtp6d7j65pvmyvpk2n5eydrjj4yh7vfcqo2jeywqzjfd6ppcvgi4", "ownerRef": "w3s-publisher" },
+    { "name": "Rock-Paper-Scissors (game frontend)", "domain": "rock-paper-scissors.dot", "url": "https://rock-paper-scissors.dot.li", "cid": "bafybeig32jfoayuvtduoa5svqvmhd2lsxaldt7rdofjz4oyxca7fvfd4su", "ownerRef": "w3s-publisher" },
+    { "name": "Rock-Paper-Scissors (alias, host-only)", "domain": "rps-game.dot", "url": "https://rps-game.dot.li", "cid": "bafybeicohsszja25bq2quwjkosz32lmqoxcvpexvhgeoesrfqqvhmz5krq", "ownerRef": "w3s-publisher" },
+    { "name": "Simple Survey", "domain": "survey.dot", "url": "https://survey.dot.li", "cid": "bafybeih46vl67qfeiecplc2mjmsx7h63jl5j6lqokt5khrqwclfq4bahlq", "ownerRef": "w3s-publisher" },
     { "name": "dotli Starter", "domain": "dotli-starter.dot", "url": "https://dotli-starter.dot.li", "cid": "bafybeieekbrschbyclzsw4cjcs5wjcbisqkbkvwyfnn3ilzey6xifck2d4", "ownerRef": "w3s-publisher" },
     { "name": "LocalDOT", "domain": "localmarket.dot", "url": "https://localmarket.dot.li", "cid": "bafybeihbtyzmngldajelxi4ffk65oavtnsldtp63qlyq4xj2zsmu3mg2iy", "ownerRef": "w3s-publisher" },
     { "name": "Mercado", "domain": "mercado.dot", "url": "https://mercado.dot.li", "cid": "bafybeicg32dyfbeb732vj7gq4ciqcw66qhonrxte24dw2xu4ydfv7yxiwu", "ownerRef": "w3s-publisher" },
-    { "name": "Feedback Board", "domain": "feedback.dot", "url": "https://feedback.dot.li", "cid": "bafybeibj5tbmmqdmajveunbmwdb2vewjoav3zuj5gzf7yitgyqbgw6llo4", "ownerRef": "w3s-publisher" }
+    { "name": "Feedback Board", "domain": "feedback.dot", "url": "https://feedback.dot.li", "cid": "bafybeigyrp65wfqwuk7fkhvjv7nlo7npxjm4k2kulgcdije4tjwpzdvunq", "ownerRef": "w3s-publisher" }
   ],
   "services": [
     { "name": "identity-backend", "endpoint": "https://polkadot-app.api.polkadotcommunity.foundation" }
