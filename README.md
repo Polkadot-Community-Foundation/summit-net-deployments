@@ -245,24 +245,24 @@ Web apps published to the **Summit Bulletin chain** and bound to `.dot` names. O
 | Browse | `browse.dot` | https://browse.dot.li | `bafybeig6oyro2d337o22igjfmr4u7ctprucxkn3zomdluk4cazzrmtriea` |
 | Festival — Admin | `web3summit-admin.dot` | https://web3summit-admin.dot.li | `bafybeighn5cql6n52pf7rl2n6eer3p2xcb2yf2alurngvs322lu3vf6frq` |
 | Festival — Attendee | `web3summit.dot` | https://web3summit.dot.li | `bafybeicx6ymls2eovcl3gkbf54zil2qecswmht5es6rfoy2a6bazl3ntlu` |
-| Game results webview | `game-results-webview.dot` | https://game-results-webview.dot.li | `bafybeichlyq74h5fpdlwdt4cn5ivmkxlbp4tdusrmoldedhzo4ilk4luby` |
-| Pocket collectibles webview | `collectibles-webview.dot` | https://collectibles-webview.dot.li | `bafybeieqx7p6rccwid3xjvxpksz3piwfn37brwa2eatpd2lud2b53xmhye` |
-| t3rminal | `t3rminal.dot` | https://t3rminal.dot.li | `bafybeibwpj54mrm62fuzrpesianvzfnwgowln7juipjbbhgp6puhut5yau` |
+| Game results webview | `game-webview.dot` | https://game-webview.dot.li | `bafybeidum55dn7odnysdgoftzgcck2vpsgqz6oihuzl7ielnewzuyqzdoq` |
+| Pocket collectibles webview | `collectibles-webview.dot` | https://collectibles-webview.dot.li | `bafybeigweag727h3mjbivxydskhh5r44ovpk7u7q2zcdgoq5sbn4esybki` |
+| t3rminal | `t3rminal.dot` | https://t3rminal.dot.li | `bafybeihqbbcfttr3pqfbchqrueph5ttl7c5givasuzqknun4yph5uun66m` |
 | t3rminal (alias) | `terminal.dot` | https://terminal.dot.li | `bafybeig5gghipthmzr3wowyi3wunnjbkqlgrcdh4hyzs27fapceo3e7tha` |
 | w3spay-admin | `w3spayadmin.dot` | https://w3spayadmin.dot.li | `bafybeihk6ugqrpdbkphtvuwszowiiawp2pejuym3uo5iffbdw3juf72gmi` |
-| w3spay checkout | `w3spaycheckout.dot` | https://w3spaycheckout.dot.li | `bafybeiadel63jof2tiailtl3ngr7l5bgvtbaca63c35k4mlwbo35x7evhe` |
-| w3s-payment-processor | `w3spayprocessor.dot` | https://w3spayprocessor.dot.li | `bafybeiermq4qz3vstftmhgmxqpfhzghhgj7k5s3sci6vwlwb7zqdm3qxdm` |
-| Playground | `playground.dot` | https://playground.dot.li | `bafybeihzgdyuq7v5ncclnnusgmcy3lye3z7kadrcfqxmgvdxveqwpy76bq` |
+| w3spay checkout | `w3spaycheckout.dot` | https://w3spaycheckout.dot.li | `bafybeifi6bc7wk35ibob7rvfsywdbbptskubeulk3t3nt4dbmrussdyaai` |
+| w3s-payment-processor | `w3spayprocessor.dot` | https://w3spayprocessor.dot.li | `bafybeiceqham366hmxblm6gps7bz6232tjgfh5fepgyrbpaahtd2443sny` |
+| Playground | `playground.dot` | https://playground.dot.li | `bafybeicndylk6flhr42737gvujhbkp6ekiowozsbtvrgpeszpwe6y4ytm4` |
 | Playground constellation (kiosk) | `constellation.dot` | https://constellation.dot.li | `bafybeibudgjoiyhcvgqumuzqlm7mzmormtpfeosv2kxdib7pomtl5hswza` |
 | Playground template (starter) | `playground-template.dot` | https://playground-template.dot.li | `bafybeiaplcd7ol5qwwezmd7pjvbnfspdpoxljoip2zna5v5pzdccgzfyna` |
 | Playground tutorial (Rock Paper Scissors) | `playground-tutorial.dot` | https://playground-tutorial.dot.li | `bafybeib2g5ig4fgrcdkqkxe5zwzoofy2msuakuksa27ixubjsclnae7pjy` |
 | Rock-Paper-Scissors (game frontend) | `rock-paper-scissors.dot` | https://rock-paper-scissors.dot.li | `bafybeidhs6e2zv7ykvjp3ex4dlugciasuyl56xhv5f33itanblf2wlvskq` |
 | Rock-Paper-Scissors (alias, host-only) | `rps-game.dot` | https://rps-game.dot.li | `bafybeiflahpgddarjrg3yod6lbxm3m7wqidcoqzexedpzxy5afsputt66i` |
-| Simple Survey | `survey.dot` | https://survey.dot.li | `bafybeifukaj2gdsmmtlk4oagno2bhucnaixr7dinsogcahkvuhofongcyu` |
+| Simple Survey | `survey.dot` | https://survey.dot.li | `bafybeigktayl3ryqer6menr2jeago6wzn3memys6b6e2tv6tapv7j6v52u` |
 | dotli Starter | `dotli-starter.dot` | https://dotli-starter.dot.li | `bafybeieekbrschbyclzsw4cjcs5wjcbisqkbkvwyfnn3ilzey6xifck2d4` |
 | LocalDOT | `localmarket.dot` | https://localmarket.dot.li | `bafybeihbtyzmngldajelxi4ffk65oavtnsldtp63qlyq4xj2zsmu3mg2iy` |
-| Mercado | `mercado.dot` | https://mercado.dot.li | `bafybeicg32dyfbeb732vj7gq4ciqcw66qhonrxte24dw2xu4ydfv7yxiwu` |
-| Feedback Board | `feedback.dot` | https://feedback.dot.li | `bafybeibj5tbmmqdmajveunbmwdb2vewjoav3zuj5gzf7yitgyqbgw6llo4` |
+| Mercado | `mercado.dot` | https://mercado.dot.li | `bafybeiawxyzink4qklzyq5nrm5bm4yh7sn66qvopjh7555mt7qb7wcxgvy` |
+| Feedback Board | `feedback.dot` | https://feedback.dot.li | `bafybeidfpdgtvqipgrnszk7rj5ssr2uae3hdmbni7sdzfds7mkmycxstti` |
 <!-- /GEN:apps -->
 
 > **DotNS UI** owner / deployer: `14M6Yc9i8dg6QLM2u1yd3jaFM2cd3NNvyKznfBaS2q3cNdKy` (EVM `0x7e0e0a5a111aa15b0c1e4bac776884e263fa6b13`); uploaded by **W3S publisher**.
