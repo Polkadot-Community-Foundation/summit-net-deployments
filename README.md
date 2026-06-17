@@ -243,8 +243,8 @@ Web apps published to the **Summit Bulletin chain** and bound to `.dot` names. O
 | DotNS UI | `dotns.dot` | https://dotns.dot.li | `bafybeiggzry5xc4ewcb6by7vh3dz7q3afhl5qk5kdufnla2vpajh2g5bha` |
 | CDM Frontend | `contracts.dot` | https://contracts.dot.li | `bafybeid2flilxbxopek7yaifq4gsp6zvbalz46gv2nd7ayvij5znckhqnu` |
 | Browse | `browse.dot` | https://browse.dot.li | `bafybeig6oyro2d337o22igjfmr4u7ctprucxkn3zomdluk4cazzrmtriea` |
-| Festival — Admin | `web3summit-admin.dot` | https://web3summit-admin.dot.li | `bafybeihuuc6poyiwu32d6uaeflffeb3mpvxbnrahjnolah2hfhbudk52ku` |
-| Festival — Attendee | `web3summit.dot` | https://web3summit.dot.li | `bafybeigkjfmdjmsjtpko4ivlsgzdg47ooocxz4o3xbtfz7hndv2vr552ta` |
+| Festival — Admin | `web3summit-admin.dot` | https://web3summit-admin.dot.li | `bafybeighn5cql6n52pf7rl2n6eer3p2xcb2yf2alurngvs322lu3vf6frq` |
+| Festival — Attendee | `web3summit.dot` | https://web3summit.dot.li | `bafybeicx6ymls2eovcl3gkbf54zil2qecswmht5es6rfoy2a6bazl3ntlu` |
 | Game results webview | `game-results-webview.dot` | https://game-results-webview.dot.li | `bafybeichlyq74h5fpdlwdt4cn5ivmkxlbp4tdusrmoldedhzo4ilk4luby` |
 | Pocket collectibles webview | `collectibles-webview.dot` | https://collectibles-webview.dot.li | `bafybeieqx7p6rccwid3xjvxpksz3piwfn37brwa2eatpd2lud2b53xmhye` |
 | t3rminal | `t3rminal.dot` | https://t3rminal.dot.li | `bafybeibwpj54mrm62fuzrpesianvzfnwgowln7juipjbbhgp6puhut5yau` |
