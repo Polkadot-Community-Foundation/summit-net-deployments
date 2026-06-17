@@ -1,0 +1,222 @@
+{
+  "$comment": "Canonical, machine-readable deployment inventory for the Summit network: network facts, contracts (by product), Bulletin apps, and npm packages. The README contract/app/npm/network tables are generated from this file. Account references (ownerRef/deployerRef) point at ids in accounts.json. Seed spec for the future automation/monitoring repo.",
+  "network": {
+    "name": "Summit Asset Hub (PolkaVM / pallet-revive)",
+    "evmChainId": 420420417,
+    "evmChainIdHex": "0x190f1b41",
+    "nativeToken": "SUM",
+    "tokenDecimals": 10,
+    "ss58Prefix": 0,
+    "rpc": {
+      "assetHub": "wss://summit-asset-hub-rpc.polkadot.io",
+      "relay": "wss://summit-rpc.polkadot.io",
+      "bulletin": "wss://summit-bulletin-rpc.polkadot.io",
+      "people": "wss://summit-people-rpc.polkadot.io"
+    },
+    "ipfsGateway": "https://summit-ipfs.polkadot.io/ipfs"
+  },
+  "products": [
+    {
+      "id": "dotns",
+      "name": "DotNS",
+      "repo": "dotns",
+      "ownerRef": "dotns-deployer",
+      "summary": "ENS-style name service.",
+      "contracts": [
+        { "name": "Create3Factory", "address": "0x2A6Ab3F071c216e80e683cB1A6eA32798A0F132C" },
+        { "name": "DotnsProtocolRegistry", "address": "0x09f1AE947950eA2d1f010fE2abC00fDd5A745820" },
+        { "name": "DotnsRegistrar", "address": "0xf3969bCBE60463302306663C62A6A8ef91ab9aA5" },
+        { "name": "DotnsRegistrarController", "address": "0xA68a5b2A6be6d014be0dB07c0ed4bacc4A6A570A" },
+        { "name": "DotnsRegistry", "address": "0xFb7AB7E142ED0248D77198CA8722D67C1930D783" },
+        { "name": "DotnsResolver", "address": "0xC7f1C3B16BFd0c5910EE37a4a2033f4506AcE94d" },
+        { "name": "DotnsReverseResolver", "address": "0x5aa444C6cbA9bd703d1a0B5E5C643FB886F80bB4" },
+        { "name": "DotnsContentResolver", "address": "0xf110e5799c3f0adb8ED885C02c45Ecfe7fD86226" },
+        { "name": "DotnsPopController", "address": "0xC7DD78B145ed109092A2d1E79324E5FE219B9518" },
+        { "name": "DotnsPopResolver", "address": "0x03FD2ed7B1b848c59A2428224162dE00D11a8133" },
+        { "name": "PopRules", "address": "0x6331e51C9AfC73BfE12562fd160BA2c66A73f984" },
+        { "name": "DotnsNameEscrow", "address": "0xDbE911007f8cd9876D384b8c025d3BB157DCCcA4" },
+        { "name": "StoreFactory", "address": "0x2947af3CBFb45b89610524a25921C32cB65C4C39" },
+        { "name": "LabelStoreBeacon", "address": "0x670Dab225ea4f2EeB0e6Df2e49AA595aB2CAa5cb" },
+        { "name": "UserStoreBeacon", "address": "0x31e392736889c973A25509861C7D6E6F2EaD951C" },
+        { "name": "RootGatewayDispatcher", "address": "0x22362162032ED2442b43f5902b3421be5aCF1b60" },
+        { "name": "Multicall3", "address": "0x1C1044BEa5bDe0F435436bB52A8340fBE1D59847" }
+      ]
+    },
+    {
+      "id": "cdm",
+      "name": "CDM — Contract Dependency Manager",
+      "repo": "contract-dependency-manager",
+      "ownerRef": "cdm-admin",
+      "summary": "Shared ContractRegistry + system contracts.",
+      "contracts": [
+        { "name": "ContractRegistry", "package": "@polkadot/contract-registry", "address": "0xa5747e60ae27f93e92019e4021abfc4957050141" },
+        { "name": "Contexts", "package": "@polkadot/contexts", "address": "0x9B935075094D7176Afc7e33C5B183109B86B1b6A" },
+        { "name": "Disputes", "package": "@polkadot/disputes", "address": "0x3671Fe6Ebdd5E2FFCE2EbbD499972900390bdD64" },
+        { "name": "Profiles", "package": "@polkadot/profiles", "address": "0x99dAFFC69479297C30815e3a27746f81632dfea1" },
+        { "name": "Reputation", "package": "@polkadot/reputation", "address": "0x94a9099379EeA0C5093F93E9934a7f6605E7922f" },
+        { "name": "Threads", "package": "@polkadot/threads", "address": "0xFa1AB6B6aCBb056F5D9952EEDC5C67F1F3162f3A" }
+      ]
+    },
+    {
+      "id": "attestation",
+      "name": "Attestation Protocol",
+      "repo": "attestation-protocol",
+      "ownerRef": null,
+      "summary": "EAS-style schema registry + attestation service (both ownerless / immutable).",
+      "contracts": [
+        { "name": "SchemaRegistry", "address": "0x4d5b7543c380be0446ff9c22b6055990e2aa952a" },
+        { "name": "AttestationService", "address": "0x40c48a58cdc2797f21325269c4422e717e6510e5" }
+      ]
+    },
+    {
+      "id": "browse",
+      "name": "Browse",
+      "repo": "browse",
+      "ownerRef": "w3s-publisher",
+      "summary": "Privacy-app directory.",
+      "contracts": [
+        { "name": "Publisher (v2.1.0)", "address": "0xf5fe0fc9f4c13dfd3a4a8abd27e64eb652157494" },
+        { "name": "RecipientAndAttesterIndexResolver", "address": "0xa2ea4ab49bbe73f466f2fa0aeb50b39d34b55218" },
+        { "name": "TrustedAttesterIndexResolver", "address": "0xde4a63079034230d71b5a5071571ed3fd95194e0" }
+      ]
+    },
+    {
+      "id": "festival",
+      "name": "Festival",
+      "repo": "festival",
+      "ownerRef": "cdm-admin",
+      "summary": "Conference app: soulbound tickets, attendance POAPs, sessions.",
+      "contracts": [
+        { "name": "Multicall3", "address": "0x6749bd94dc0d68fb7f829e0bf3422ad324d5fe53" },
+        { "name": "Festival POAP (AttendancePOAP)", "address": "0x22127c13ee2abd2280c2e56bf3b7fff82d24ef75" },
+        { "name": "Session POAP (AttendancePOAP)", "address": "0x55a0fced4cf4f2e50570ae27ce9a037b99579578" },
+        { "name": "Festival", "address": "0xd75f84d9593bd2cf61dbf3670cc94f771050a99a" },
+        { "name": "FestivalSession", "address": "0x50a70807bbb6eec19840ad46b0cb508f8c6cd99e" }
+      ]
+    },
+    {
+      "id": "t3rminal",
+      "name": "t3rminal",
+      "repo": "t3rminal",
+      "ownerRef": "cdm-admin",
+      "summary": "Point-of-sale terminal: indexes signed daily sales-report CIDs (writes permissionless, no admin).",
+      "contracts": [
+        { "name": "T3rminalBulletinIndex", "address": "0x10acbce7ea2fb859ef7c2caab29c0babb8b91803" }
+      ]
+    },
+    {
+      "id": "w3spay-admin",
+      "name": "w3spay-admin",
+      "repo": "w3spay-admin",
+      "ownerRef": "cdm-admin",
+      "summary": "W3sPay pilot admin console: the W3SPayRegistry contract (owner = deployer H160, super-admin).",
+      "contracts": [
+        { "name": "W3SPayRegistry", "address": "0xf76dadbbc112738275ed398d15c0e8c47b2550f2" }
+      ]
+    },
+    {
+      "id": "playground",
+      "name": "Playground",
+      "repo": "playground-app-community",
+      "ownerRef": "w3s-publisher",
+      "summary": "Registry browser + quest platform for the Web3 Summit Developer Lab.",
+      "contracts": [
+        { "name": "Registry", "package": "@polkadot/playground-registry", "address": "0x14C27954796575C26c85eD9BC6441522e174a0f3" }
+      ]
+    },
+    {
+      "id": "localdot",
+      "name": "LocalDOT",
+      "repo": "localdot-community",
+      "ownerRef": null,
+      "summary": "Peer-to-peer cash<->token marketplace; permissionless escrow, no on-chain owner.",
+      "contracts": [
+        { "name": "P2PMarket", "address": "0x6132fe5cfd82790ea548515c7d63878e6860397d" },
+        { "name": "ZKPassportRegistry", "address": "0x4161D8dbe61DB1A68dfC570c1cBfD2f7C8E44749" }
+      ]
+    },
+    {
+      "id": "mercado",
+      "name": "Mercado",
+      "repo": "mercado-community",
+      "ownerRef": "dotns-deployer",
+      "appOwnerRef": "w3s-publisher",
+      "summary": "Food-delivery marketplace dApp (restaurants, orders, ratings, disputes, matchmakers).",
+      "contracts": [
+        { "name": "MercadoCore", "address": "0xc411ea624e8f8f0ec2a2145f79e88b80e0269289" },
+        { "name": "MercadoRatings", "address": "0xac36c0173ea817c63dfea1ea796bfd4506d586d2" },
+        { "name": "RestaurantMeta", "address": "0xe707ec73fc95a939c2591dbbdc910d91fdb52e3b" },
+        { "name": "MercadoDisputes", "address": "0xb03380920c5dd15f725875c8eba6e30c2b3710fe" },
+        { "name": "MockMobRule", "address": "0x24f2cce5598c733415d4cb3d23494c7e589d05ba" },
+        { "name": "MercadoMatchmakers", "address": "0x569ee3092a64fdeb114c1cf3414817b31d3bc0bd" }
+      ]
+    },
+    {
+      "id": "simple-survey",
+      "name": "Simple Survey",
+      "repo": "simple-survey",
+      "ownerRef": null,
+      "deployerRef": "w3s-publisher",
+      "summary": "Decentralized survey app: contract indexes survey + response CIDs; permissionless.",
+      "contracts": [
+        { "name": "Surveys", "package": "@polkadot/surveys", "address": "0xD9FBCF04Ea06904Ded8703d07b0c7E34F681E89F" }
+      ]
+    },
+    {
+      "id": "rps",
+      "name": "Rock-Paper-Scissors",
+      "repo": "Rock-Paper-Scissors",
+      "ownerRef": null,
+      "deployerRef": "w3s-publisher",
+      "summary": "Rock-paper-scissors game: @rps/leaderboard tracks address -> (game-history CID, points); permissionless.",
+      "contracts": [
+        { "name": "Leaderboard", "package": "@rps/leaderboard", "address": "0xf3A06D11BDf5d01fD27D767Cd88e277070026AeE" }
+      ]
+    },
+    {
+      "id": "feedback",
+      "name": "Feedback Board",
+      "repo": "feedback-board",
+      "ownerRef": null,
+      "deployerRef": "w3s-publisher",
+      "summary": "Decentralized sticky-note board: @polkadot/feedback keeps an ordered list of note CIDs + poster H160; permissionless.",
+      "contracts": [
+        { "name": "Feedback", "package": "@polkadot/feedback", "address": "0x86Cc121993A2B7Aa53EC8222B63D2053eF352f32" }
+      ]
+    }
+  ],
+  "apps": [
+    { "name": "DotNS UI", "domain": "dotns.dot", "url": "https://dotns.dot.li", "cid": "bafybeiggzry5xc4ewcb6by7vh3dz7q3afhl5qk5kdufnla2vpajh2g5bha", "ownerRef": "dotns-ui-owner" },
+    { "name": "CDM Frontend", "domain": "contracts.dot", "url": "https://contracts.dot.li", "cid": "bafybeid2flilxbxopek7yaifq4gsp6zvbalz46gv2nd7ayvij5znckhqnu", "ownerRef": "w3s-publisher" },
+    { "name": "Browse", "domain": "browse.dot", "url": "https://browse.dot.li", "cid": "bafybeig6oyro2d337o22igjfmr4u7ctprucxkn3zomdluk4cazzrmtriea", "ownerRef": "w3s-publisher" },
+    { "name": "Festival — Admin", "domain": "web3summit-admin.dot", "url": "https://web3summit-admin.dot.li", "cid": "bafybeihuuc6poyiwu32d6uaeflffeb3mpvxbnrahjnolah2hfhbudk52ku", "ownerRef": "w3s-publisher" },
+    { "name": "Festival — Attendee", "domain": "web3summit.dot", "url": "https://web3summit.dot.li", "cid": "bafybeigkjfmdjmsjtpko4ivlsgzdg47ooocxz4o3xbtfz7hndv2vr552ta", "ownerRef": "w3s-publisher" },
+    { "name": "Game results webview", "domain": "game-results-webview.dot", "url": "https://game-results-webview.dot.li", "cid": "bafybeichlyq74h5fpdlwdt4cn5ivmkxlbp4tdusrmoldedhzo4ilk4luby", "ownerRef": "w3s-publisher" },
+    { "name": "Pocket collectibles webview", "domain": "collectibles-webview.dot", "url": "https://collectibles-webview.dot.li", "cid": "bafybeieqx7p6rccwid3xjvxpksz3piwfn37brwa2eatpd2lud2b53xmhye", "ownerRef": "w3s-publisher" },
+    { "name": "t3rminal", "domain": "t3rminal.dot", "url": "https://t3rminal.dot.li", "cid": "bafybeibwpj54mrm62fuzrpesianvzfnwgowln7juipjbbhgp6puhut5yau", "ownerRef": "w3s-publisher" },
+    { "name": "t3rminal (alias)", "domain": "terminal.dot", "url": "https://terminal.dot.li", "cid": "bafybeig5gghipthmzr3wowyi3wunnjbkqlgrcdh4hyzs27fapceo3e7tha", "ownerRef": "w3s-publisher" },
+    { "name": "w3spay-admin", "domain": "w3spayadmin.dot", "url": "https://w3spayadmin.dot.li", "cid": "bafybeihk6ugqrpdbkphtvuwszowiiawp2pejuym3uo5iffbdw3juf72gmi", "ownerRef": "w3s-publisher" },
+    { "name": "w3spay checkout", "domain": "w3spaycheckout.dot", "url": "https://w3spaycheckout.dot.li", "cid": "bafybeiadel63jof2tiailtl3ngr7l5bgvtbaca63c35k4mlwbo35x7evhe", "ownerRef": "w3s-publisher" },
+    { "name": "w3s-payment-processor", "domain": "w3spayprocessor.dot", "url": "https://w3spayprocessor.dot.li", "cid": "bafybeiermq4qz3vstftmhgmxqpfhzghhgj7k5s3sci6vwlwb7zqdm3qxdm", "ownerRef": "w3s-publisher" },
+    { "name": "Playground", "domain": "playground.dot", "url": "https://playground.dot.li", "cid": "bafybeihzgdyuq7v5ncclnnusgmcy3lye3z7kadrcfqxmgvdxveqwpy76bq", "ownerRef": "w3s-publisher" },
+    { "name": "Playground constellation (kiosk)", "domain": "constellation.dot", "url": "https://constellation.dot.li", "cid": "bafybeibudgjoiyhcvgqumuzqlm7mzmormtpfeosv2kxdib7pomtl5hswza", "ownerRef": "w3s-publisher" },
+    { "name": "Playground template (starter)", "domain": "playground-template.dot", "url": "https://playground-template.dot.li", "cid": "bafybeiaplcd7ol5qwwezmd7pjvbnfspdpoxljoip2zna5v5pzdccgzfyna", "ownerRef": "w3s-publisher" },
+    { "name": "Playground tutorial (Rock Paper Scissors)", "domain": "playground-tutorial.dot", "url": "https://playground-tutorial.dot.li", "cid": "bafybeib2g5ig4fgrcdkqkxe5zwzoofy2msuakuksa27ixubjsclnae7pjy", "ownerRef": "w3s-publisher" },
+    { "name": "Rock-Paper-Scissors (game frontend)", "domain": "rock-paper-scissors.dot", "url": "https://rock-paper-scissors.dot.li", "cid": "bafybeidhs6e2zv7ykvjp3ex4dlugciasuyl56xhv5f33itanblf2wlvskq", "ownerRef": "w3s-publisher" },
+    { "name": "Rock-Paper-Scissors (alias, host-only)", "domain": "rps-game.dot", "url": "https://rps-game.dot.li", "cid": "bafybeiflahpgddarjrg3yod6lbxm3m7wqidcoqzexedpzxy5afsputt66i", "ownerRef": "w3s-publisher" },
+    { "name": "Simple Survey", "domain": "survey.dot", "url": "https://survey.dot.li", "cid": "bafybeifukaj2gdsmmtlk4oagno2bhucnaixr7dinsogcahkvuhofongcyu", "ownerRef": "w3s-publisher" },
+    { "name": "dotli Starter", "domain": "dotli-starter.dot", "url": "https://dotli-starter.dot.li", "cid": "bafybeieekbrschbyclzsw4cjcs5wjcbisqkbkvwyfnn3ilzey6xifck2d4", "ownerRef": "w3s-publisher" },
+    { "name": "LocalDOT", "domain": "localmarket.dot", "url": "https://localmarket.dot.li", "cid": "bafybeihbtyzmngldajelxi4ffk65oavtnsldtp63qlyq4xj2zsmu3mg2iy", "ownerRef": "w3s-publisher" },
+    { "name": "Mercado", "domain": "mercado.dot", "url": "https://mercado.dot.li", "cid": "bafybeicg32dyfbeb732vj7gq4ciqcw66qhonrxte24dw2xu4ydfv7yxiwu", "ownerRef": "w3s-publisher" },
+    { "name": "Feedback Board", "domain": "feedback.dot", "url": "https://feedback.dot.li", "cid": "bafybeibj5tbmmqdmajveunbmwdb2vewjoav3zuj5gzf7yitgyqbgw6llo4", "ownerRef": "w3s-publisher" }
+  ],
+  "services": [
+    { "name": "identity-backend", "endpoint": "https://polkadot-app.api.polkadotcommunity.foundation" }
+  ],
+  "npm": [
+    { "name": "@polkadot-community-foundation/cdm-env", "version": "2.1.0", "purpose": "CDM chain env presets; `getRegistryAddress(\"w3s\")` → `0xa5747e60ae27f93e92019e4021abfc4957050141`" },
+    { "name": "@polkadot-community-foundation/dotns-cli", "version": "0.7.2", "purpose": "DotNS CLI (`dotns`)" },
+    { "name": "@polkadot-community-foundation/polkadot-app-deploy", "version": "0.10.1", "purpose": "Bulletin app-deploy CLI (`polkadot-app-deploy` / `pad`)" },
+    { "name": "@polkadot-community-foundation/cdm-cli", "version": "0.8.22", "purpose": "CDM CLI (`cdm`) — bundled, registry baked in" }
+  ]
+}
