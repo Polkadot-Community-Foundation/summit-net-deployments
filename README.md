@@ -251,18 +251,18 @@ Web apps published to the **Summit Bulletin chain** and bound to `.dot` names. O
 | t3rminal (alias) | `terminal.dot` | https://terminal.dot.li | `bafybeig5gghipthmzr3wowyi3wunnjbkqlgrcdh4hyzs27fapceo3e7tha` |
 | w3spay-admin | `w3spayadmin.dot` | https://w3spayadmin.dot.li | `bafybeihk6ugqrpdbkphtvuwszowiiawp2pejuym3uo5iffbdw3juf72gmi` |
 | w3spay checkout | `w3spaycheckout.dot` | https://w3spaycheckout.dot.li | `bafybeifi6bc7wk35ibob7rvfsywdbbptskubeulk3t3nt4dbmrussdyaai` |
-| w3s-payment-processor | `w3spayprocessor.dot` | https://w3spayprocessor.dot.li | `bafybeiceqham366hmxblm6gps7bz6232tjgfh5fepgyrbpaahtd2443sny` |
+| w3s-payment-processor | `w3spayprocessor.dot` | https://w3spayprocessor.dot.li | `bafybeif6kkkfelyo2eynuqveev2ozkjungzgykd2dcgrmu3hxad6mkrugq` |
 | Playground | `playground.dot` | https://playground.dot.li | `bafybeicndylk6flhr42737gvujhbkp6ekiowozsbtvrgpeszpwe6y4ytm4` |
 | Playground constellation (kiosk) | `constellation.dot` | https://constellation.dot.li | `bafybeibudgjoiyhcvgqumuzqlm7mzmormtpfeosv2kxdib7pomtl5hswza` |
-| Playground template (starter) | `playground-template.dot` | https://playground-template.dot.li | `bafybeiaplcd7ol5qwwezmd7pjvbnfspdpoxljoip2zna5v5pzdccgzfyna` |
-| Playground tutorial (Rock Paper Scissors) | `playground-tutorial.dot` | https://playground-tutorial.dot.li | `bafybeib2g5ig4fgrcdkqkxe5zwzoofy2msuakuksa27ixubjsclnae7pjy` |
-| Rock-Paper-Scissors (game frontend) | `rock-paper-scissors.dot` | https://rock-paper-scissors.dot.li | `bafybeidhs6e2zv7ykvjp3ex4dlugciasuyl56xhv5f33itanblf2wlvskq` |
-| Rock-Paper-Scissors (alias, host-only) | `rps-game.dot` | https://rps-game.dot.li | `bafybeiflahpgddarjrg3yod6lbxm3m7wqidcoqzexedpzxy5afsputt66i` |
-| Simple Survey | `survey.dot` | https://survey.dot.li | `bafybeigktayl3ryqer6menr2jeago6wzn3memys6b6e2tv6tapv7j6v52u` |
+| Playground template (starter) | `playground-template.dot` | https://playground-template.dot.li | `bafybeifbva5wdmkxvs4x4swom2e4hicvzjsdy7arorfttyn3kktii2etoy` |
+| Playground tutorial (Rock Paper Scissors) | `playground-tutorial.dot` | https://playground-tutorial.dot.li | `bafybeidtp6d7j65pvmyvpk2n5eydrjj4yh7vfcqo2jeywqzjfd6ppcvgi4` |
+| Rock-Paper-Scissors (game frontend) | `rock-paper-scissors.dot` | https://rock-paper-scissors.dot.li | `bafybeig32jfoayuvtduoa5svqvmhd2lsxaldt7rdofjz4oyxca7fvfd4su` |
+| Rock-Paper-Scissors (alias, host-only) | `rps-game.dot` | https://rps-game.dot.li | `bafybeicohsszja25bq2quwjkosz32lmqoxcvpexvhgeoesrfqqvhmz5krq` |
+| Simple Survey | `survey.dot` | https://survey.dot.li | `bafybeih46vl67qfeiecplc2mjmsx7h63jl5j6lqokt5khrqwclfq4bahlq` |
 | dotli Starter | `dotli-starter.dot` | https://dotli-starter.dot.li | `bafybeieekbrschbyclzsw4cjcs5wjcbisqkbkvwyfnn3ilzey6xifck2d4` |
 | LocalDOT | `localmarket.dot` | https://localmarket.dot.li | `bafybeihbtyzmngldajelxi4ffk65oavtnsldtp63qlyq4xj2zsmu3mg2iy` |
 | Mercado | `mercado.dot` | https://mercado.dot.li | `bafybeiawxyzink4qklzyq5nrm5bm4yh7sn66qvopjh7555mt7qb7wcxgvy` |
-| Feedback Board | `feedback.dot` | https://feedback.dot.li | `bafybeidfpdgtvqipgrnszk7rj5ssr2uae3hdmbni7sdzfds7mkmycxstti` |
+| Feedback Board | `feedback.dot` | https://feedback.dot.li | `bafybeigyrp65wfqwuk7fkhvjv7nlo7npxjm4k2kulgcdije4tjwpzdvunq` |
 <!-- /GEN:apps -->
 
 > **DotNS UI** owner / deployer: `14M6Yc9i8dg6QLM2u1yd3jaFM2cd3NNvyKznfBaS2q3cNdKy` (EVM `0x7e0e0a5a111aa15b0c1e4bac776884e263fa6b13`); uploaded by **W3S publisher**.
