@@ -348,7 +348,7 @@
       "name": "CDM Frontend",
       "domain": "contracts.dot",
       "url": "https://contracts.dot.li",
-      "cid": "bafybeid2flilxbxopek7yaifq4gsp6zvbalz46gv2nd7ayvij5znckhqnu",
+      "cid": "bafybeibr6qumuw3g3i2cuhyg4xbkk2hihb2holakzci7pp2zu6pm3wqrwm",
       "ownerRef": "w3s-publisher"
     },
     {
@@ -453,7 +453,7 @@
       "name": "Rock-Paper-Scissors (game frontend)",
       "domain": "rock-paper-scissors.dot",
       "url": "https://rock-paper-scissors.dot.li",
-      "cid": "bafybeig32jfoayuvtduoa5svqvmhd2lsxaldt7rdofjz4oyxca7fvfd4su",
+      "cid": "bafybeifzwqdn3lir5iaynk7s7zztebkf6ukphxk2y54ou5yafgh4e5szda",
       "ownerRef": "w3s-publisher"
     },
     {
@@ -500,16 +500,56 @@
     }
   ],
   "clients": [
-    { "platform": "Android", "channel": "Google Play", "url": "https://play.google.com/store/apps/details?id=io.pcf.polkadotapp" },
-    { "platform": "Android", "channel": "Direct APK (latest)", "url": "https://get.polkadotcommunity.foundation/android/latest.apk" },
-    { "platform": "iOS", "channel": "TestFlight (beta)", "url": "https://testflight.apple.com/join/VvC8SHVE" },
-    { "platform": "macOS — Apple Silicon", "channel": "Direct `.dmg`", "url": "https://get.polkadotcommunity.foundation/desktop/latest-mac-arm64.dmg" },
-    { "platform": "macOS — Intel", "channel": "Direct `.dmg`", "url": "https://get.polkadotcommunity.foundation/desktop/latest-mac-x64.dmg" },
-    { "platform": "Windows — universal", "channel": "Direct `.exe`", "url": "https://get.polkadotcommunity.foundation/desktop/latest-win.exe" },
-    { "platform": "Windows — x64", "channel": "Direct `.exe`", "url": "https://get.polkadotcommunity.foundation/desktop/latest-win-x64.exe" },
-    { "platform": "Windows — ARM64", "channel": "Direct `.exe`", "url": "https://get.polkadotcommunity.foundation/desktop/latest-win-arm64.exe" },
-    { "platform": "Linux — x86_64", "channel": "Direct `AppImage`", "url": "https://get.polkadotcommunity.foundation/desktop/latest-linux-x64.AppImage" },
-    { "platform": "Linux — ARM64", "channel": "Direct `AppImage`", "url": "https://get.polkadotcommunity.foundation/desktop/latest-linux-arm64.AppImage" }
+    {
+      "platform": "Android",
+      "channel": "Google Play",
+      "url": "https://play.google.com/store/apps/details?id=io.pcf.polkadotapp"
+    },
+    {
+      "platform": "Android",
+      "channel": "Direct APK (latest)",
+      "url": "https://get.polkadotcommunity.foundation/android/latest.apk"
+    },
+    {
+      "platform": "iOS",
+      "channel": "TestFlight (beta)",
+      "url": "https://testflight.apple.com/join/VvC8SHVE"
+    },
+    {
+      "platform": "macOS — Apple Silicon",
+      "channel": "Direct `.dmg`",
+      "url": "https://get.polkadotcommunity.foundation/desktop/latest-mac-arm64.dmg"
+    },
+    {
+      "platform": "macOS — Intel",
+      "channel": "Direct `.dmg`",
+      "url": "https://get.polkadotcommunity.foundation/desktop/latest-mac-x64.dmg"
+    },
+    {
+      "platform": "Windows — universal",
+      "channel": "Direct `.exe`",
+      "url": "https://get.polkadotcommunity.foundation/desktop/latest-win.exe"
+    },
+    {
+      "platform": "Windows — x64",
+      "channel": "Direct `.exe`",
+      "url": "https://get.polkadotcommunity.foundation/desktop/latest-win-x64.exe"
+    },
+    {
+      "platform": "Windows — ARM64",
+      "channel": "Direct `.exe`",
+      "url": "https://get.polkadotcommunity.foundation/desktop/latest-win-arm64.exe"
+    },
+    {
+      "platform": "Linux — x86_64",
+      "channel": "Direct `AppImage`",
+      "url": "https://get.polkadotcommunity.foundation/desktop/latest-linux-x64.AppImage"
+    },
+    {
+      "platform": "Linux — ARM64",
+      "channel": "Direct `AppImage`",
+      "url": "https://get.polkadotcommunity.foundation/desktop/latest-linux-arm64.AppImage"
+    }
   ],
   "services": [
     {
