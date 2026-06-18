@@ -233,9 +233,9 @@
       "summary": "Registry browser + quest platform for the Web3 Summit Developer Lab.",
       "contracts": [
         {
-          "name": "Registry",
-          "package": "@polkadot/playground-registry",
-          "address": "0x14C27954796575C26c85eD9BC6441522e174a0f3"
+          "name": "Registry (v1)",
+          "package": "@w3s/playground-registry",
+          "address": "0x49091Eb6dbBf2f95B55243b987ebc15eaaEe711F"
         }
       ]
     },
@@ -425,7 +425,7 @@
       "name": "Playground",
       "domain": "playground.dot",
       "url": "https://playground.dot.li",
-      "cid": "bafybeihzgdyuq7v5ncclnnusgmcy3lye3z7kadrcfqxmgvdxveqwpy76bq",
+      "cid": "bafybeicrnm56b7j7zxrnkbbb3v3zz6mwznps7qgumkzotrwkib2ku2nivu",
       "ownerRef": "w3s-publisher"
     },
     {

@@ -168,10 +168,10 @@ Registry browser + quest platform for the Web3 Summit Developer Lab. Deployer / 
 <!-- GEN:contracts:playground -->
 | Contract | Package | Address |
 | --- | --- | --- |
-| Registry | `@polkadot/playground-registry` | `0x14C27954796575C26c85eD9BC6441522e174a0f3` |
+| Registry (v1) | `@w3s/playground-registry` | `0x49091Eb6dbBf2f95B55243b987ebc15eaaEe711F` |
 <!-- /GEN:contracts:playground -->
 
-> Legacy alias `@w3s/playground-registry` still resolves to the same address (append-only) and is required at runtime.
+> **v1 registry** (`0x49091Eb6…711F`) is the live runtime contract — a fresh CDM deploy that the frontend resolves via `@w3s/playground-registry`. State (6 apps, 9 point balances, 2 social counters) was migrated from the prior **v0** instance `0x14C27954796575C26c85eD9BC6441522e174a0f3` (now superseded). Extra admin granted on v1: `5FHxLwXdYvyQAsuH9RKeF7LyLXJaA3NbXjPZAbq13hZMcKRN` (sudo remains the W3S publisher).
 
 ## LocalDOT
 
@@ -254,7 +254,7 @@ Web apps published to the **Summit Bulletin chain** and bound to `.dot` names. O
 | w3spay-admin | `w3spayadmin.dot` | https://w3spayadmin.dot.li | `bafybeihk6ugqrpdbkphtvuwszowiiawp2pejuym3uo5iffbdw3juf72gmi` |
 | w3spay checkout | `w3spay.dot` | https://w3spay.dot.li | `bafybeibfysmrfngmh4j4dmdcwqme4ngu4l6chhbuxshjewyktqz2o5mqjm` |
 | w3s-payment-processor | `w3spayprocessor.dot` | https://w3spayprocessor.dot.li | `bafybeif6kkkfelyo2eynuqveev2ozkjungzgykd2dcgrmu3hxad6mkrugq` |
-| Playground | `playground.dot` | https://playground.dot.li | `bafybeihzgdyuq7v5ncclnnusgmcy3lye3z7kadrcfqxmgvdxveqwpy76bq` |
+| Playground | `playground.dot` | https://playground.dot.li | `bafybeicrnm56b7j7zxrnkbbb3v3zz6mwznps7qgumkzotrwkib2ku2nivu` |
 | Playground constellation (kiosk) | `constellation.dot` | https://constellation.dot.li | `bafybeibudgjoiyhcvgqumuzqlm7mzmormtpfeosv2kxdib7pomtl5hswza` |
 | Playground template (starter) | `playground-template.dot` | https://playground-template.dot.li | `bafybeibfa3q4us7ufv2bajyjvbrukycfixgmbpiccurzij3556l5fqfdpe` |
 | Playground tutorial (Rock Paper Scissors) | `playground-tutorial.dot` | https://playground-tutorial.dot.li | `bafybeihcma3ab4qodsc45cg5u5tav5qkyhc5qav6vw5c7a5ycjhg45v2vq` |
