@@ -243,7 +243,7 @@ Web apps published to the **Summit Bulletin chain** and bound to `.dot` names. O
 | App | Domain | URL | Root CID |
 | --- | --- | --- | --- |
 | DotNS UI | `dotns.dot` | https://dotns.dot.li | `bafybeiggzry5xc4ewcb6by7vh3dz7q3afhl5qk5kdufnla2vpajh2g5bha` |
-| CDM Frontend | `contracts.dot` | https://contracts.dot.li | `bafybeid2flilxbxopek7yaifq4gsp6zvbalz46gv2nd7ayvij5znckhqnu` |
+| CDM Frontend | `contracts.dot` | https://contracts.dot.li | `bafybeibr6qumuw3g3i2cuhyg4xbkk2hihb2holakzci7pp2zu6pm3wqrwm` |
 | Browse | `browse.dot` | https://browse.dot.li | `bafybeifybdg32mikvkrmssv6ie3kbgnrllwo7zksuzzrd53slvrpizq4ne` |
 | Festival — Admin | `web3summit-admin.dot` | https://web3summit-admin.dot.li | `bafybeifba5rompnrufzup36uzssdnk3kqa3d7oxgjajvdb5woynvmzkzty` |
 | Festival — Attendee | `web3summit.dot` | https://web3summit.dot.li | `bafybeicdaujjbajmfo2en4qjpoxibmaamz755nds2ojmpyrp65zebteiaq` |
@@ -258,7 +258,7 @@ Web apps published to the **Summit Bulletin chain** and bound to `.dot` names. O
 | Playground constellation (kiosk) | `constellation.dot` | https://constellation.dot.li | `bafybeiewulbrpo2amxrwnekv7c3mt3lrhpxzzf657qyqge3bb7vwqnafc4` |
 | Playground template (starter) | `playground-template.dot` | https://playground-template.dot.li | `bafybeibfa3q4us7ufv2bajyjvbrukycfixgmbpiccurzij3556l5fqfdpe` |
 | Playground tutorial (Rock Paper Scissors) | `playground-tutorial.dot` | https://playground-tutorial.dot.li | `bafybeihcma3ab4qodsc45cg5u5tav5qkyhc5qav6vw5c7a5ycjhg45v2vq` |
-| Rock-Paper-Scissors (game frontend) | `rock-paper-scissors.dot` | https://rock-paper-scissors.dot.li | `bafybeig32jfoayuvtduoa5svqvmhd2lsxaldt7rdofjz4oyxca7fvfd4su` |
+| Rock-Paper-Scissors (game frontend) | `rock-paper-scissors.dot` | https://rock-paper-scissors.dot.li | `bafybeifzwqdn3lir5iaynk7s7zztebkf6ukphxk2y54ou5yafgh4e5szda` |
 | Rock-Paper-Scissors (alias, host-only) | `rps-game.dot` | https://rps-game.dot.li | `bafybeicohsszja25bq2quwjkosz32lmqoxcvpexvhgeoesrfqqvhmz5krq` |
 | Simple Survey | `survey.dot` | https://survey.dot.li | `bafybeih46vl67qfeiecplc2mjmsx7h63jl5j6lqokt5khrqwclfq4bahlq` |
 | dotli Starter | `dotli-starter.dot` | https://dotli-starter.dot.li | `bafybeieekbrschbyclzsw4cjcs5wjcbisqkbkvwyfnn3ilzey6xifck2d4` |
