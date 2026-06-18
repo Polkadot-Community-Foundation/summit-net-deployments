@@ -244,18 +244,18 @@ Web apps published to the **Summit Bulletin chain** and bound to `.dot` names. O
 | --- | --- | --- | --- |
 | DotNS UI | `dotns.dot` | https://dotns.dot.li | `bafybeiggzry5xc4ewcb6by7vh3dz7q3afhl5qk5kdufnla2vpajh2g5bha` |
 | CDM Frontend | `contracts.dot` | https://contracts.dot.li | `bafybeibr6qumuw3g3i2cuhyg4xbkk2hihb2holakzci7pp2zu6pm3wqrwm` |
-| Browse | `browse.dot` | https://browse.dot.li | `bafybeifybdg32mikvkrmssv6ie3kbgnrllwo7zksuzzrd53slvrpizq4ne` |
-| Festival — Admin | `web3summit-admin.dot` | https://web3summit-admin.dot.li | `bafybeifba5rompnrufzup36uzssdnk3kqa3d7oxgjajvdb5woynvmzkzty` |
-| Festival — Attendee | `web3summit.dot` | https://web3summit.dot.li | `bafybeicdaujjbajmfo2en4qjpoxibmaamz755nds2ojmpyrp65zebteiaq` |
-| Game results webview | `game-webview.dot` | https://game-webview.dot.li | `bafybeigifj52a7zs7qdms5fvkztkdkz4szrmwsk2z3zeq5xxzaqarsqaiu` |
+| Browse | `browse.dot` | https://browse.dot.li | `bafybeig6oyro2d337o22igjfmr4u7ctprucxkn3zomdluk4cazzrmtriea` |
+| Festival — Admin | `web3summit-admin.dot` | https://web3summit-admin.dot.li | `bafybeifkuyb352dyb3frz6unutilhghxu32dzgepe7xoybndoyhfffbjza` |
+| Festival — Attendee | `web3summit.dot` | https://web3summit.dot.li | `bafybeicei7xvikseqky3apyo7skdvf6ebsvbwxveamlql3imslqmezejze` |
+| Game results webview | `game-webview.dot` | https://game-webview.dot.li | `bafybeihi7faliwhtqaree53u5raxt6ayv2d5iv5z3xpoybx6nmjehy2pga` |
 | Pocket collectibles webview | `collectibles-webview.dot` | https://collectibles-webview.dot.li | `bafybeiapc7v7x2ghalgciirymvxlmaspmhrf4hlgwu6xgzmfoa6qkwjg5i` |
-| t3rminal | `t3rminal.dot` | https://t3rminal.dot.li | `bafybeiaonylrnny7n4enc4rtuuqgks3tjgdifs4gelhgzpwi7cbnnzk434` |
-| t3rminal (alias) | `terminal.dot` | https://terminal.dot.li | `bafybeif3pp7tbdfiqaw7ioh6c6jhbfnuyu4jdoo3hvdfhxiwxn4u4abo3e` |
+| t3rminal | `t3rminal.dot` | https://t3rminal.dot.li | `bafybeibwpj54mrm62fuzrpesianvzfnwgowln7juipjbbhgp6puhut5yau` |
+| t3rminal (alias) | `terminal.dot` | https://terminal.dot.li | `bafybeig5gghipthmzr3wowyi3wunnjbkqlgrcdh4hyzs27fapceo3e7tha` |
 | w3spay-admin | `w3spayadmin.dot` | https://w3spayadmin.dot.li | `bafybeihk6ugqrpdbkphtvuwszowiiawp2pejuym3uo5iffbdw3juf72gmi` |
 | w3spay checkout | `w3spay.dot` | https://w3spay.dot.li | `bafybeibfysmrfngmh4j4dmdcwqme4ngu4l6chhbuxshjewyktqz2o5mqjm` |
 | w3s-payment-processor | `w3spayprocessor.dot` | https://w3spayprocessor.dot.li | `bafybeif6kkkfelyo2eynuqveev2ozkjungzgykd2dcgrmu3hxad6mkrugq` |
 | Playground | `playground.dot` | https://playground.dot.li | `bafybeicrnm56b7j7zxrnkbbb3v3zz6mwznps7qgumkzotrwkib2ku2nivu` |
-| Playground constellation (kiosk) | `constellation.dot` | https://constellation.dot.li | `bafybeiewulbrpo2amxrwnekv7c3mt3lrhpxzzf657qyqge3bb7vwqnafc4` |
+| Playground constellation (kiosk) | `constellation.dot` | https://constellation.dot.li | `bafybeibudgjoiyhcvgqumuzqlm7mzmormtpfeosv2kxdib7pomtl5hswza` |
 | Playground template (starter) | `playground-template.dot` | https://playground-template.dot.li | `bafybeibfa3q4us7ufv2bajyjvbrukycfixgmbpiccurzij3556l5fqfdpe` |
 | Playground tutorial (Rock Paper Scissors) | `playground-tutorial.dot` | https://playground-tutorial.dot.li | `bafybeihcma3ab4qodsc45cg5u5tav5qkyhc5qav6vw5c7a5ycjhg45v2vq` |
 | Rock-Paper-Scissors (game frontend) | `rock-paper-scissors.dot` | https://rock-paper-scissors.dot.li | `bafybeifzwqdn3lir5iaynk7s7zztebkf6ukphxk2y54ou5yafgh4e5szda` |
