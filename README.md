@@ -245,12 +245,12 @@ Web apps published to the **Summit Bulletin chain** and bound to `.dot` names. O
 | DotNS UI | `dotns.dot` | https://dotns.dot.li | `bafybeiggzry5xc4ewcb6by7vh3dz7q3afhl5qk5kdufnla2vpajh2g5bha` |
 | CDM Frontend | `contracts.dot` | https://contracts.dot.li | `bafybeid2flilxbxopek7yaifq4gsp6zvbalz46gv2nd7ayvij5znckhqnu` |
 | Browse | `browse.dot` | https://browse.dot.li | `bafybeig6oyro2d337o22igjfmr4u7ctprucxkn3zomdluk4cazzrmtriea` |
-| Festival — Admin | `web3summit-admin.dot` | https://web3summit-admin.dot.li | `bafybeihuuc6poyiwu32d6uaeflffeb3mpvxbnrahjnolah2hfhbudk52ku` |
-| Festival — Attendee | `web3summit.dot` | https://web3summit.dot.li | `bafybeigkjfmdjmsjtpko4ivlsgzdg47ooocxz4o3xbtfz7hndv2vr552ta` |
-| Game results webview | `game-webview.dot` | https://game-webview.dot.li | `bafybeihi7faliwhtqaree53u5raxt6ayv2d5iv5z3xpoybx6nmjehy2pga` |
+| Festival — Admin | `web3summit-admin.dot` | https://web3summit-admin.dot.li | `bafybeifba5rompnrufzup36uzssdnk3kqa3d7oxgjajvdb5woynvmzkzty` |
+| Festival — Attendee | `web3summit.dot` | https://web3summit.dot.li | `bafybeicdaujjbajmfo2en4qjpoxibmaamz755nds2ojmpyrp65zebteiaq` |
+| Game results webview | `game-webview.dot` | https://game-webview.dot.li | `bafybeigifj52a7zs7qdms5fvkztkdkz4szrmwsk2z3zeq5xxzaqarsqaiu` |
 | Pocket collectibles webview | `collectibles-webview.dot` | https://collectibles-webview.dot.li | `bafybeiapc7v7x2ghalgciirymvxlmaspmhrf4hlgwu6xgzmfoa6qkwjg5i` |
-| t3rminal | `t3rminal.dot` | https://t3rminal.dot.li | `bafybeibwpj54mrm62fuzrpesianvzfnwgowln7juipjbbhgp6puhut5yau` |
-| t3rminal (alias) | `terminal.dot` | https://terminal.dot.li | `bafybeig5gghipthmzr3wowyi3wunnjbkqlgrcdh4hyzs27fapceo3e7tha` |
+| t3rminal | `t3rminal.dot` | https://t3rminal.dot.li | `bafybeiaonylrnny7n4enc4rtuuqgks3tjgdifs4gelhgzpwi7cbnnzk434` |
+| t3rminal (alias) | `terminal.dot` | https://terminal.dot.li | `bafybeif3pp7tbdfiqaw7ioh6c6jhbfnuyu4jdoo3hvdfhxiwxn4u4abo3e` |
 | w3spay-admin | `w3spayadmin.dot` | https://w3spayadmin.dot.li | `bafybeihk6ugqrpdbkphtvuwszowiiawp2pejuym3uo5iffbdw3juf72gmi` |
 | w3spay checkout | `w3spay.dot` | https://w3spay.dot.li | `bafybeibfysmrfngmh4j4dmdcwqme4ngu4l6chhbuxshjewyktqz2o5mqjm` |
 | w3s-payment-processor | `w3spayprocessor.dot` | https://w3spayprocessor.dot.li | `bafybeif6kkkfelyo2eynuqveev2ozkjungzgykd2dcgrmu3hxad6mkrugq` |
