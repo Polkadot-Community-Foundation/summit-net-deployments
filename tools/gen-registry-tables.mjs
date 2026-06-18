@@ -11,6 +11,8 @@
  *   <!-- GEN:accounts -->           ... <!-- /GEN:accounts -->
  *   <!-- GEN:contracts:<id> -->     ... <!-- /GEN:contracts:<id> -->   (one per product)
  *   <!-- GEN:apps -->               ... <!-- /GEN:apps -->
+ *   <!-- GEN:clients -->            ... <!-- /GEN:clients -->
+ *   <!-- GEN:services -->           ... <!-- /GEN:services -->
  *   <!-- GEN:npm -->                ... <!-- /GEN:npm -->
  */
 import { readFileSync, writeFileSync } from "node:fs";
@@ -80,6 +82,14 @@ for (const p of deploy.products) {
   blocks["apps"] = table(
     ["App", "Domain", "URL", "Root CID"],
     deploy.apps.map((a) => [a.name, code(a.domain), a.url, code(a.cid)])
+  );
+}
+
+// --- clients (downloadable / store-distributed apps) ---
+if (deploy.clients && deploy.clients.length) {
+  blocks["clients"] = table(
+    ["Platform", "Channel", "Download"],
+    deploy.clients.map((c) => [c.platform, c.channel, c.url])
   );
 }
 
