@@ -255,7 +255,7 @@ Web apps published to the **Summit Bulletin chain** and bound to `.dot` names. O
 | w3spay checkout | `w3spay.dot` | https://w3spay.dot.li | `bafybeibfysmrfngmh4j4dmdcwqme4ngu4l6chhbuxshjewyktqz2o5mqjm` |
 | w3s-payment-processor | `w3spayprocessor.dot` | https://w3spayprocessor.dot.li | `bafybeif6kkkfelyo2eynuqveev2ozkjungzgykd2dcgrmu3hxad6mkrugq` |
 | Playground | `playground.dot` | https://playground.dot.li | `bafybeicrnm56b7j7zxrnkbbb3v3zz6mwznps7qgumkzotrwkib2ku2nivu` |
-| Playground constellation (kiosk) | `constellation.dot` | https://constellation.dot.li | `bafybeibudgjoiyhcvgqumuzqlm7mzmormtpfeosv2kxdib7pomtl5hswza` |
+| Playground constellation (kiosk) | `constellation.dot` | https://constellation.dot.li | `bafybeiewulbrpo2amxrwnekv7c3mt3lrhpxzzf657qyqge3bb7vwqnafc4` |
 | Playground template (starter) | `playground-template.dot` | https://playground-template.dot.li | `bafybeibfa3q4us7ufv2bajyjvbrukycfixgmbpiccurzij3556l5fqfdpe` |
 | Playground tutorial (Rock Paper Scissors) | `playground-tutorial.dot` | https://playground-tutorial.dot.li | `bafybeihcma3ab4qodsc45cg5u5tav5qkyhc5qav6vw5c7a5ycjhg45v2vq` |
 | Rock-Paper-Scissors (game frontend) | `rock-paper-scissors.dot` | https://rock-paper-scissors.dot.li | `bafybeig32jfoayuvtduoa5svqvmhd2lsxaldt7rdofjz4oyxca7fvfd4su` |
