@@ -244,7 +244,7 @@ Web apps published to the **Summit Bulletin chain** and bound to `.dot` names. O
 | --- | --- | --- | --- |
 | DotNS UI | `dotns.dot` | https://dotns.dot.li | `bafybeiggzry5xc4ewcb6by7vh3dz7q3afhl5qk5kdufnla2vpajh2g5bha` |
 | CDM Frontend | `contracts.dot` | https://contracts.dot.li | `bafybeid2flilxbxopek7yaifq4gsp6zvbalz46gv2nd7ayvij5znckhqnu` |
-| Browse | `browse.dot` | https://browse.dot.li | `bafybeig6oyro2d337o22igjfmr4u7ctprucxkn3zomdluk4cazzrmtriea` |
+| Browse | `browse.dot` | https://browse.dot.li | `bafybeifybdg32mikvkrmssv6ie3kbgnrllwo7zksuzzrd53slvrpizq4ne` |
 | Festival — Admin | `web3summit-admin.dot` | https://web3summit-admin.dot.li | `bafybeifba5rompnrufzup36uzssdnk3kqa3d7oxgjajvdb5woynvmzkzty` |
 | Festival — Attendee | `web3summit.dot` | https://web3summit.dot.li | `bafybeicdaujjbajmfo2en4qjpoxibmaamz755nds2ojmpyrp65zebteiaq` |
 | Game results webview | `game-webview.dot` | https://game-webview.dot.li | `bafybeigifj52a7zs7qdms5fvkztkdkz4szrmwsk2z3zeq5xxzaqarsqaiu` |
