@@ -273,6 +273,25 @@ Web apps published to the **Summit Bulletin chain** and bound to `.dot` names. O
 
 The dotli `.dot` browser at **https://dot.li**, defaulting to the **Summit** network. Source: [dotli-community](https://github.com/Polkadot-Community-Foundation/dotli-community).
 
+## Client Apps
+
+The Polkadot superapp clients (Android / iOS / desktop). App stores aside, direct-download installers are hosted on the **PCF downloads host** — the R2 bucket at `get.polkadotcommunity.foundation` (zero-egress). Current desktop/Android build: **`1.0.0-rc.1`**. Each `latest-*` link is a stable pointer to the newest build; immutable version-named copies live alongside, and every direct download has a `.sha256` sidecar (append `.sha256` to the URL).
+
+<!-- GEN:clients -->
+| Platform | Channel | Download |
+| --- | --- | --- |
+| Android | Google Play | https://play.google.com/store/apps/details?id=io.pcf.polkadotapp |
+| Android | Direct APK (latest) | https://get.polkadotcommunity.foundation/android/latest.apk |
+| iOS | TestFlight (beta) | https://testflight.apple.com/join/VvC8SHVE |
+| macOS — Apple Silicon | Direct `.dmg` | https://get.polkadotcommunity.foundation/desktop/latest-mac-arm64.dmg |
+| macOS — Intel | Direct `.dmg` | https://get.polkadotcommunity.foundation/desktop/latest-mac-x64.dmg |
+| Windows — universal | Direct `.exe` | https://get.polkadotcommunity.foundation/desktop/latest-win.exe |
+| Windows — x64 | Direct `.exe` | https://get.polkadotcommunity.foundation/desktop/latest-win-x64.exe |
+| Windows — ARM64 | Direct `.exe` | https://get.polkadotcommunity.foundation/desktop/latest-win-arm64.exe |
+| Linux — x86_64 | Direct `AppImage` | https://get.polkadotcommunity.foundation/desktop/latest-linux-x64.AppImage |
+| Linux — ARM64 | Direct `AppImage` | https://get.polkadotcommunity.foundation/desktop/latest-linux-arm64.AppImage |
+<!-- /GEN:clients -->
+
 ## Services
 
 Hosted on PCF infrastructure.
