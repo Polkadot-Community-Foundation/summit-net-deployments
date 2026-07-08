@@ -2,6 +2,8 @@
 
 On-chain addresses, deployers, and domains for everything deployed to the **Summit** network.
 
+> **Paseo Next (interim target):** the PCF product suite was re-homed onto the Parity-operated Paseo Next chains after Summit's decommission — see [PASEO-NEXT.md](./PASEO-NEXT.md). This README is retained as the record of the (now decommissioned) Summit network.
+
 ## Network
 
 <!-- GEN:network -->
