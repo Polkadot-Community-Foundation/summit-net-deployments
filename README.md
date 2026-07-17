@@ -312,8 +312,8 @@ Published under [`@polkadot-community-foundation`](https://www.npmjs.com/org/pol
 <!-- GEN:npm -->
 | Package | Version | Purpose |
 | --- | --- | --- |
-| [`cdm-env`](https://www.npmjs.com/package/@polkadot-community-foundation/cdm-env) | `2.1.0` | CDM chain env presets; `getRegistryAddress("w3s")` → `0xa5747e60ae27f93e92019e4021abfc4957050141` |
-| [`dotns-cli`](https://www.npmjs.com/package/@polkadot-community-foundation/dotns-cli) | `0.7.2` | DotNS CLI (`dotns`) |
-| [`polkadot-app-deploy`](https://www.npmjs.com/package/@polkadot-community-foundation/polkadot-app-deploy) | `0.10.1` | Bulletin app-deploy CLI (`polkadot-app-deploy` / `pad`) |
-| [`cdm-cli`](https://www.npmjs.com/package/@polkadot-community-foundation/cdm-cli) | `0.8.22` | CDM CLI (`cdm`) — bundled, registry baked in |
+| [`cdm-env`](https://www.npmjs.com/package/@polkadot-community-foundation/cdm-env) | `2.2.2` | CDM chain env presets; `getRegistryAddress("devnet")` → `0x59b0245778917af55224e5f8fb55f7f8d452619f`; devnet IPFS gateway → `devnet-ipfs.api.polkadotcommunity.foundation` |
+| [`dotns-cli`](https://www.npmjs.com/package/@polkadot-community-foundation/dotns-cli) | `0.7.7` | DotNS CLI (`dotns`) |
+| [`polkadot-app-deploy`](https://www.npmjs.com/package/@polkadot-community-foundation/polkadot-app-deploy) | `0.12.2` | Bulletin app-deploy CLI (`polkadot-app-deploy` / `pad`) |
+| [`cdm-cli`](https://www.npmjs.com/package/@polkadot-community-foundation/cdm-cli) | `0.8.26` | CDM CLI (`cdm`) — bundled, devnet registry + IPFS gateway baked in |
 <!-- /GEN:npm -->
