@@ -141,6 +141,12 @@ Mirrors the 15XX (paseo-next) layout. On **AssetHub (1000)** these live in the `
 | SchemaRegistry | `0xf8fccb815aabb57fb0210c686a923406ac4ef99d` |
 | AttestationService | `0x1c8aeb620106dc05c74db5667e16042af6893352` |
 
+> **2026-09-09 — `executable` records restored.** The v0.6.0 migration replayed subname contenthashes but not
+> the `executable` text record, so every migrated manifest product failed to open in the clients ("Can't find
+> product"). 18 PCF-owned subnames were replayed by 5Fk8; the 83 community-owned ones are written back with
+> `Sudo.sudo_as(owner, Revive.call(setText…))` so each write carries the owner's origin (no redeploys). Audit +
+> plans: `summit-deployer-skills/scripts/dotns-v060-migration/snapshots/*executable*-20260909.json`.
+
 ## Browse
 
 | Contract | Address |
@@ -177,6 +183,7 @@ All `.dot` names below are owned by the products deployer **5Fk8** (`0xf8d1…d2
 | feedback-board | `feedback.dot` · browse-listed | `@polkadot/feedback` `0x70b10d0361aecfa48069795f19d35eb212807ea4` | `bafybeigg3ib6dqlbufsuzkkm4unolc7ncesgy7dg2yuxkixhrflgx3kjea` |
 | Rock-Paper-Scissors | `rock-paper-scissors.dot` · browse-listed (+ alias `rps-game.dot` · browse-**unlisted**) | `@rps/leaderboard` `0x3d05ec0916417c5e08a134c632745a9ca985dd5f` | `bafybeiebf7ka6wqsg2sovgfninm2ohrmgytyxlajofsyqmhbqwqocpvbkm` |
 | browse (directory app) | `browse.dot` · browse-listed | Publisher `0xaab42efbe8ea4d4228c3a11e973f94c17b9a0f2c` (see Browse section) | `bafybeiftqsjcuoiacyx47kaokt2ioti57bsgzj47ozb446bamw3dxa4sly` |
+| polkadot-app-docs | `docs.dot` · browse-listed | docs site (MkDocs), published with pad in manifest mode (devnet icon, `app.docs.dot` executable) | `bafybeiduemwopizurfce2mtbxyu2dohbifqpcwqot53eii7ogwwhptaezq` |
 | browse dashboard widget | `widget.browse.dot` (executable-manifest subname; desktop default card) | — | `bafybeic4eit2s3dq6hsvfpgijtrxdnjhzohuho5kuygteut6kj6szbztoa` |
 | playground-tutorial | `playground-tutorial.dot` · browse-listed | app-only (no contract) | `bafybeig7curj7fibyinp3o7lbsengogzb6blgwdsfi2rmehtyvrq3426cy` |
 | playground-app-template | `playground-template.dot` · browse-listed | app-only (no contract) | `bafybeiaucj454qmrirzfndefyhss4xwxhyhhqrjr2clc7ghx67g2iwfaci` |
