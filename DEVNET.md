@@ -9,7 +9,7 @@ PCF product suite on the public **Paseo** system chains (AssetHub 1000 / People 
 | EVM chain id | `420420417` |
 | Native token | PAS (10 dp) · SS58 prefix 42 |
 | Gateway | `dev-dot.li` |
-| Gateway build | TrUAPI host runtime (dotli fork sync 2026-09-09, deployed from the sync worktree; dot.li still on the previous build) |
+| Gateway build | TrUAPI host runtime (dotli fork sync 2026-09-09, PR #30 merged; dev-dot.li and dot.li both on this build, byte-identical asset graphs, DotNS v0.6.0 set) |
 | DotNS v0.6.0 restore | ✅ complete 2026-09-09: 301 community names + 121 subnames restored on the new set (2 escrow-held names skipped: ip-assets, squadbuilder); migration controller retired |
 | Bulletin uploader auth | ✅ 5Fk8 authorized until Bulletin block 930720 (~2026-09-18). ⚠️ `dotns-cli` < 0.9.1 misreads the post-2004000 authorization shape as "not authorized": check on-chain `transactionStorage.authorizations` before re-granting |
 | Relay genesis | `0x374057be67b355151f271ff70c3db98308c62c8adc48dc6724b6a009a1a014fd` |
@@ -176,7 +176,7 @@ All `.dot` names below are owned by the products deployer **5Fk8** (`0xf8d1…d2
 | simple-survey | `survey.dot` · browse-listed | `@polkadot/surveys` `0x4a641d1530bb44bed8afa0e00a004eba106d02c0` | `bafybeie3sxni3t47ztcitjnggfiaiqpoquzsj6u2um4pucgrm2lwz3ffuy` |
 | feedback-board | `feedback.dot` · browse-listed | `@polkadot/feedback` `0x70b10d0361aecfa48069795f19d35eb212807ea4` | `bafybeigg3ib6dqlbufsuzkkm4unolc7ncesgy7dg2yuxkixhrflgx3kjea` |
 | Rock-Paper-Scissors | `rock-paper-scissors.dot` · browse-listed (+ alias `rps-game.dot` · browse-**unlisted**) | `@rps/leaderboard` `0x3d05ec0916417c5e08a134c632745a9ca985dd5f` | `bafybeiebf7ka6wqsg2sovgfninm2ohrmgytyxlajofsyqmhbqwqocpvbkm` |
-| browse (directory app) | `browse.dot` · browse-listed | Publisher `0xaab42efbe8ea4d4228c3a11e973f94c17b9a0f2c` (see Browse section) | `bafybeigdof6hgoqmf7ycfucfxlb3zr6xeozrxpgjjjmma7d64bsht4xwda` |
+| browse (directory app) | `browse.dot` · browse-listed | Publisher `0xaab42efbe8ea4d4228c3a11e973f94c17b9a0f2c` (see Browse section) | `bafybeiftqsjcuoiacyx47kaokt2ioti57bsgzj47ozb446bamw3dxa4sly` |
 | browse dashboard widget | `widget.browse.dot` (executable-manifest subname; desktop default card) | — | `bafybeic4eit2s3dq6hsvfpgijtrxdnjhzohuho5kuygteut6kj6szbztoa` |
 | playground-tutorial | `playground-tutorial.dot` · browse-listed | app-only (no contract) | `bafybeig7curj7fibyinp3o7lbsengogzb6blgwdsfi2rmehtyvrq3426cy` |
 | playground-app-template | `playground-template.dot` · browse-listed | app-only (no contract) | `bafybeiaucj454qmrirzfndefyhss4xwxhyhhqrjr2clc7ghx67g2iwfaci` |
@@ -191,7 +191,7 @@ All `.dot` names below are owned by the products deployer **5Fk8** (`0xf8d1…d2
 | CDM / contracts UI | `contracts.dot` · browse-listed | the **CDM frontend** (`contract-dependency-manager/src/apps/frontend`, `@parity/cdm-frontend`); reads CDM `ContractRegistry` `0x05662b3dbd5dd9f2ff92d67630477e84b0b37c1f` (ctdt in CDM section) | `bafybeicyodhvzaiqmqptoqou7pyoylmbgfqvvhin6dbyattpn27dd6zjym` |
 | disputes UI | `disputes.dot` · browse-listed | the disputes-frontend (`contract-developer-tools/src/apps/disputes-frontend`); reads `@polkadot/disputes` (alias `0xC20a79f6…` in CDM section) | `bafybeih5m72nwsxif5ybxzitnwwskloka55nxjwzbw5knubl52ygehnj4i` |
 | t3rminal | `t3rminal.dot` · browse-**unlisted** (+ alias `terminal.dot` · browse-listed) | T3rminalBulletinIndex `0xf94229a0bbbb1dac19773c0086beff7ba930b1fc` | t3rminal `bafybeihirpzqnxlmmpinag247dnbokqmprvzopzi7byzs6ypbkfpeioxuu` · terminal `bafybeidggmmk2bxby5tk7qpz6t3pqrg77leknewww77kqjgj2i6dl7amii` |
-| playground | `playground.dot` · browse-listed | reads `@w3s/playground-registry` `0xdba08504…` (Playground section); frontend built via **BYOD** devnet SDK descriptors (PCF-scoped `product-sdk-descriptors` + `createChainClient`/cloud-storage explicit-network — bypasses the missing `@parity` `devnet` preset) | `bafybeihq5ej4qyp5exn26cjgt3dwhoyvrx6bg5olspseat6u76ngrjrmrm` |
+| playground | `playground.dot` · browse-listed | reads `@w3s/playground-registry` `0xdba08504…` (Playground section); frontend built via **BYOD** devnet SDK descriptors (PCF-scoped `product-sdk-descriptors` + `createChainClient`/cloud-storage explicit-network — bypasses the missing `@parity` `devnet` preset) | `bafybeidnq6jecajgtelnn2rey6igkzf6fk7qpr25rlcnfig2tchu3oc5x4` |
 | playground constellation (kiosk) | `constellation.dot` · browse-listed | read-only kiosk over `@w3s/playground-registry` `0xdba08504…`; already on the PCF-scoped SDK (has devnet), unblocked with a **vite alias** mapping the stale `@parity/{result,product-sdk-errors,product-sdk-host,product-sdk-descriptors}` dist imports → PCF scope | `bafybeibl4mtarljiernx7mem5xzhrjfsexziq4sdwnmdy2lmppumd35g2m` |
 | hello-dot (static demo page) | **`hello.dot`** · browse-listed · ⚠️ **governance-reserved label** (see note below) | app-only (no contract) | `bafybeienblwb3p24mv2jsnsjgkit2a6nhghfovwwykkmp4nzrtnrrtd34i` (prev `bafybeicnjpo52g2uejim4ephteqwcnywqvpeqyqc63t7cqr6vhyhf3mkgi`) |
 
