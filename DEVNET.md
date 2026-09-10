@@ -23,6 +23,20 @@ PCF product suite on the public **Paseo** system chains (AssetHub 1000 / People 
 | Bulletin IPFS gateway | `https://devnet-ipfs.api.polkadotcommunity.foundation` (bare origin; tools append `/ipfs/<cid>`) |
 | Relay RPC | `wss://paseo-rpc.n.dwellir.com` |
 
+## Runtimes
+
+Paseo system-chain runtimes as enacted on the products devnet. Source: [paseo-network/runtimes](https://github.com/paseo-network/runtimes).
+
+| Chain | spec_version | transaction_version | Release | Enacted (UTC) | Enactment block | Blob blake2-256 |
+| --- | --- | --- | --- | --- | --- | --- |
+| people-paseo (1004) | `2005002` (from 2005001) | `3` | [v2.5.2](https://github.com/paseo-network/runtimes/releases/tag/v2.5.2) | 2026-09-10 | `6618852` | `0xd0f3191c63f51decc9eaa0cb61be5e84dcda532e0934e827d382183458ac36df` |
+| asset-hub-paseo (1000) | `2005002` (from 2005000) | `18` | [v2.5.2](https://github.com/paseo-network/runtimes/releases/tag/v2.5.2) | 2026-09-10 | `13182258` | `0x3d399dc2daeaaf831fc4fda6ddc1958494fc0f3319ebb8ec0c1e7ca8995eed56` |
+
+> **v2.5.2 ([paseo-network/runtimes#421](https://github.com/paseo-network/runtimes/pull/421), closes #420) drops the W3S `AuthorizeValueTransfer` gate.**
+> The extension and the protected-asset (pUSD `50000413`) value-transfer filter are gone from both chains: plain signed
+> origins can now move pUSD and coinage, so clients no longer need a bundled W3S key. Slot 0 of the origin-modifier
+> tuple is now the unit extension (metadata `UnitTransactionExtension`); extension counts are unchanged (People 23, Asset Hub 17).
+
 ## Stablecoins (pUSD / USDt / USDC)
 
 Mirrors the 15XX (paseo-next) layout. On **AssetHub (1000)** these live in the `assets` pallet keyed by **u32** id; on **People (1004)** they are registered as **foreign assets** in People's `assets` pallet, keyed by the AH **MultiLocation** `{parents:1, X3[Parachain(1000), PalletInstance(50), GeneralIndex(<u32>)]}` (all `is_sufficient=true`, owner 5Fk8, decimals 6).
