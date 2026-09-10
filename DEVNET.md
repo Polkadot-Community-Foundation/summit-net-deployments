@@ -32,7 +32,7 @@ Paseo system-chain runtimes as enacted on the products devnet. Source: [paseo-ne
 | people-paseo (1004) | `2005002` (from 2005001) | `3` | [v2.5.2](https://github.com/paseo-network/runtimes/releases/tag/v2.5.2) | 2026-09-10 | `6618852` | `0xd0f3191c63f51decc9eaa0cb61be5e84dcda532e0934e827d382183458ac36df` |
 | asset-hub-paseo (1000) | `2005002` (from 2005000) | `18` | [v2.5.2](https://github.com/paseo-network/runtimes/releases/tag/v2.5.2) | 2026-09-10 | `13182258` | `0x3d399dc2daeaaf831fc4fda6ddc1958494fc0f3319ebb8ec0c1e7ca8995eed56` |
 
-> **v2.5.2 ([paseo-network/runtimes#421](https://github.com/paseo-network/runtimes/pull/421), closes #420) drops the W3S `AuthorizeValueTransfer` gate.**
+> **v2.5.2 ([paseo-network/runtimes#421](https://github.com/paseo-network/runtimes/pull/421), closes [paseo-network/runtimes#420](https://github.com/paseo-network/runtimes/issues/420)) drops the W3S `AuthorizeValueTransfer` gate.**
 > The extension and the protected-asset (pUSD `50000413`) value-transfer filter are gone from both chains: plain signed
 > origins can now move pUSD and coinage, so clients no longer need a bundled W3S key. Slot 0 of the origin-modifier
 > tuple is now the unit extension (metadata `UnitTransactionExtension`); extension counts are unchanged (People 23, Asset Hub 17).
