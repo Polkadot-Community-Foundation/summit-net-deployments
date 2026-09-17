@@ -63,6 +63,12 @@ Mirrors the 15XX (paseo-next) layout. On **AssetHub (1000)** these live in the `
 
 ## DotNS
 
+> **Migrated to v0.8.0 on 2026-09-17.** Fresh set from the same CREATE3 factory with `DOTNS_SALT_VERSION=2`
+> (dotns fork PR #15, upstream release v0.8.0); owner unchanged (`0x82612afF…545d`). Names, subnames and records are
+> re-created by Root `registerReserved` + `sudo_as` record writes (`scripts/dotns-v060-migration/v080-*`). The tables below list
+> the v0.8.0 set. The v0.6.0 set (registry `0x38cf3dE5…`, registrar `0x0E05e0E2…`) is **abandoned, not destroyed**; do not point
+> anything at it. The note that follows is the v0.6.0 history.
+>
 > **Migrated to v0.6.0 on 2026-09-08 (block ~13152236).** Fresh CREATE3 set = the fork's canonical manifest
 > `deployments/pcf-devnet/420420417.json` (factory deployer `0x70C9D7d8…5F1a`, nonce-0). **Owner of every
 > proxy = `0x82612afF72effDc0E8771A22B9AAF72f6fa3545d`** (new DotNS owner; keystore `devnet-dotns-owner`).
@@ -75,25 +81,25 @@ Mirrors the 15XX (paseo-next) layout. On **AssetHub (1000)** these live in the `
 | Contract | Address |
 | --- | --- |
 | Create3Factory | `0x32B9dDD1bd1D721f3787C1FB1DC41CD3D40aAC7a` |
-| DotnsContentResolver | `0x444578659848ba38D1825238f10B8D75522d278f` |
-| DotnsCostModelRegistry | `0x1B05a078b8FEAeE1f9f74AE9edDaCe488B252843` |
-| DotnsFlatPricing | `0xcFEba3bd01A35aadf143f13CA7bEA0e894fd8D42` |
-| DotnsNameEscrow | `0xCbf524C2E8ebC43FDE09C9A02632A4Fe03290524` |
-| DotnsNameWhitelist | `0xBE95E5d19357F34f3041E0e8C005EB7d8AdB2173` |
-| DotnsPopController | `0xB25510B665ad82291bc1552E94005013a025c42b` |
-| DotnsPopLens | `0x99355A606baEB903A4f76787d0fE8818Ae603a63` |
-| DotnsPopResolver | `0xE841BaEaDac51d301BCb82162d3B10918b60D158` |
-| DotnsProtocolRegistry | `0xB961db86815326d2f99F6B62f27f9Fc938117406` |
-| DotnsRegistrar | `0x0E05e0E2576DDD1C339d360Aa634fE52CBa7Ee45` |
-| DotnsRegistrarController | `0x77556F42DF5db7f89c2eCD00446041F16781011E` |
-| DotnsRegistry | `0x38cf3dE5877a18157f4C1a4e067F84956F582b31` |
-| DotnsResolver | `0x57c10bc51bC59B93b6F2C165C62daFa92C34A8a9` |
-| DotnsReverseResolver | `0x992c7C87967897b0F9336de640d9f66A5af76f73` |
-| LabelStoreBeacon | `0xE1A11b57c08C299930Cf1235299804dfe561Fa39` |
-| Multicall3 | `0x55985d2Cfdac95DD828bd3Aa0e031602a07a9049` |
-| PopRules | `0xB991Bc0C5Ff4B4c7f3634bfC74e0E20F74D59554` |
-| StoreFactory | `0x59aAF46797A549455697B6f046B4dE16b92670fd` |
-| UserStoreBeacon | `0xf496E2CcDFE29135Cf38261E1c5c528e25673029` |
+| DotnsContentResolver | `0x7e75491ecfb04900EB05ee63CABA2B33900aABB5` |
+| DotnsCostModelRegistry | `0x3Eb67102d99C1849169b0159F5147f54dFC51cB5` |
+| DotnsFlatPricing | `0x707180Fc571C1eB9ef4a1391e2271ec825dbB78c` |
+| DotnsNameEscrow | `0xb50269322010DeeF2afb162c009Caf897971952C` |
+| DotnsNameWhitelist | `0xEe0a4539549D64548270f5F8bC47d3DeF17eDEcb` |
+| DotnsPopController | `0xC3a3EdAb753F91488fD84E6134b5b0325dc22452` |
+| DotnsPopLens | `0xcE40cCA227897D168Ea4844062609A034A49309B` |
+| DotnsPopResolver | `0x398912c9bb03180Ff049f0E034FE2E0024fb8406` |
+| DotnsProtocolRegistry | `0xdDF3D3838Ff056F15602fC5a65927f185679C36F` |
+| DotnsRegistrar | `0xc609e0c2DAB4433d55a32FB098Db8788C1956302` |
+| DotnsRegistrarController | `0x59dcF8BfFFa7239243785C3fC336D8Bb22312e8c` |
+| DotnsRegistry | `0xb052E5EfC5ADEff1f21d48DEfb5169Cb394A1a73` |
+| DotnsResolver | `0xFcB74C073a2d14dc65B178Bb873f4dE51318DDC2` |
+| DotnsReverseResolver | `0x736e067290AE71f841399575ABfc8b2BAA5Eed7E` |
+| LabelStoreBeacon | `0xE83Fd671aAee2fa4A07471f62152627183438e4f` |
+| Multicall3 | `0x92640655c5c7ee7E42F0B5aD68D205a8A767b81C` |
+| PopRules | `0xD5Ee34610F06f7FF4668aB4fabE2393B65a43AE7` |
+| StoreFactory | `0x5Df012daA06cA2602DA153309C2E3A83284Cb879` |
+| UserStoreBeacon | `0x646dBf4baB91e6Af81653e51780E3b536bdd634b` |
 
 ## CDM
 
@@ -133,19 +139,19 @@ Mirrors the 15XX (paseo-next) layout. On **AssetHub (1000)** these live in the `
 > / prefix-42 `5EYCAe5i…`). On devnet this was unmapped → `Revive::AccountUnmapped`. Fixed by mapping it once via
 > `Sudo.sudo_as(modlpy/reviv, Revive.map_account())` (sudo `13uYxsEfJL…`). Verified: `ReviveApi.call getContractCount = 19`.
 
-### `@dotns/*` in the devnet ContractRegistry (re-registered for v0.6.0, 2026-09-08, signer 5Fk8)
+### `@dotns/*` in the devnet ContractRegistry (addresses = v0.8.0 set; ⏳ metadata CIDs below are from the v0.6.0 registration and change on re-registration)
 
 | Package | Address | metadata CID |
 | --- | --- | --- |
-| `@dotns/registrar-controller` | `0x77556F42DF5db7f89c2eCD00446041F16781011E` | `bafk2bzaceaangaerusxky5iyvylqy2e7urvs6g5jwpiaccp5g527khuk3x4m2` |
-| `@dotns/registrar` | `0x0E05e0E2576DDD1C339d360Aa634fE52CBa7Ee45` | `bafk2bzaceatcoscbirgo6x57baug5rapdaipydxebhrgw55ymsvjz7s2znzce` |
-| `@dotns/registry` | `0x38cf3dE5877a18157f4C1a4e067F84956F582b31` | `bafk2bzaceazs27wj2xcs6shrmkq6kyrxlvztmnb4vvnsbk6jnc76n3vhs34ky` |
-| `@dotns/pop-rules` | `0xB991Bc0C5Ff4B4c7f3634bfC74e0E20F74D59554` | `bafk2bzacedd7kxpjodqed7fwjnck35ai3sz5uv6c7rty6i4uo7qdt3oeqyphe` |
-| `@dotns/resolver` | `0x57c10bc51bC59B93b6F2C165C62daFa92C34A8a9` | `bafk2bzacecelxy7klp2elrpslxqwtl4fqsyg5ev7mkebudxpw5sjz4stdr2ki` |
-| `@dotns/reverse-resolver` | `0x992c7C87967897b0F9336de640d9f66A5af76f73` | `bafk2bzaceaw76qleakn5rosowt4barlftgxkmaumdidfz6qmarqiieoxe6hgc` |
-| `@dotns/content-resolver` | `0x444578659848ba38D1825238f10B8D75522d278f` | `bafk2bzaced4ffeu6g76y37wnmz273dvp74leqisaqhbvoxrbkaftxrhd6akww` |
-| `@dotns/store-factory` | `0x59aAF46797A549455697B6f046B4dE16b92670fd` | `bafk2bzacebcrlp2jhpchsbujoewqyil7vqcxkqwzajlgsotkracn5ntbeypmw` |
-| `@dotns/multicall3` | `0x55985d2Cfdac95DD828bd3Aa0e031602a07a9049` | `bafk2bzacedzz47wy4xhjk3wksgqe75rtrnwedarmr7kaggy7hgxy3eq6xvfyy` |
+| `@dotns/registrar-controller` | `0x59dcF8BfFFa7239243785C3fC336D8Bb22312e8c` | `bafk2bzaceaangaerusxky5iyvylqy2e7urvs6g5jwpiaccp5g527khuk3x4m2` |
+| `@dotns/registrar` | `0xc609e0c2DAB4433d55a32FB098Db8788C1956302` | `bafk2bzaceatcoscbirgo6x57baug5rapdaipydxebhrgw55ymsvjz7s2znzce` |
+| `@dotns/registry` | `0xb052E5EfC5ADEff1f21d48DEfb5169Cb394A1a73` | `bafk2bzaceazs27wj2xcs6shrmkq6kyrxlvztmnb4vvnsbk6jnc76n3vhs34ky` |
+| `@dotns/pop-rules` | `0xD5Ee34610F06f7FF4668aB4fabE2393B65a43AE7` | `bafk2bzacedd7kxpjodqed7fwjnck35ai3sz5uv6c7rty6i4uo7qdt3oeqyphe` |
+| `@dotns/resolver` | `0xFcB74C073a2d14dc65B178Bb873f4dE51318DDC2` | `bafk2bzacecelxy7klp2elrpslxqwtl4fqsyg5ev7mkebudxpw5sjz4stdr2ki` |
+| `@dotns/reverse-resolver` | `0x736e067290AE71f841399575ABfc8b2BAA5Eed7E` | `bafk2bzaceaw76qleakn5rosowt4barlftgxkmaumdidfz6qmarqiieoxe6hgc` |
+| `@dotns/content-resolver` | `0x7e75491ecfb04900EB05ee63CABA2B33900aABB5` | `bafk2bzaced4ffeu6g76y37wnmz273dvp74leqisaqhbvoxrbkaftxrhd6akww` |
+| `@dotns/store-factory` | `0x5Df012daA06cA2602DA153309C2E3A83284Cb879` | `bafk2bzacebcrlp2jhpchsbujoewqyil7vqcxkqwzajlgsotkracn5ntbeypmw` |
+| `@dotns/multicall3` | `0x92640655c5c7ee7E42F0B5aD68D205a8A767b81C` | `bafk2bzacedzz47wy4xhjk3wksgqe75rtrnwedarmr7kaggy7hgxy3eq6xvfyy` |
 
 
 ## Attestation
@@ -187,7 +193,7 @@ Point-of-sale terminal; permissionless writes, no admin. Deployer: **5Fk8** (nat
 
 ## Apps
 
-All `.dot` names below are owned by the products deployer **5Fk8** (`0xf8d1…d2dd`) on the DotnsRegistrar (v0.6.0 `0x0E05e0E2…`; legacy `0x7f0dF075…`), have their contenthash set to the listed CID, are listed in the browse Publisher (`0xaab42efb…`, owner 5Fk8 → owner-bypass), and resolve at `https://<label>.dev-dot.li`.
+All `.dot` names below are owned by the products deployer **5Fk8** (`0xf8d1…d2dd`) on the DotnsRegistrar (v0.8.0 `0xc609e0c2…`; v0.6.0 `0x0E05e0E2…`; legacy `0x7f0dF075…`), have their contenthash set to the listed CID, are listed in the browse Publisher (`0xaab42efb…`, owner 5Fk8 → owner-bypass), and resolve at `https://<label>.dev-dot.li`.
 
 | App | .dot | Contracts | Bulletin CID |
 | --- | --- | --- | --- |
