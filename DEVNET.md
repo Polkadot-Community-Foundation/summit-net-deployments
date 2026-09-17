@@ -139,19 +139,25 @@ Mirrors the 15XX (paseo-next) layout. On **AssetHub (1000)** these live in the `
 > / prefix-42 `5EYCAe5i…`). On devnet this was unmapped → `Revive::AccountUnmapped`. Fixed by mapping it once via
 > `Sudo.sudo_as(modlpy/reviv, Revive.map_account())` (sudo `13uYxsEfJL…`). Verified: `ReviveApi.call getContractCount = 19`.
 
-### `@dotns/*` in the devnet ContractRegistry (addresses = v0.8.0 set; ⏳ metadata CIDs below are from the v0.6.0 registration and change on re-registration)
+### `@dotns/*` in the devnet ContractRegistry (re-registered for the v0.8.0 set, 2026-09-18, signer 5Fk8)
 
-| Package | Address | metadata CID |
-| --- | --- | --- |
-| `@dotns/registrar-controller` | `0x59dcF8BfFFa7239243785C3fC336D8Bb22312e8c` | `bafk2bzaceaangaerusxky5iyvylqy2e7urvs6g5jwpiaccp5g527khuk3x4m2` |
-| `@dotns/registrar` | `0xc609e0c2DAB4433d55a32FB098Db8788C1956302` | `bafk2bzaceatcoscbirgo6x57baug5rapdaipydxebhrgw55ymsvjz7s2znzce` |
-| `@dotns/registry` | `0xb052E5EfC5ADEff1f21d48DEfb5169Cb394A1a73` | `bafk2bzaceazs27wj2xcs6shrmkq6kyrxlvztmnb4vvnsbk6jnc76n3vhs34ky` |
-| `@dotns/pop-rules` | `0xD5Ee34610F06f7FF4668aB4fabE2393B65a43AE7` | `bafk2bzacedd7kxpjodqed7fwjnck35ai3sz5uv6c7rty6i4uo7qdt3oeqyphe` |
-| `@dotns/resolver` | `0xFcB74C073a2d14dc65B178Bb873f4dE51318DDC2` | `bafk2bzacecelxy7klp2elrpslxqwtl4fqsyg5ev7mkebudxpw5sjz4stdr2ki` |
-| `@dotns/reverse-resolver` | `0x736e067290AE71f841399575ABfc8b2BAA5Eed7E` | `bafk2bzaceaw76qleakn5rosowt4barlftgxkmaumdidfz6qmarqiieoxe6hgc` |
-| `@dotns/content-resolver` | `0x7e75491ecfb04900EB05ee63CABA2B33900aABB5` | `bafk2bzaced4ffeu6g76y37wnmz273dvp74leqisaqhbvoxrbkaftxrhd6akww` |
-| `@dotns/store-factory` | `0x5Df012daA06cA2602DA153309C2E3A83284Cb879` | `bafk2bzacebcrlp2jhpchsbujoewqyil7vqcxkqwzajlgsotkracn5ntbeypmw` |
-| `@dotns/multicall3` | `0x92640655c5c7ee7E42F0B5aD68D205a8A767b81C` | `bafk2bzacedzz47wy4xhjk3wksgqe75rtrnwedarmr7kaggy7hgxy3eq6xvfyy` |
+Version counts are the registry's own: the nine pre-existing packages gained a third version, the four added for v0.8.0 start at one.
+
+| Package | Address | metadata CID | versions |
+| --- | --- | --- | ---: |
+| `@dotns/registrar-controller` | `0x59dcF8BfFFa7239243785C3fC336D8Bb22312e8c` | `bafk2bzaceasedjuztlsmpj6i3smlgxvs4ggzxtshutq5s34r3ladvt4jwx4fk` | 3 |
+| `@dotns/registrar` | `0xc609e0c2DAB4433d55a32FB098Db8788C1956302` | `bafk2bzacebi5l6yj5nl4ici5igvt6vvdgsperljmofsi3jt46vxsdysqg2vhm` | 3 |
+| `@dotns/registry` | `0xb052E5EfC5ADEff1f21d48DEfb5169Cb394A1a73` | `bafk2bzaceadcg3j5jg4b4a5swxp4azrmtarpfhbwwcj2lsa4kjgwitpma4huo` | 3 |
+| `@dotns/pop-rules` | `0xD5Ee34610F06f7FF4668aB4fabE2393B65a43AE7` | `bafk2bzaced4i4ugbv35arfvakfvc4iytzitqyqoddcw3kjxd3wcbg5y7nqh34` | 3 |
+| `@dotns/resolver` | `0xFcB74C073a2d14dc65B178Bb873f4dE51318DDC2` | `bafk2bzaceap6pkniae4gcus23kull4jwli5nxjlnrj5u6puq25l5fp7gk4nu2` | 3 |
+| `@dotns/reverse-resolver` | `0x736e067290AE71f841399575ABfc8b2BAA5Eed7E` | `bafk2bzacea4rulcph2lzyezpcz2bkxkd75acwnd7qs43jlxabb6pmxkdzzi5a` | 3 |
+| `@dotns/content-resolver` | `0x7e75491ecfb04900EB05ee63CABA2B33900aABB5` | `bafk2bzaceatdihid4mprjuaeheap36qoj2w26xx4tjmtufs5qjzbqofventke` | 3 |
+| `@dotns/store-factory` | `0x5Df012daA06cA2602DA153309C2E3A83284Cb879` | `bafk2bzacecyruxrzngqpgaz2diku6wczoss6bz7a3vpjoqkqlgkr5svtoupqs` | 3 |
+| `@dotns/multicall3` | `0x92640655c5c7ee7E42F0B5aD68D205a8A767b81C` | `bafk2bzacecz6lnrisn2m2v2puifg5tdtgubmyk6gqc6lblfz6j2madiiobmfa` | 3 |
+| `@dotns/protocol-registry` | `0xdDF3D3838Ff056F15602fC5a65927f185679C36F` | `bafk2bzaceajhfbwrwlacfs5j4dmctneiljvoigket4o4mp3ouv7oz33h45klk` | 1 |
+| `@dotns/pop-controller` | `0xC3a3EdAb753F91488fD84E6134b5b0325dc22452` | `bafk2bzacecivzt6of454yor43jygpppkfcfkfzo7rkkfydmmr4fatp5rpbdbc` | 1 |
+| `@dotns/pop-resolver` | `0x398912c9bb03180Ff049f0E034FE2E0024fb8406` | `bafk2bzaceazxa577avscy45zpt4hcpuds5ig4zbpeblwp23avlkdqluonrdso` | 1 |
+| `@dotns/name-escrow` | `0xb50269322010DeeF2afb162c009Caf897971952C` | `bafk2bzacedup73yqafvpjjuxwsjrr7v6ccxjqpceqtdwywyz5algfk7xfsnrs` | 1 |
 
 
 ## Attestation
