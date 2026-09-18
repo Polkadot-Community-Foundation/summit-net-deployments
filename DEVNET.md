@@ -205,14 +205,14 @@ All `.dot` names below are owned by the products deployer **5Fk8** (`0xf8d1…d2
 | --- | --- | --- | --- |
 | game-results-webview | `game-results-webview.dot` · browse-listed | app-only (webview) | `bafybeiffbmvler5aavegpqizlrwksobt6mmo5gw6ubvw3njxxnhi2hqnyq` |
 | pocket-collectibles-webview | `collectibles-webview.dot` · browse-**unlisted** | app-only (webview) | `bafybeifnyl6tcy52oe2hhncoj36bgcnlq56i7sjuw3udprvprnlaqetl64` |
-| simple-survey | `survey.dot` · browse-listed | `@polkadot/surveys` `0x4a641d1530bb44bed8afa0e00a004eba106d02c0` | `bafybeie3sxni3t47ztcitjnggfiaiqpoquzsj6u2um4pucgrm2lwz3ffuy` |
-| feedback-board | `feedback.dot` · browse-listed | `@polkadot/feedback` `0x70b10d0361aecfa48069795f19d35eb212807ea4` | `bafybeigg3ib6dqlbufsuzkkm4unolc7ncesgy7dg2yuxkixhrflgx3kjea` |
+| simple-survey | `survey.dot` · browse-listed | `@polkadot/surveys` `0x4a641d1530bb44bed8afa0e00a004eba106d02c0` | `bafybeibfhphw4lrrxgddgfxsrjduddfc6rvv7f7ymsuzuvfxztq77r56sa` |
+| feedback-board | `feedback.dot` · browse-listed | `@polkadot/feedback` `0x70b10d0361aecfa48069795f19d35eb212807ea4` | `bafybeifqef2f4ffrpnq3hlbsjdy6ijgbgteq4igutp6vtto5yzastc7xam` |
 | Rock-Paper-Scissors | `rock-paper-scissors.dot` · browse-listed (+ alias `rps-game.dot` · browse-**unlisted**) | `@rps/leaderboard` `0x3d05ec0916417c5e08a134c632745a9ca985dd5f` | `bafybeiebf7ka6wqsg2sovgfninm2ohrmgytyxlajofsyqmhbqwqocpvbkm` |
 | browse (directory app) | `browse.dot` · browse-listed | Publisher `0xaab42efbe8ea4d4228c3a11e973f94c17b9a0f2c` (see Browse section) | `bafybeiftqsjcuoiacyx47kaokt2ioti57bsgzj47ozb446bamw3dxa4sly` |
 | polkadot-app-docs | `docs.dot` · browse-listed | docs site (MkDocs), published with pad in manifest mode (devnet icon, `app.docs.dot` executable) | `bafybeiduemwopizurfce2mtbxyu2dohbifqpcwqot53eii7ogwwhptaezq` |
 | browse dashboard widget | `widget.browse.dot` (executable-manifest subname; desktop default card) | — | `bafybeic4eit2s3dq6hsvfpgijtrxdnjhzohuho5kuygteut6kj6szbztoa` |
 | playground-tutorial | `playground-tutorial.dot` · browse-listed | app-only (no contract) | `bafybeig7curj7fibyinp3o7lbsengogzb6blgwdsfi2rmehtyvrq3426cy` |
-| playground-app-template | `playground-template.dot` · browse-listed | app-only (no contract) | `bafybeiaucj454qmrirzfndefyhss4xwxhyhhqrjr2clc7ghx67g2iwfaci` |
+| playground-app-template | `playground-template.dot` · browse-listed | app-only (no contract) | `bafybeiedu45zsnlmsputezxoc7kn4cjwuisl2e5ktvihj4pdzqtewt6ppu` |
 | w3spay-admin | `w3spayadmin.dot` · browse-**unlisted** | W3SPayRegistry `0x950c0243cb112abe1112924f1fcab04fb03ae670` (owner 0x8C78) | `bafybeibkxhzzqce4ie6avgrdkxrgdbc7tg5hipeh5nkr5f7c4yt624v7ri` |
 | w3spay | `w3spaycheckout.dot` · browse-listed | consumes W3SPayRegistry above | `bafybeiei4yy27lieiz7mxktjxjxvqad7ybh3sjxere7oars5kq2zfimi64` |
 | w3s-payment-processor | `w3spayprocessor.dot` · browse-listed | reads W3SPayRegistry above | `bafybeiczlggzlgh5l7ryrfmsqh24x3kv6ws6c7tkzayuj7ygqssqpup5xi` |
