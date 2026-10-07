@@ -284,7 +284,7 @@ The Polkadot superapp clients (Android / iOS / desktop). App stores aside, direc
 | --- | --- | --- |
 | Android | Google Play | https://play.google.com/store/apps/details?id=io.pcf.polkadotapp |
 | Android | Direct APK (latest) | https://get.polkadotcommunity.foundation/android/latest.apk |
-| iOS | TestFlight (beta) | https://testflight.apple.com/join/VvC8SHVE |
+| iOS | TestFlight (beta) | https://testflight.apple.com/join/HnBX59vz |
 | macOS — Apple Silicon | Direct `.dmg` | https://get.polkadotcommunity.foundation/desktop/latest-mac-arm64.dmg |
 | macOS — Intel | Direct `.dmg` | https://get.polkadotcommunity.foundation/desktop/latest-mac-x64.dmg |
 | Windows — universal | Direct `.exe` | https://get.polkadotcommunity.foundation/desktop/latest-win.exe |
