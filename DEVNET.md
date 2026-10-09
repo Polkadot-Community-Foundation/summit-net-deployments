@@ -146,24 +146,26 @@ Mirrors the 15XX (paseo-next) layout. On **AssetHub (1000)** these live in the `
 > / prefix-42 `5EYCAe5i…`). On devnet this was unmapped → `Revive::AccountUnmapped`. Fixed by mapping it once via
 > `Sudo.sudo_as(modlpy/reviv, Revive.map_account())` (sudo `13uYxsEfJL…`). Verified: `ReviveApi.call getContractCount = 19`.
 
-### `@dotns/*` in the devnet ContractRegistry (re-registered for the v0.8.0 set, 2026-09-18, signer 5Fk8)
+### `@dotns/*` in the devnet ContractRegistry (republished with the v1.0.0 ABIs, 2026-10-09, signer 5Fk8)
 
-Version counts are the registry's own: the nine pre-existing packages gained a third version, the four added for v0.8.0 start at one.
+Version counts are the registry's own. The in-place v1.0.0 upgrade kept every address; ten packages gained a version
+carrying the v1.0.0 release ABI (eight now at four, pop-controller and pop-resolver at two). multicall3, protocol-registry
+and name-escrow already carried the current ABI.
 
 | Package | Address | metadata CID | versions |
 | --- | --- | --- | ---: |
-| `@dotns/registrar-controller` | `0x59dcF8BfFFa7239243785C3fC336D8Bb22312e8c` | `bafk2bzaceasedjuztlsmpj6i3smlgxvs4ggzxtshutq5s34r3ladvt4jwx4fk` | 3 |
-| `@dotns/registrar` | `0xc609e0c2DAB4433d55a32FB098Db8788C1956302` | `bafk2bzacebi5l6yj5nl4ici5igvt6vvdgsperljmofsi3jt46vxsdysqg2vhm` | 3 |
-| `@dotns/registry` | `0xb052E5EfC5ADEff1f21d48DEfb5169Cb394A1a73` | `bafk2bzaceadcg3j5jg4b4a5swxp4azrmtarpfhbwwcj2lsa4kjgwitpma4huo` | 3 |
-| `@dotns/pop-rules` | `0xD5Ee34610F06f7FF4668aB4fabE2393B65a43AE7` | `bafk2bzaced4i4ugbv35arfvakfvc4iytzitqyqoddcw3kjxd3wcbg5y7nqh34` | 3 |
-| `@dotns/resolver` | `0xFcB74C073a2d14dc65B178Bb873f4dE51318DDC2` | `bafk2bzaceap6pkniae4gcus23kull4jwli5nxjlnrj5u6puq25l5fp7gk4nu2` | 3 |
-| `@dotns/reverse-resolver` | `0x736e067290AE71f841399575ABfc8b2BAA5Eed7E` | `bafk2bzacea4rulcph2lzyezpcz2bkxkd75acwnd7qs43jlxabb6pmxkdzzi5a` | 3 |
-| `@dotns/content-resolver` | `0x7e75491ecfb04900EB05ee63CABA2B33900aABB5` | `bafk2bzaceatdihid4mprjuaeheap36qoj2w26xx4tjmtufs5qjzbqofventke` | 3 |
-| `@dotns/store-factory` | `0x5Df012daA06cA2602DA153309C2E3A83284Cb879` | `bafk2bzacecyruxrzngqpgaz2diku6wczoss6bz7a3vpjoqkqlgkr5svtoupqs` | 3 |
+| `@dotns/registrar-controller` | `0x59dcF8BfFFa7239243785C3fC336D8Bb22312e8c` | `bafk2bzacecw6nznbrbq7fgyxbj3p2tn2ix2il4iulqrrs4u6vh5j73o3iuj3a` | 4 |
+| `@dotns/registrar` | `0xc609e0c2DAB4433d55a32FB098Db8788C1956302` | `bafk2bzaced4nroryuogs5irb3nmgcu7vmu3beuctvso4b3wau3a3jtnsb3pxo` | 4 |
+| `@dotns/registry` | `0xb052E5EfC5ADEff1f21d48DEfb5169Cb394A1a73` | `bafk2bzacedecxpxfacifbi3kp7j6mukhbhcujfxopts4fdwtwhedle55bfp2c` | 4 |
+| `@dotns/pop-rules` | `0xD5Ee34610F06f7FF4668aB4fabE2393B65a43AE7` | `bafk2bzacecv2xc35zejzrdimjd6ajz4tl3zfffncpna2vwnltnwtj4pueyv5s` | 4 |
+| `@dotns/resolver` | `0xFcB74C073a2d14dc65B178Bb873f4dE51318DDC2` | `bafk2bzacecy5hhyyy4ddx6pzhntp6xgoqomc7aigblt6rttyaehfubq5ffyiu` | 4 |
+| `@dotns/reverse-resolver` | `0x736e067290AE71f841399575ABfc8b2BAA5Eed7E` | `bafk2bzacedeqpkd7lvtzqvssegwahbidxdgpxsxas7ihawxy4bqxrdlghx2km` | 4 |
+| `@dotns/content-resolver` | `0x7e75491ecfb04900EB05ee63CABA2B33900aABB5` | `bafk2bzaceb5ivx6s42id4hjjh6ptatvu6ui5gr43525jbegezvgup5o4zf3ew` | 4 |
+| `@dotns/store-factory` | `0x5Df012daA06cA2602DA153309C2E3A83284Cb879` | `bafk2bzacebb4576nr42sqxkkyzdw7j2rjlisdl3cvkeelmdbgb5sgznttksk2` | 4 |
 | `@dotns/multicall3` | `0x92640655c5c7ee7E42F0B5aD68D205a8A767b81C` | `bafk2bzacecz6lnrisn2m2v2puifg5tdtgubmyk6gqc6lblfz6j2madiiobmfa` | 3 |
 | `@dotns/protocol-registry` | `0xdDF3D3838Ff056F15602fC5a65927f185679C36F` | `bafk2bzaceajhfbwrwlacfs5j4dmctneiljvoigket4o4mp3ouv7oz33h45klk` | 1 |
-| `@dotns/pop-controller` | `0xC3a3EdAb753F91488fD84E6134b5b0325dc22452` | `bafk2bzacecivzt6of454yor43jygpppkfcfkfzo7rkkfydmmr4fatp5rpbdbc` | 1 |
-| `@dotns/pop-resolver` | `0x398912c9bb03180Ff049f0E034FE2E0024fb8406` | `bafk2bzaceazxa577avscy45zpt4hcpuds5ig4zbpeblwp23avlkdqluonrdso` | 1 |
+| `@dotns/pop-controller` | `0xC3a3EdAb753F91488fD84E6134b5b0325dc22452` | `bafk2bzacea3ydcmfxbftkp6so4jidlmcb7535th5h7b2l3tczq4hrmo25jgn2` | 2 |
+| `@dotns/pop-resolver` | `0x398912c9bb03180Ff049f0E034FE2E0024fb8406` | `bafk2bzaceahrwqdekxsj4oqg5sec44usvfwrfjh3hdvj77r3qv4wiluodw4gs` | 2 |
 | `@dotns/name-escrow` | `0xb50269322010DeeF2afb162c009Caf897971952C` | `bafk2bzacedup73yqafvpjjuxwsjrr7v6ccxjqpceqtdwywyz5algfk7xfsnrs` | 1 |
 
 
