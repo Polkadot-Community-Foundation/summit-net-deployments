@@ -63,10 +63,17 @@ Mirrors the 15XX (paseo-next) layout. On **AssetHub (1000)** these live in the `
 
 ## DotNS
 
+> **Upgraded in place to v1.0.0 on 2026-10-09 (AH blocks 0xd90861–0xd90872).** The four proxies whose code changed
+> (DotnsRegistry, PopRules, DotnsPopResolver, DotnsPopController) now run the upstream v1.0.0 release implementations
+> (dotns fork tag `v1.0.0-pcf.1`); every other contract was already identical. All addresses below are unchanged except
+> **DotnsPopLens**, redeployed through the CREATE3 factory with the release-scoped salt (the old lens `0xcE40cCA2…309B`
+> holds no state and is no longer referenced). `protocolVersion()` = `1.0.0`. Names, records, chat keys and reservations
+> carried over untouched; the gateway pallet keeps calling the same PopController through its legacy selectors.
+>
 > **Migrated to v0.8.0 on 2026-09-17.** Fresh set from the same CREATE3 factory with `DOTNS_SALT_VERSION=2`
 > (dotns fork PR #15, upstream release v0.8.0); owner unchanged (`0x82612afF…545d`). Names, subnames and records are
 > re-created by Root `registerReserved` + `sudo_as` record writes (`scripts/dotns-v060-migration/v080-*`). The tables below list
-> the v0.8.0 set. The v0.6.0 set (registry `0x38cf3dE5…`, registrar `0x0E05e0E2…`) is **abandoned, not destroyed**; do not point
+> the current set. The v0.6.0 set (registry `0x38cf3dE5…`, registrar `0x0E05e0E2…`) is **abandoned, not destroyed**; do not point
 > anything at it. The note that follows is the v0.6.0 history.
 >
 > **Migrated to v0.6.0 on 2026-09-08 (block ~13152236).** Fresh CREATE3 set = the fork's canonical manifest
@@ -87,7 +94,7 @@ Mirrors the 15XX (paseo-next) layout. On **AssetHub (1000)** these live in the `
 | DotnsNameEscrow | `0xb50269322010DeeF2afb162c009Caf897971952C` |
 | DotnsNameWhitelist | `0xEe0a4539549D64548270f5F8bC47d3DeF17eDEcb` |
 | DotnsPopController | `0xC3a3EdAb753F91488fD84E6134b5b0325dc22452` |
-| DotnsPopLens | `0xcE40cCA227897D168Ea4844062609A034A49309B` |
+| DotnsPopLens | `0x18cb33a2f440B100FaD2d2813145728E2d287c18` |
 | DotnsPopResolver | `0x398912c9bb03180Ff049f0E034FE2E0024fb8406` |
 | DotnsProtocolRegistry | `0xdDF3D3838Ff056F15602fC5a65927f185679C36F` |
 | DotnsRegistrar | `0xc609e0c2DAB4433d55a32FB098Db8788C1956302` |
